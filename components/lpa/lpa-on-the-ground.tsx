@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { Eye, Ruler, MapPin, FileText } from "lucide-react"
-import { ArrowRight } from "lucide-react"
+import { useEffect, useRef, useState } from "react"
+import { Eye, Ruler, MapPin, FileText, ArrowRight } from "lucide-react"
+import { LpaEnquiryModal, type ServiceKey } from "@/components/lpa/lpa-enquiry-modal"
 
 const visitHighlights = [
   {
@@ -29,6 +29,7 @@ const visitHighlights = [
 
 export function LpaOnTheGround() {
   const sectionRef = useRef<HTMLDivElement>(null)
+  const [activeModal, setActiveModal] = useState<ServiceKey | null>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,7 +51,8 @@ export function LpaOnTheGround() {
   }, [])
 
   return (
-    <section className="py-24 lg:py-32 bg-moore-navy overflow-hidden">
+    <>
+      <section className="py-24 lg:py-32 bg-moore-navy overflow-hidden">
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         {/* Header */}
         <div className="mb-16 lg:mb-20">
@@ -135,18 +137,24 @@ export function LpaOnTheGround() {
                 <p className="text-moore-offwhite/60 text-sm mb-4">
                   The Tour de Coastal is $500 and the ideal first step before committing to anything further.
                 </p>
-                <a
-                  href="#contact"
+                <button
+                  onClick={() => setActiveModal("tour")}
                   className="group inline-flex items-center gap-2 text-moore-gold hover:text-moore-offwhite transition-colors"
                 >
                   <span className="text-sm tracking-wide">Book the Tour de Coastal</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </a>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      </section>
+
+      <LpaEnquiryModal
+        service={activeModal}
+        onClose={() => setActiveModal(null)}
+      />
+    </>
   )
 }

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { X, ArrowRight, CheckCircle } from "lucide-react"
 
-export type ServiceKey = "tour" | "foundations" | "livedeals" | "pm"
+export type ServiceKey = "tour" | "foundations" | "livedeals" | "pm" | "discovery"
 
 interface ServiceModalContent {
   eyebrow: string
@@ -16,6 +16,21 @@ interface ServiceModalContent {
 }
 
 const modalContent: Record<ServiceKey, ServiceModalContent> = {
+  discovery: {
+    eyebrow: "FREE DISCOVERY CALL",
+    headline: "Find out exactly where to start in 30 minutes",
+    subheadline:
+      "A free, no-obligation call with Guy Moore. In 30 minutes you will know which service is the right starting point for your situation, what your realistic capital position needs to look like, and what your path to a first development could look like.",
+    bullets: [
+      "Understand which service matches where you are right now",
+      "Get an honest assessment of your capital and finance position",
+      "Ask any questions you have about the process",
+      "No obligation to proceed -- just clarity on your next step",
+    ],
+    formHeading: "Book your free discovery call",
+    ctaLabel: "BOOK MY DISCOVERY CALL",
+    price: "Free",
+  },
   tour: {
     eyebrow: "TOUR DE COASTAL",
     headline: "See a real development before you commit to anything",
