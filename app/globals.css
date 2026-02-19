@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Moore Consultants Brand Colors */
+  --moore-navy: #0f172a;
+  --moore-charcoal: #27272a;
+  --moore-gold: #d4af37;
+  --moore-offwhite: #fafaf9;
+  --moore-white: #ffffff;
+  --moore-black: #09090b;
+
+  --background: var(--moore-offwhite);
+  --foreground: var(--moore-black);
+  --card: var(--moore-white);
+  --card-foreground: var(--moore-black);
+  --popover: var(--moore-white);
+  --popover-foreground: var(--moore-black);
+  --primary: var(--moore-navy);
+  --primary-foreground: var(--moore-offwhite);
+  --secondary: var(--moore-charcoal);
+  --secondary-foreground: var(--moore-offwhite);
+  --muted: var(--moore-offwhite);
+  --muted-foreground: var(--moore-charcoal);
+  --accent: var(--moore-gold);
+  --accent-foreground: var(--moore-navy);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: rgba(15, 23, 42, 0.1);
+  --input: rgba(15, 23, 42, 0.1);
+  --ring: var(--moore-gold);
+  --radius: 0rem;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
+
+  /* Custom Moore Colors */
+  --color-moore-navy: var(--moore-navy);
+  --color-moore-charcoal: var(--moore-charcoal);
+  --color-moore-gold: var(--moore-gold);
+  --color-moore-offwhite: var(--moore-offwhite);
+  --color-moore-white: var(--moore-white);
+  --color-moore-black: var(--moore-black);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background-color: var(--moore-gold);
+  color: var(--moore-navy);
+}
