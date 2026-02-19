@@ -6,27 +6,28 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     quote:
-      "Guy's hands-on approach transformed my theoretical knowledge into real profit. I went from paralysed by fear to completing my first $450k development in 18 months.",
+      "I had done three property development courses before I found Guy. I understood the theory completely. But I was frozen. I could not pull the trigger on a site because I had no one to tell me whether I was reading it correctly. Guy changed that. He walked me through his own Glenelg East project financials on our first meeting. Real numbers. Real margins. Real lessons. I went from paralysed to completing my first development in 18 months.",
     name: "Dr. Sarah",
-    role: "Surgeon",
-    location: "Glenelg East Project",
+    role: "Surgeon, Adelaide",
+    location: "Glenelg East, SA",
     result: "$187k profit",
     size: "large",
   },
   {
     quote:
-      "The personalised guidance was invaluable. Having Guy validate every major decision gave me the confidence to execute.",
+      "As a senior engineer, I am used to managing complex projects. But property development in Adelaide has its own rules, its own councils, and its own traps. Having Guy validate every major decision, from site selection in Brighton through to builder contracts, gave me the confidence to execute without second-guessing myself at every turn.",
     name: "Mark",
-    role: "Senior Engineer",
-    location: "Brighton Project",
+    role: "Senior Engineer, Adelaide",
+    location: "Brighton, SA",
     result: "$234k profit",
     size: "medium",
   },
   {
-    quote: "Worth every cent. The ROI speaks for itself.",
+    quote:
+      "I was sceptical. I had seen enough property gurus to know the difference between someone who teaches and someone who does. Guy does. He is active in the Adelaide market right now. That is what made the difference.",
     name: "James",
-    role: "Corporate Lawyer",
-    location: "Somerton Park Project",
+    role: "Corporate Lawyer, Adelaide",
+    location: "Somerton Park, SA",
     result: "$156k profit",
     size: "small",
   },
@@ -58,8 +59,13 @@ export function LpaTestimonials() {
     <section id="results" className="py-24 lg:py-32 bg-moore-white">
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         <div className="mb-16">
-          <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">CLIENT RESULTS</span>
-          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">What Clients Have Achieved</h2>
+          <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">TESTIMONIALS</span>
+          <div className="lg:flex lg:items-end lg:justify-between">
+            <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Client Success Stories</h2>
+            <p className="text-moore-charcoal/60 max-w-md mt-4 lg:mt-0 leading-relaxed">
+              Adelaide professionals who moved from theory to reality with Guy Moore alongside them.
+            </p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
@@ -85,6 +91,7 @@ export function LpaTestimonials() {
               </div>
               <div className="text-right">
                 <div className="text-moore-gold text-2xl font-light">{testimonials[0].result}</div>
+                <div className="text-moore-charcoal/40 text-xs mt-1">First development</div>
               </div>
             </div>
           </div>
@@ -109,11 +116,38 @@ export function LpaTestimonials() {
                   <div>
                     <div className="text-moore-navy font-medium text-sm">{testimonial.name}</div>
                     <div className="text-moore-charcoal/60 text-xs">{testimonial.role}</div>
+                    <div className="text-moore-charcoal/60 text-xs">{testimonial.location}</div>
                   </div>
-                  <div className="text-moore-gold text-lg font-light">{testimonial.result}</div>
+                  <div className="text-right">
+                    <div className="text-moore-gold text-lg font-light">{testimonial.result}</div>
+                    <div className="text-moore-charcoal/40 text-xs mt-1">First development</div>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Adelaide Projects Bar */}
+        <div className="mt-12 border border-moore-charcoal/10 p-8 lg:p-10">
+          <div className="lg:flex lg:items-center lg:justify-between gap-8">
+            <div className="mb-6 lg:mb-0">
+              <span className="text-moore-gold text-xs tracking-[0.4em] mb-2 block">ADELAIDE CASE STUDIES</span>
+              <p className="text-moore-charcoal/70 text-sm leading-relaxed max-w-2xl">
+                Guy's own Adelaide projects include South Brighton ($857k profit, 163% CoC return), Glenelg East, and
+                Somerton Park. These are the real numbers he shares with every client.
+              </p>
+            </div>
+            <div className="flex gap-8 flex-shrink-0">
+              <div className="text-center">
+                <div className="text-moore-navy text-3xl font-light">$857k</div>
+                <div className="text-moore-charcoal/50 text-xs tracking-wide uppercase mt-1">South Brighton</div>
+              </div>
+              <div className="text-center">
+                <div className="text-moore-navy text-3xl font-light">163%</div>
+                <div className="text-moore-charcoal/50 text-xs tracking-wide uppercase mt-1">CoC Return</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

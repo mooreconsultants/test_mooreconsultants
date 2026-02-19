@@ -34,7 +34,7 @@ export function LpaHero() {
         <div className="lg:hidden absolute inset-0 z-0">
           <img
             src="/guy-moore-site-visit-mobile.jpg"
-            alt="Guy Moore reviewing development plans on site"
+            alt="Guy Moore reviewing development plans on site in Adelaide"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-moore-offwhite/90 via-moore-offwhite/85 to-moore-offwhite/95" />
@@ -45,12 +45,12 @@ export function LpaHero() {
           <div className="absolute inset-0 bg-moore-navy/20" />
           <img
             src="/luxury-modern-architectural-building-exterior-with.jpg"
-            alt="Modern Adelaide property development"
+            alt="Completed Adelaide property development"
             className="w-full h-full object-cover"
           />
           <div className="absolute left-8 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
             <span className="text-moore-offwhite/30 text-xs tracking-[0.5em] uppercase">
-              Property Development Excellence
+              Adelaide Property Development
             </span>
           </div>
         </div>
@@ -65,26 +65,24 @@ export function LpaHero() {
           />
 
           <div ref={contentRef} className="relative opacity-0 transition-opacity duration-1000">
-            <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE CONSULTANTS</span>
+            <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE CONSULTANTS · ADELAIDE</span>
 
             <h1 className="font-serif text-5xl lg:text-7xl text-moore-navy leading-[1.1] mb-6">
-              Your First
+              From Theory
               <br />
-              <span className="text-moore-charcoal">Development,</span>
-              <br />
-              Done Right
+              <span className="text-moore-charcoal">to Reality.</span>
             </h1>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <h2 className="text-xl lg:text-2xl text-moore-charcoal font-light mb-6">
-              One-on-One Coaching for Australians Ready to Build Real Wealth Through Property
+              Adelaide's Only Execution-Focused Property Development Partner
             </h2>
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-md">
-              Guy Moore is an active Adelaide property developer who has built a $23M portfolio from a $450k starting
-              point. He now takes a select number of clients through the exact same process, one step at a time, from
-              foundations through to a completed, profitable development.
+              You have done the research. You understand the theory. But when it comes to actually executing your first
+              Adelaide development, the fear of getting it wrong stops you cold. Guy Moore has built a $23M portfolio
+              right here in Adelaide. He does not teach theory. He builds with you.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -92,7 +90,7 @@ export function LpaHero() {
                 onClick={() => setActiveModal("discovery")}
                 className="group inline-flex items-center justify-center gap-3 bg-moore-navy text-moore-offwhite px-8 py-4 text-sm tracking-widest uppercase transition-all hover:bg-moore-charcoal"
               >
-                Book a Free Discovery Call
+                Book a Free Adelaide Consultation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
@@ -102,7 +100,7 @@ export function LpaHero() {
               className="inline-flex items-center gap-2 text-moore-charcoal text-sm tracking-wide hover:text-moore-gold transition-colors"
             >
               <Download className="w-4 h-4" />
-              Download Free Feasibility Checklist
+              Download Free Adelaide Feasibility Checklist
             </a>
           </div>
         </div>
@@ -111,8 +109,8 @@ export function LpaHero() {
         <div className="absolute bottom-0 left-0 right-0 lg:left-[10%] lg:right-auto lg:bottom-12 lg:w-auto">
           <div className="bg-moore-navy text-moore-offwhite px-8 lg:px-12 py-6 lg:py-8 flex flex-col sm:flex-row gap-6 lg:gap-16">
             {[
-              { value: "$23M", label: "Completed Projects" },
-              { value: "10+", label: "Years Experience" },
+              { value: "$23M", label: "Adelaide Projects Completed" },
+              { value: "10+", label: "Years in Adelaide Market" },
               { value: "163%", label: "Best CoC Return" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">

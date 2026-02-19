@@ -5,18 +5,21 @@ import { useEffect, useRef } from "react"
 const problems = [
   {
     number: "01",
-    title: "You don't know if you have enough capital",
-    body: "Everyone says you need $500k or more. But what does that actually mean for your situation? What structures can you use? What finance options are available? These questions stop most people before they even start.",
+    segment: "The Paralysed Learner",
+    title: "You have consumed the courses. You are still not executing.",
+    body: "You understand feasibility. You know what a planning overlay is. You have run the numbers on paper. But when it comes to committing real money to a real Adelaide site, analysis paralysis sets in. You need expert validation at every decision point, not more theory.",
   },
   {
     number: "02",
-    title: "You don't know how to find the right site",
-    body: "Finding a profitable development site is not about browsing realestate.com.au. It requires specific knowledge of what to look for, how to run a feasibility, and how to negotiate. Without a guide, the risk of getting it wrong is significant.",
+    segment: "The Time-Poor Professional",
+    title: "Your career demands 60 hours a week. You cannot afford to learn on the job.",
+    body: "As a doctor, lawyer, engineer, or senior executive, your time is worth too much to spend navigating Adelaide council approvals, vetting builders, and running feasibilities. You need a partner who handles the complexity while you focus on your career.",
   },
   {
     number: "03",
-    title: "You have no one to validate your decisions",
-    body: "Property development is full of decision points where the wrong call costs you tens of thousands of dollars. Without an experienced mentor in your corner, you are making those calls alone.",
+    segment: "The Experienced Investor",
+    title: "Passive investment returns are no longer enough.",
+    body: "You already own investment properties in Adelaide. You understand the market. But the gap between passive investment and active development feels significant. You need someone who has made that transition successfully and can accelerate your path to your first profitable development.",
   },
 ]
 
@@ -49,12 +52,13 @@ export function LpaProblem() {
           <div className="lg:col-span-4">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE CHALLENGE</span>
             <h2 className="font-serif text-3xl lg:text-4xl text-moore-navy mb-6 leading-tight">
-              Three things that stop first-time developers
+              Three types of Adelaide professional. One solution.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-charcoal/70 leading-relaxed">
-              These are not unique problems. They are the same barriers that come up in almost every conversation Guy
-              Moore has with someone who wants to develop property. And they are all solvable.
+              Every client Guy Moore works with is different. But the barriers they face are remarkably consistent.
+              Whether you are paralysed by fear, time-poor, or ready to scale, the path forward is the same: expert
+              guidance from someone who has done it in Adelaide, with real money, on real sites.
             </p>
           </div>
 
@@ -62,18 +66,19 @@ export function LpaProblem() {
             <div className="relative">
               <img
                 src="/professional-consultant-reviewing-architectural-pl.jpg"
-                alt="Guy Moore reviewing development plans with a client"
+                alt="Guy Moore reviewing Adelaide development plans with a client"
                 className="w-full h-[350px] lg:h-[420px] object-cover mb-0"
               />
 
               <div className="bg-moore-navy p-8 lg:p-12 lg:absolute lg:-bottom-12 lg:-left-16 lg:w-[85%]">
                 <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE SOLUTION</span>
                 <h3 className="font-serif text-2xl text-moore-offwhite mb-4">
-                  Personalised coaching that removes the guesswork
+                  We build with you. Not just teach you.
                 </h3>
                 <p className="text-moore-offwhite/70 leading-relaxed text-sm">
-                  Guy Moore works with you one-on-one, sharing his own financials, his own process, and his own hard-won
-                  lessons. You do not get a course. You get a partner who has done it himself.
+                  Most property courses leave you stranded with theory. Moore Consultants is different. Guy works with
+                  you one-on-one, sharing his own Adelaide project financials, his own process, and his own hard-won
+                  lessons from 10+ years in this market. You do not get a course. You get a partner.
                 </p>
               </div>
             </div>
@@ -87,6 +92,7 @@ export function LpaProblem() {
                 {problem.number}
               </span>
               <div className="pt-8">
+                <span className="text-moore-gold text-xs tracking-[0.3em] uppercase mb-3 block">{problem.segment}</span>
                 <h3 className="font-serif text-xl text-moore-navy mb-4 leading-snug">{problem.title}</h3>
                 <p className="text-moore-charcoal/70 leading-relaxed text-sm">{problem.body}</p>
               </div>

@@ -1,32 +1,44 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Target, Award, Users, Handshake } from "lucide-react"
+import { Target, Award, Users, MapPin, ShieldCheck, TrendingUp } from "lucide-react"
 
 const differentiators = [
   {
-    icon: Target,
-    title: "He builds with you, not just teaches you",
+    icon: MapPin,
+    title: "Adelaide expertise, not national theory",
     description:
-      "Guy Moore is an active developer. When he coaches you, he is drawing on projects he is running right now, not case studies from ten years ago. You get real-world knowledge at the point it is most relevant.",
+      "Guy Moore has spent 10+ years navigating Adelaide's specific planning system, council approval processes, and local market dynamics. Glenelg. Brighton. Somerton Park. Burnside. Unley. He knows which suburbs offer genuine development margin and which ones look good on paper but do not stack up. No interstate consultant or national course can replicate that.",
+  },
+  {
+    icon: Target,
+    title: "We build with you, not just teach you",
+    description:
+      "Most property courses leave you stranded with theory. Moore Consultants is different. Guy is an active Adelaide developer right now, and every coaching engagement is grounded in what he is doing in the market today. You get real-world knowledge at the point it is most relevant.",
   },
   {
     icon: Award,
     title: "A $23M track record you can verify",
     description:
-      "Guy shares his actual project financials with clients. You will see the real numbers, the real margins, and the real lessons from every development he has completed. No polished pitch decks. Just the truth.",
+      "Guy shares his actual Adelaide project financials with clients. You will see the real numbers, the real margins, and the real lessons from South Brighton, Glenelg East, and Somerton Park. Not polished pitch decks. Not estimated returns. The truth.",
   },
   {
     icon: Users,
     title: "One-on-one, not a group course",
     description:
-      "Every client gets direct access to Guy. There is no cohort, no online portal, and no recorded videos. Your coaching is tailored to your situation, your capital position, and your goals.",
+      "Every client gets direct access to Guy. There is no cohort, no online portal, and no recorded videos. Your coaching is tailored to your situation, your capital position, and your goals as an Adelaide professional.",
   },
   {
-    icon: Handshake,
-    title: "Your success is the only metric that matters",
+    icon: ShieldCheck,
+    title: "Expert validation at every decision point",
     description:
-      "Guy takes a limited number of clients at any one time. That is by design. It means every client gets the attention and accountability they need to actually execute, not just learn.",
+      "The fear of a $100,000 mistake is the single biggest barrier for first-time developers. Guy's role is to de-risk your investment by validating every major decision before you commit. Site selection. Feasibility. Builder selection. DA strategy. You are never making those calls alone.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Limited to eight active clients at any time",
+    description:
+      "Guy personally oversees every engagement. That means he limits his client intake to ensure every client gets the attention and accountability they need to actually execute. When a spot opens, it fills quickly.",
   },
 ]
 
@@ -62,8 +74,8 @@ export function LpaDifferentiation() {
           <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-4">Why Moore Consultants?</h2>
 
           <p className="text-moore-offwhite/60 leading-relaxed mb-12 max-w-md">
-            There is no shortage of property development courses and coaches in Australia. Here is what makes this
-            different.
+            There is no shortage of property development courses and coaches in Australia. Most of them are national
+            operators with no local execution. Here is what makes Moore Consultants different.
           </p>
 
           <div className="space-y-10">
@@ -88,15 +100,28 @@ export function LpaDifferentiation() {
         <div className="relative h-[500px] lg:h-auto">
           <img
             src="/modern-luxury-property-development-aerial-view-ade.jpg"
-            alt="Moore Consultants completed development project"
+            alt="Completed Moore Consultants Adelaide development project"
             className="w-full h-full object-cover"
           />
 
-          {/* Overlay Stat */}
-          <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/80 via-transparent to-transparent flex items-end p-8 lg:p-12">
-            <div>
-              <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">$23M+</div>
-              <div className="text-moore-offwhite/80 text-sm tracking-widest uppercase">In Completed Projects</div>
+          {/* Overlay Stats */}
+          <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/90 via-moore-navy/30 to-transparent flex items-end p-8 lg:p-12">
+            <div className="space-y-6 w-full">
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-moore-gold text-4xl lg:text-5xl font-light mb-1">$857k</div>
+                  <div className="text-moore-offwhite/70 text-xs tracking-widest uppercase">Profit, South Brighton</div>
+                </div>
+                <div>
+                  <div className="text-moore-gold text-4xl lg:text-5xl font-light mb-1">163%</div>
+                  <div className="text-moore-offwhite/70 text-xs tracking-widest uppercase">Cash-on-Cash Return</div>
+                </div>
+              </div>
+              <div>
+                <div className="text-moore-offwhite/50 text-xs tracking-wide">
+                  Proudly Adelaide-based. Serving SA property developers since 2014.
+                </div>
+              </div>
             </div>
           </div>
         </div>

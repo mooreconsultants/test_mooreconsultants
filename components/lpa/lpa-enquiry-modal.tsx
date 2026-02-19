@@ -17,29 +17,29 @@ interface ServiceModalContent {
 
 const modalContent: Record<ServiceKey, ServiceModalContent> = {
   discovery: {
-    eyebrow: "FREE DISCOVERY CALL",
+    eyebrow: "FREE ADELAIDE CONSULTATION",
     headline: "Find out exactly where to start in 30 minutes",
     subheadline:
-      "A free, no-obligation call with Guy Moore. In 30 minutes you will know which service is the right starting point for your situation, what your realistic capital position needs to look like, and what your path to a first development could look like.",
+      "A free, no-obligation call with Guy Moore. In 30 minutes you will know which service is the right starting point for your situation, what your realistic capital position needs to look like, and what your path to a first Adelaide development could look like. Guy gives you honest advice, not a sales pitch.",
     bullets: [
       "Understand which service matches where you are right now",
-      "Get an honest assessment of your capital and finance position",
-      "Ask any questions you have about the process",
+      "Get an honest assessment of your capital and Adelaide finance position",
+      "Ask any questions you have about the Adelaide development process",
       "No obligation to proceed -- just clarity on your next step",
     ],
-    formHeading: "Book your free discovery call",
-    ctaLabel: "BOOK MY DISCOVERY CALL",
+    formHeading: "Book your free Adelaide consultation",
+    ctaLabel: "BOOK MY FREE CONSULTATION",
     price: "Free",
   },
   tour: {
-    eyebrow: "TOUR DE COASTAL",
-    headline: "See a real development before you commit to anything",
+    eyebrow: "TOUR DE COASTAL · $500",
+    headline: "See a real Adelaide development before you commit to anything",
     subheadline:
-      "The Tour de Coastal is a private, two-hour site visit with Guy Moore across active and completed development projects in Adelaide's coastal suburbs. It is the lowest-risk way to find out if property development is right for you.",
+      "The Tour de Coastal is a private site visit with Guy Moore across active and completed development projects in Adelaide's coastal suburbs. Glenelg. Brighton. Somerton Park. You will see how Guy reads a block, runs a preliminary feasibility, and identifies the opportunities most buyers walk straight past. It is the lowest-risk way to find out if property development is right for you.",
     bullets: [
-      "Walk 3+ active or completed development sites with Guy",
-      "See real project financials and margins firsthand",
-      "Ask every question you have in a private setting",
+      "Walk active and completed Adelaide development sites with Guy",
+      "See real Adelaide project financials and margins firsthand",
+      "Understand Adelaide's planning overlays and council requirements on the ground",
       "No obligation to proceed further afterwards",
     ],
     formHeading: "Book your Tour de Coastal",
@@ -47,29 +47,29 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     price: "$500",
   },
   foundations: {
-    eyebrow: "FOUNDATIONS",
-    headline: "Get your structures and strategy right before you spend a dollar on a site",
+    eyebrow: "FOUNDATIONS · $2,000",
+    headline: "Get your structures and strategy right before you spend a dollar on an Adelaide site",
     subheadline:
-      "Most first-time developers get this wrong. They find a site before they have the right entity structure, the right finance position, or a clear strategy. Foundations fixes that. It is the coaching programme that gets you genuinely ready.",
+      "Most first-time developers get this wrong. They find a site before they have the right entity structure, the right finance position, or a clear strategy for the Adelaide market. Foundations fixes that. It is the one-on-one coaching programme that gets you genuinely ready to develop.",
     bullets: [
-      "Entity structuring for property development (trusts, companies, joint ventures)",
-      "Finance readiness assessment and planning",
-      "Introduction to development types and feasibility modelling",
-      "A clear, written action plan for your first project",
+      "Entity structuring for Adelaide property development (trusts, companies, joint ventures)",
+      "Finance readiness assessment and Adelaide borrowing capacity review",
+      "Adelaide-specific development types and feasibility modelling introduction",
+      "A clear, written action plan for your first Adelaide project",
     ],
     formHeading: "Enquire about Foundations",
     ctaLabel: "ENQUIRE NOW",
     price: "$2,000",
   },
   livedeals: {
-    eyebrow: "LIVE DEALS",
-    headline: "Find and secure your first profitable development site",
+    eyebrow: "LIVE DEALS · $8,000",
+    headline: "Find and secure your first profitable Adelaide development site",
     subheadline:
-      "This is the most critical step in any development. Live Deals takes you through the entire site identification and acquisition process, with Guy Moore coaching you on real sites in real time. You do not just learn the theory -- you apply it.",
+      "This is the most critical step in any development. Live Deals takes you through the entire site identification and acquisition process in the Adelaide market, with Guy Moore coaching you on real sites in real time. Glenelg. Brighton. Burnside. Unley. You do not just learn the theory -- you apply it, with Guy alongside you at every decision point.",
     bullets: [
-      "Site identification criteria and search strategy tailored to your market",
-      "Full financial feasibility modelling on real sites",
-      "Due diligence process and risk assessment",
+      "Adelaide site identification criteria and search strategy tailored to your capital",
+      "Full financial feasibility modelling with real Adelaide suburb numbers",
+      "Due diligence process, Adelaide planning checks, and risk assessment",
       "Negotiation coaching and acquisition support through to contract",
     ],
     formHeading: "Enquire about Live Deals",
@@ -77,12 +77,12 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     price: "$8,000",
   },
   pm: {
-    eyebrow: "FULL PROJECT MANAGEMENT",
-    headline: "Guy Moore alongside you for the entire development",
+    eyebrow: "PROJECT MANAGEMENT · FROM $50,000",
+    headline: "Guy Moore alongside you for the entire Adelaide development",
     subheadline:
-      "For clients who have completed Foundations and Live Deals and are ready to build. This is a true end-to-end partnership, from DA coordination and builder selection through to construction oversight and final sale.",
+      "For clients who have completed the coaching programmes and are ready to execute their first Adelaide development. This is a true end-to-end partnership. Guy manages the entire project alongside you, from DA coordination with Adelaide councils through to builder selection, construction oversight, and final sale. You make the major decisions. He handles everything else.",
     bullets: [
-      "DA coordination and council liaison",
+      "DA coordination and Adelaide council liaison",
       "Builder selection and contract negotiation",
       "Construction oversight and progress management",
       "Sales strategy and settlement coordination",
@@ -167,9 +167,10 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
               <CheckCircle className="w-8 h-8 text-moore-gold" />
             </div>
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">{content.eyebrow}</span>
-            <h3 className="font-serif text-3xl text-moore-navy mb-4">Thanks, we will be in touch shortly.</h3>
+            <h3 className="font-serif text-3xl text-moore-navy mb-4">Thanks. Guy will be in touch shortly.</h3>
             <p className="text-moore-charcoal/60 max-w-md leading-relaxed mb-8">
-              Guy Moore personally reviews every enquiry. You can expect to hear back within one business day.
+              Guy personally reviews every enquiry. No sales team. No automated responses. You can expect to hear
+              back within one business day.
             </p>
             <button
               onClick={onClose}
@@ -247,7 +248,7 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
 
                 <div>
                   <label className="block text-xs tracking-widest uppercase text-moore-charcoal/60 mb-2">
-                    Where are you in your property journey?
+                    Where are you in your Adelaide property journey?
                   </label>
                   <textarea
                     value={message}
@@ -267,7 +268,7 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
                 </button>
 
                 <p className="text-moore-charcoal/40 text-xs text-center leading-relaxed">
-                  Guy personally reviews every enquiry. No sales team. No automated responses.
+                  Guy personally reviews every enquiry. No sales team. No automated responses. Proudly Adelaide-based since 2014.
                 </p>
               </form>
             </div>

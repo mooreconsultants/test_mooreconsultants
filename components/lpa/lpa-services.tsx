@@ -18,14 +18,14 @@ const coreServices: {
     number: "01",
     title: "Tour de Coastal",
     price: "$500",
-    tagline: "See it before you build it",
+    tagline: "The lowest-risk first step",
     description:
-      "A private, two-hour one-on-one tour of active and completed development projects across Adelaide's coastal suburbs. See the process firsthand, understand what makes a site viable, and get your questions answered directly by Guy Moore.",
+      "Walk active and completed development sites in Adelaide's coastal suburbs with Guy Moore. See how he reads a block, runs a preliminary feasibility, and identifies the opportunities most buyers walk straight past. This is not a seminar. It is Guy, on the ground, in the Adelaide suburbs where he has completed $23M in projects.",
     deliverables: [
-      "Private site visits to 3+ active or completed projects",
-      "Behind-the-scenes look at real financials and margins",
+      "Private site visits to active and completed Adelaide projects",
+      "Behind-the-scenes look at real project financials and margins",
       "One-on-one Q&A with Guy throughout the tour",
-      "Ideal first step before committing to any further investment",
+      "Understand Adelaide's planning overlays and council requirements",
     ],
     highlight: false,
     serviceKey: "tour",
@@ -36,12 +36,12 @@ const coreServices: {
     price: "$2,000",
     tagline: "Get your structures and strategy right",
     description:
-      "Before you can develop, you need to be ready. This coaching programme covers the essential groundwork: how to structure your entity, how to understand your finance position, and how to build a clear strategy for your first project.",
+      "The essential groundwork before you look at a single Adelaide site. This one-on-one coaching programme covers how to structure your entity, understand your finance position, and build a clear strategy for your first project. Most property courses skip this step entirely. Guy does not.",
     deliverables: [
-      "Entity structuring for property development",
-      "Finance readiness assessment and planning",
-      "Introduction to development types and feasibility",
-      "Clear action plan for your first project",
+      "Entity structuring for Adelaide property development",
+      "Finance readiness assessment and borrowing capacity review",
+      "Adelaide-specific development types and feasibility introduction",
+      "First project action plan tailored to your goals and capital",
     ],
     highlight: false,
     serviceKey: "foundations",
@@ -50,14 +50,14 @@ const coreServices: {
     number: "03",
     title: "Live Deals",
     price: "$8,000",
-    tagline: "Find and secure your first profitable site",
+    tagline: "Find and secure your first profitable Adelaide site",
     description:
-      "The most critical step in any development. This coaching programme takes you through the entire site identification and acquisition process, from understanding what to look for to running a full feasibility and negotiating the deal.",
+      "The most critical step in any development. This coaching programme takes you through the entire site identification and acquisition process in the Adelaide market, from understanding what to look for in Glenelg, Brighton, Burnside, and Unley, to running a full feasibility and negotiating the deal. Guy is alongside you at every decision point.",
     deliverables: [
-      "Site identification criteria and search strategy",
-      "Full financial feasibility modelling",
-      "Due diligence process and risk assessment",
-      "Negotiation coaching and acquisition support",
+      "Adelaide site identification criteria and search strategy",
+      "Full financial feasibility modelling with real Adelaide numbers",
+      "Due diligence process, planning checks, and risk assessment",
+      "Negotiation coaching and acquisition support through to settlement",
     ],
     highlight: true,
     serviceKey: "livedeals",
@@ -97,8 +97,8 @@ export function LpaServices() {
               <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Choose Your Starting Point</h2>
             </div>
             <p className="text-moore-charcoal/70 max-w-md mt-6 lg:mt-0 leading-relaxed">
-              Every client starts somewhere different. Choose the service that matches where you are right now, and build
-              from there.
+              Every client starts somewhere different. Choose the service that matches where you are right now.
+              Guy will tell you honestly if a different starting point makes more sense for your situation.
             </p>
           </div>
 
@@ -202,10 +202,10 @@ export function LpaServices() {
                 <span className="text-moore-charcoal/50 text-xs tracking-[0.4em] mb-3 block">FURTHER IN YOUR JOURNEY?</span>
                 <h3 className="font-serif text-2xl text-moore-navy mb-2">Full Project Management</h3>
                 <p className="text-moore-charcoal/60 text-sm leading-relaxed max-w-2xl">
-                  For clients who are ready to build and want Guy alongside them for the entire project. From DA
-                  coordination and builder selection through to construction oversight and final sale, this is a true
-                  end-to-end partnership. Typically suited to clients who have completed the Foundations and Live Deals
-                  programmes and are ready to execute.
+                  For clients who have completed the coaching programmes and are ready to execute their first Adelaide
+                  development. Guy manages the entire project alongside you, from DA coordination and builder selection
+                  through to construction oversight and final sale. You make the major decisions. He handles everything
+                  else. Typically suited to clients who have completed Foundations and Live Deals and are ready to build.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4 flex-shrink-0">

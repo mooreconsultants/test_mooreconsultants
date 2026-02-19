@@ -9,16 +9,16 @@ const steps = [
     title: "Get Ready",
     subtitle: "Foundations — $2,000",
     description:
-      "Start with the Foundations programme to get your structures, finance position, and strategy right. This is the groundwork that every successful developer needs before they look at a single site.",
+      "Start with the Foundations programme to get your structures, finance position, and Adelaide-specific strategy right. This is the groundwork every successful developer needs before they look at a single site. You will leave with an entity structure, a finance readiness assessment, and a first project action plan tailored to the Adelaide market.",
     icon: BookOpen,
-    optional: "Or begin with the Tour de Coastal ($500) to see what is possible before committing.",
+    optional: "Or begin with the Tour de Coastal ($500) to walk active Adelaide development sites with Guy before committing to anything further.",
   },
   {
     number: "02",
     title: "Find Your Site",
     subtitle: "Live Deals — $8,000",
     description:
-      "Work with Guy to identify, evaluate, and secure a profitable development site. This is where the real coaching happens, with Guy alongside you at every decision point from search to settlement.",
+      "Work with Guy to identify, evaluate, and secure a profitable development site in Adelaide. This is where the real coaching happens. Guy is alongside you at every decision point, from initial site search through feasibility modelling, due diligence, and negotiation. You are never making a $100,000 decision alone.",
     icon: MapPin,
     optional: null,
   },
@@ -27,7 +27,7 @@ const steps = [
     title: "Build and Profit",
     subtitle: "Project Management — From $50,000",
     description:
-      "For clients ready to execute, Guy can manage the entire project alongside you. From DA coordination and builder selection through to construction oversight and final sale.",
+      "For clients who have completed the coaching programmes and are ready to execute, Guy can manage the entire Adelaide development alongside you. DA coordination, builder selection, construction oversight, and sales strategy. You make the major decisions. Guy handles everything else.",
     icon: HardHat,
     optional: null,
   },
@@ -60,10 +60,13 @@ export function LpaProcess() {
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         <div className="text-center mb-20">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE JOURNEY</span>
-          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy mb-6">Your Path to a Profitable Development</h2>
+          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy mb-6">
+            Your Path to a Profitable Adelaide Development
+          </h2>
           <p className="text-moore-charcoal/60 max-w-xl mx-auto leading-relaxed">
             Every client starts at a different point. The journey below is the natural progression, but you can enter
-            at whichever step makes sense for where you are right now.
+            at whichever step makes sense for where you are right now. Guy will tell you honestly which starting point
+            is right for your situation.
           </p>
         </div>
 

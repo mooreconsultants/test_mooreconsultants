@@ -47,7 +47,7 @@ export function LpaContact() {
       <div className="absolute inset-0">
         <img
           src="/modern-architectural-home-interior-with-natural-li.jpg"
-          alt="Modern property development interior"
+          alt="Modern Adelaide property development interior"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-moore-navy/90" />
@@ -61,7 +61,8 @@ export function LpaContact() {
           </h2>
           <p className="text-moore-offwhite/70 text-lg max-w-xl mx-auto leading-relaxed">
             Book a free, no-obligation discovery call with Guy Moore. In 30 minutes, you will know exactly which
-            service is the right starting point for your situation.
+            service is the right starting point for your situation and what your path to your first Adelaide
+            development looks like.
           </p>
         </div>
 
@@ -70,9 +71,10 @@ export function LpaContact() {
             <div className="inline-flex items-center justify-center w-16 h-16 border border-moore-gold mb-6">
               <CheckCircle className="w-8 h-8 text-moore-gold" />
             </div>
-            <h3 className="font-serif text-3xl text-moore-offwhite mb-4">Thank you, we will be in touch shortly.</h3>
+            <h3 className="font-serif text-3xl text-moore-offwhite mb-4">Thank you. Guy will be in touch shortly.</h3>
             <p className="text-moore-offwhite/60 max-w-md mx-auto">
-              Guy or a member of the team will reach out within one business day to confirm your discovery call.
+              Guy personally reviews every enquiry. He or a member of the team will reach out within one business day
+              to confirm your free discovery call.
             </p>
           </div>
         ) : (
@@ -113,24 +115,24 @@ export function LpaContact() {
                 Which service are you interested in?
               </option>
               <option value="tour" className="bg-moore-navy">
-                Tour de Coastal ($500)
+                Tour de Coastal — See Adelaide development sites with Guy ($500)
               </option>
               <option value="foundations" className="bg-moore-navy">
-                Foundations ($2,000)
+                Foundations — Get your structures and strategy right ($2,000)
               </option>
               <option value="live-deals" className="bg-moore-navy">
-                Live Deals ($8,000)
+                Live Deals — Find and secure your first Adelaide site ($8,000)
               </option>
               <option value="project-management" className="bg-moore-navy">
-                Project Management ($50,000+)
+                Project Management — End-to-end development management ($50,000+)
               </option>
               <option value="not-sure" className="bg-moore-navy">
-                Not sure yet — I'd like to talk it through
+                Not sure yet — I would like to talk it through
               </option>
             </select>
 
             <textarea
-              placeholder="Briefly tell us where you are in your property development journey (optional)"
+              placeholder="Briefly tell us where you are in your Adelaide property development journey (optional)"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows={4}
@@ -142,12 +144,13 @@ export function LpaContact() {
                 type="submit"
                 className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-navy px-12 py-5 text-sm tracking-widest uppercase transition-all hover:bg-moore-offwhite font-medium"
               >
-                Book My Free Discovery Call
+                Book My Free Adelaide Consultation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
               <p className="text-moore-offwhite/50 text-sm mt-6">
-                No obligation. No sales pitch. Just an honest conversation about your goals.
+                No obligation. No sales pitch. Just an honest conversation about your Adelaide development goals.
+                Proudly Adelaide-based since 2014.
               </p>
             </div>
           </form>
