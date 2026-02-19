@@ -75,7 +75,7 @@ export function LpcHero() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               <button onClick={() => setActiveModal("tour")} className="group border border-moore-offwhite/30 text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:border-moore-gold hover:text-moore-gold transition-all duration-300">
-                START WITH THE TOUR ($400)
+                START WITH THE TOUR ($500)
               </button>
             </div>
           </div>
@@ -85,10 +85,10 @@ export function LpcHero() {
               <p className="text-moore-gold text-xs tracking-[0.4em] uppercase mb-6">EARLY BIRD RATES THIS MONTH</p>
               <div className="space-y-0">
                 {[
-                  { name: "Tour de Coastal", early: "$400", standard: "$500", saving: "Save $100" },
-                  { name: "Foundations", early: "$1,750", standard: "$2,000", saving: "Save $250" },
-                  { name: "Tour + Foundations Bundle", early: "$2,150", standard: "$3,000", saving: "Save $850" },
-                  { name: "Full Development Pathway", early: "$8,500", standard: "$10,000", saving: "Save $1,500" },
+                  { name: "Tour de Coastal", early: "$500", standard: "$650", saving: "Save $150" },
+                  { name: "Foundations", early: "$2,000", standard: "$2,500", saving: "Save $500" },
+                  { name: "Tour + Foundations Bundle", early: "$2,500", standard: "$3,200", saving: "Save $700" },
+                  { name: "Full Development Pathway", early: "$10,000", standard: "$12,000", saving: "Save $2,000" },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center justify-between py-4 border-b border-moore-offwhite/10 last:border-0">
                     <div>
