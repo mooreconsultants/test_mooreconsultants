@@ -4,6 +4,8 @@ import { LpaStatement } from "@/components/lpa/lpa-statement"
 import { LpaProblem } from "@/components/lpa/lpa-problem"
 import { LpaServices } from "@/components/lpa/lpa-services"
 import { LpaAbout } from "@/components/lpa/lpa-about"
+import { LpaOnTheGround } from "@/components/lpa/lpa-on-the-ground"
+import { LpaDifferentiation } from "@/components/lpa/lpa-differentiation"
 import { LpaProcess } from "@/components/lpa/lpa-process"
 import { LpaTestimonials } from "@/components/lpa/lpa-testimonials"
 import { LpaContact } from "@/components/lpa/lpa-contact"
@@ -23,6 +25,8 @@ export default function LandingPageA() {
       <LpaStatement />
       <LpaProblem />
       <LpaServices />
+      <LpaOnTheGround />
+      <LpaDifferentiation />
       <LpaAbout />
       <LpaProcess />
       <LpaTestimonials />
