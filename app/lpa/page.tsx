@@ -26,10 +26,10 @@ export default function LandingPageA() {
       <LpaProblem />
       <LpaServices />
       <LpaOnTheGround />
+      <LpaTestimonials />
       <LpaDifferentiation />
       <LpaAbout />
       <LpaProcess />
-      <LpaTestimonials />
       <LpaContact />
       <Footer />
     </main>
