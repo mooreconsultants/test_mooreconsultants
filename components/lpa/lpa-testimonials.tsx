@@ -7,7 +7,7 @@ const testimonials = [
   {
     quote:
       "Guy's hands-on approach transformed my theoretical knowledge into real profit. I went from paralysed by fear to completing my first $450k development in 18 months.",
-    name: "Dr. Sarah Chen",
+    name: "Dr. Sarah",
     role: "Surgeon",
     location: "Glenelg East Project",
     result: "$187k profit",
@@ -16,7 +16,7 @@ const testimonials = [
   {
     quote:
       "The personalised guidance was invaluable. Having Guy validate every major decision gave me the confidence to execute.",
-    name: "Mark Thompson",
+    name: "Mark",
     role: "Senior Engineer",
     location: "Brighton Project",
     result: "$234k profit",
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote: "Worth every cent. The ROI speaks for itself.",
-    name: "James Liu",
+    name: "James",
     role: "Corporate Lawyer",
     location: "Somerton Park Project",
     result: "$156k profit",
