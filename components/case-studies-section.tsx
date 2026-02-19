@@ -32,7 +32,7 @@ const projects = [
       { label: "Timeline", value: "20 Months" },
       { label: "Type", value: "Subdivision" },
     ],
-    image: "/new-contemporary-home-subdivision-adelaide-austral.jpg",
+    image: "/images/properties/somerton-park-render-exterior.webp",
   },
 ]
 

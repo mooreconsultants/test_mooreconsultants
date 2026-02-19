@@ -48,22 +48,20 @@ export function AboutSection() {
             <h2 className="font-serif text-4xl lg:text-6xl text-moore-navy mb-4 relative z-10">Guy Moore</h2>
 
             <p className="text-moore-charcoal text-xl lg:text-2xl font-light mb-8 relative z-10">
-              From $450k to $5M in 9 Years
+              Built and Sold Over $23M in New Adelaide Homes in 7 Years
             </p>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-lg relative z-10">
-              With over a decade of hands-on experience in Adelaide's property market, Guy has transformed his initial
-              investment into a multi-million dollar portfolio. Now, he's dedicated to helping high-achieving
-              professionals replicate his success through personalised coaching and expert guidance.
+              Guy Moore has spent the past seven years building and selling new homes across Adelaide's coastal suburbs, accumulating over $23M in completed projects. He is not a course seller or a theorist. He is an active developer who works alongside a small number of clients each year, sharing the same strategies, sites, and financial models he uses in his own business.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mb-10 relative z-10">
               {[
-                { value: "$23M", label: "Completed Projects" },
-                { value: "10+", label: "Years Experience" },
+                { value: "$23M+", label: "New Homes Built & Sold" },
+                { value: "7 Years", label: "To Build the Portfolio" },
                 { value: "163%", label: "Best CoC Return" },
               ].map((stat, index) => (
                 <div key={index}>

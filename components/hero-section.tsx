@@ -106,9 +106,9 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 lg:left-[10%] lg:right-auto lg:bottom-12 lg:w-auto">
         <div className="bg-moore-navy text-moore-offwhite px-8 lg:px-12 py-6 lg:py-8 flex flex-col sm:flex-row gap-6 lg:gap-16">
           {[
-            { value: "$23M", label: "Completed Projects" },
-            { value: "10+", label: "Years Experience" },
-            { value: "8", label: "Active Clients" },
+            { value: "$23M+", label: "New Homes Built & Sold" },
+            { value: "7 Yrs", label: "To Build the Portfolio" },
+            { value: "Scott", label: "Current Active Client" },
           ].map((stat, index) => (
             <div key={index} className="text-center sm:text-left">
               <div className="text-moore-gold text-3xl lg:text-4xl font-light mb-1">{stat.value}</div>

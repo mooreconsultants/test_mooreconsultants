@@ -8,6 +8,7 @@ const coreServices: {
   number: string
   title: string
   price: string
+  priceDetail?: string
   tagline: string
   description: string
   deliverables: string[]
@@ -50,6 +51,7 @@ const coreServices: {
     number: "03",
     title: "Live Deals",
     price: "$8,000",
+    priceDetail: "$4,000 upfront + $4,000 on success",
     tagline: "Find and secure your first profitable Adelaide site",
     description:
       "The most critical step in any development. This coaching programme takes you through the entire site identification and acquisition process in the Adelaide market, from understanding what to look for in Glenelg, Brighton, Burnside, and Unley, to running a full feasibility and negotiating the deal. Guy is alongside you at every decision point.",
@@ -148,12 +150,21 @@ export function LpaServices() {
                       {service.tagline}
                     </p>
 
-                    <div
-                      className={`text-3xl font-light mb-6 ${
-                        service.highlight ? "text-moore-gold" : "text-moore-navy"
-                      }`}
-                    >
-                      {service.price}
+                    <div className="mb-6">
+                      <div
+                        className={`text-3xl font-light ${
+                          service.highlight ? "text-moore-gold" : "text-moore-navy"
+                        }`}
+                      >
+                        {service.price}
+                      </div>
+                      {service.priceDetail && (
+                        <div className={`text-xs mt-1 tracking-wide ${
+                          service.highlight ? "text-moore-offwhite/50" : "text-moore-charcoal/50"
+                        }`}>
+                          {service.priceDetail}
+                        </div>
+                      )}
                     </div>
 
                     <p

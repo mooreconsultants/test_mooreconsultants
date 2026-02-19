@@ -13,6 +13,7 @@ interface ServiceModalContent {
   formHeading: string
   ctaLabel: string
   price: string
+  priceNote?: string
 }
 
 const modalContent: Record<ServiceKey, ServiceModalContent> = {
@@ -62,7 +63,7 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     price: "$2,000",
   },
   livedeals: {
-    eyebrow: "LIVE DEALS · $8,000",
+    eyebrow: "LIVE DEALS · $4,000 UPFRONT + $4,000 ON SUCCESS",
     headline: "Find and secure your first profitable Adelaide development site",
     subheadline:
       "This is the most critical step in any development. Live Deals takes you through the entire site identification and acquisition process in the Adelaide market, with Guy Moore coaching you on real sites in real time. Glenelg. Brighton. Burnside. Unley. You do not just learn the theory -- you apply it, with Guy alongside you at every decision point.",
@@ -75,6 +76,7 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     formHeading: "Enquire about Live Deals",
     ctaLabel: "ENQUIRE NOW",
     price: "$8,000",
+    priceNote: "$4,000 upfront. $4,000 payable on successful site acquisition.",
   },
   pm: {
     eyebrow: "PROJECT MANAGEMENT · FROM $50,000",
@@ -184,7 +186,10 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
             {/* Left: Product Info */}
             <div className="bg-moore-navy px-8 lg:px-10 py-12 lg:py-14">
               <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">{content.eyebrow}</span>
-              <div className="text-moore-gold text-3xl font-light mb-4">{content.price}</div>
+              <div className="text-moore-gold text-3xl font-light mb-1">{content.price}</div>
+              {content.priceNote && (
+                <div className="text-moore-offwhite/40 text-xs mb-4">{content.priceNote}</div>
+              )}
               <h3 className="font-serif text-2xl lg:text-3xl text-moore-offwhite mb-4 leading-snug">
                 {content.headline}
               </h3>

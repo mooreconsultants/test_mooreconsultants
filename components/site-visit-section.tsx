@@ -85,8 +85,8 @@ export function SiteVisitSection() {
 
             {/* Video Caption */}
             <p className="text-moore-white/40 text-sm mt-6 italic">
-              A recent site assessment in South East Queensland — identifying a 12-lot subdivision opportunity the
-              vendor had missed entirely.
+              A recent site assessment in Adelaide's coastal suburbs — Lot 2, 19 King George Avenue, Somerton Park.
+              One sold, one remaining. Construction underway.
             </p>
           </div>
 
