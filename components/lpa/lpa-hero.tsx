@@ -44,7 +44,7 @@ export function LpaHero() {
         <div className="hidden lg:block w-[60%] relative">
           <div className="absolute inset-0 bg-moore-navy/20" />
           <img
-            src="/luxury-modern-architectural-building-exterior-with.jpg"
+            src="/Hero.jpg"
             alt="Completed Adelaide property development"
             className="w-full h-full object-cover"
           />
