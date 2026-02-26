@@ -9,19 +9,19 @@ const visitHighlights = [
     icon: Eye,
     title: "Adelaide Zoning and Overlay Analysis",
     description:
-      "Identify development potential and planning constraints specific to Adelaide councils before you commit a single dollar.",
+      "Identify development potential and planning constraints specific to Adelaide councils .",
   },
   {
     icon: Ruler,
-    title: "Site Measurements and Yield Assessment",
+    title: "Site Measurements",
     description:
-      "Assess dimensions, setbacks, and buildable area for maximum yield. Guy reads a block the way most buyers never will.",
+      "Assess dimensions, setbacks, and buildable area for maximum yield.",
   },
   {
     icon: MapPin,
     title: "Suburb and Neighbourhood Context",
     description:
-      "Evaluate surrounding developments, demographics, and real demand in Adelaide's coastal and eastern suburbs.",
+      "Evaluate surrounding developments, demographics, and real demand spots in Adelaide.",
   },
   {
     icon: FileText,
