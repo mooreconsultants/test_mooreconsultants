@@ -75,7 +75,7 @@ export function SiteVisitSection() {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-r-2 border-b-2 border-moore-gold" />
 
               {/* Video */}
-              <div className="relative bg-moore-charcoal aspect-video">
+              <div className="relative bg-moore-charcoal aspect-video rounded-2xl overflow-hidden">
                 <video className="w-full h-full object-cover" controls poster="/aerial-view-of-residential-development-site.jpg">
                   <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Video_Revision_Request_Granted-H2mpoYTRyghufHilHZuaBqV6bLxeRm.mp4" type="video/mp4" />
                   Your browser does not support the video tag.

@@ -64,7 +64,7 @@ export function TestimonialsSection() {
 
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Large testimonial */}
-          <div className="lg:col-span-7 bg-moore-offwhite p-8 lg:p-12 relative">
+          <div className="lg:col-span-7 bg-moore-offwhite p-8 lg:p-12 rounded-2xl relative shadow-sm">
             <span className="text-moore-gold text-8xl font-serif absolute top-4 left-8 opacity-20">"</span>
 
             <blockquote className="font-serif text-xl lg:text-2xl text-moore-navy leading-relaxed mb-8 relative z-10 pt-8">
@@ -92,7 +92,7 @@ export function TestimonialsSection() {
           {/* Stacked smaller testimonials */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:gap-8">
             {testimonials.slice(1).map((testimonial, index) => (
-              <div key={index} className="bg-moore-offwhite p-8 relative flex-1">
+              <div key={index} className="bg-moore-offwhite p-8 rounded-2xl relative flex-1 shadow-sm">
                 <span className="text-moore-gold text-5xl font-serif absolute top-2 left-6 opacity-20">"</span>
 
                 <blockquote className="text-moore-charcoal leading-relaxed mb-6 relative z-10 pt-4">

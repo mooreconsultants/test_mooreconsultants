@@ -20,7 +20,7 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled ? "bg-moore-navy/95 backdrop-blur-md py-4" : "bg-transparent py-6",
+        isScrolled ? "bg-moore-navy/95 backdrop-blur-md py-4 rounded-b-2xl" : "bg-transparent py-6",
       )}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -59,10 +59,10 @@ export function Navigation() {
           <a
             href="#contact"
             className={cn(
-              "px-6 py-3 text-xs tracking-widest uppercase transition-all border",
+              "px-6 py-3 rounded-xl text-xs font-medium tracking-widest uppercase transition-all bg-moore-gold text-moore-white hover:bg-moore-blue shadow-md",
               isScrolled
-                ? "border-moore-gold text-moore-gold hover:bg-moore-gold hover:text-moore-navy"
-                : "border-moore-gold text-moore-gold hover:bg-moore-gold hover:text-moore-navy",
+                ? "bg-moore-gold text-moore-white hover:bg-moore-blue"
+                : "bg-moore-gold text-moore-white hover:bg-moore-blue",
             )}
           >
             Book Consultation

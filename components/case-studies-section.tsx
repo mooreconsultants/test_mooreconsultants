@@ -77,7 +77,7 @@ export function CaseStudiesSection() {
 
         <div className="space-y-8">
           {projects.map((project, index) => (
-            <div key={index} className="group relative h-[400px] lg:h-[500px] overflow-hidden cursor-pointer">
+            <div key={index} className="group relative h-[400px] lg:h-[500px] overflow-hidden rounded-2xl cursor-pointer shadow-sm">
               <img
                 src={project.image || "/placeholder.svg"}
                 alt={project.location}

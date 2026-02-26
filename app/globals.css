@@ -4,13 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Moore Consultants Brand Colors */
-  --moore-navy: #0f172a;
-  --moore-charcoal: #27272a;
-  --moore-gold: #d4af37;
-  --moore-offwhite: #fafaf9;
+  /* Moore Consultants Brand Colors (from logo) */
+  --moore-blue: #2a9dbe;      /* logo blue – accents, highlights */
+  --moore-gray: #4a4a4a;      /* logo dark gray – headings, primary text */
+  --moore-navy: #4a4a4a;      /* alias for gray (used in components) */
+  --moore-charcoal: #3e444a; /* slightly softer gray for secondary text */
+  --moore-gold: #2a9dbe;     /* accent = logo blue (replaces gold) */
+  --moore-offwhite: #f8fafb;
   --moore-white: #ffffff;
-  --moore-black: #09090b;
+  --moore-black: #4a4a4a;
 
   --background: var(--moore-offwhite);
   --foreground: var(--moore-black);
@@ -28,10 +30,10 @@
   --accent-foreground: var(--moore-navy);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: rgba(15, 23, 42, 0.1);
-  --input: rgba(15, 23, 42, 0.1);
-  --ring: var(--moore-gold);
-  --radius: 0rem;
+  --border: rgba(74, 74, 74, 0.12);
+  --input: rgba(74, 74, 74, 0.12);
+  --ring: var(--moore-blue);
+  --radius: 1rem; /* Rounded corners across the site (buttons, cards, images) */
 }
 
 @theme inline {
@@ -40,6 +42,8 @@
   --font-mono: "Geist Mono", "Geist Mono Fallback", monospace;
 
   /* Custom Moore Colors */
+  --color-moore-blue: var(--moore-blue);
+  --color-moore-gray: var(--moore-gray);
   --color-moore-navy: var(--moore-navy);
   --color-moore-charcoal: var(--moore-charcoal);
   --color-moore-gold: var(--moore-gold);
@@ -104,6 +108,6 @@ html {
 
 /* Custom selection color */
 ::selection {
-  background-color: var(--moore-gold);
-  color: var(--moore-navy);
+  background-color: var(--moore-blue);
+  color: var(--moore-white);
 }

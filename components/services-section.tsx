@@ -78,7 +78,7 @@ export function ServicesSection() {
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Large Card */}
           <div className="lg:col-span-5 group">
-            <div className="bg-moore-white p-8 lg:p-10 h-full border border-transparent hover:border-moore-gold transition-all duration-500 relative overflow-hidden">
+            <div className="bg-moore-white p-8 lg:p-10 h-full rounded-2xl border border-transparent hover:border-moore-gold transition-all duration-500 relative overflow-hidden shadow-sm">
               <div className="absolute top-0 left-0 w-0 h-1 bg-moore-gold transition-all duration-500 group-hover:w-full" />
 
               <span className="text-moore-gold text-6xl font-serif opacity-20 absolute top-4 right-6">
@@ -115,7 +115,7 @@ export function ServicesSection() {
           <div className="lg:col-span-7 flex flex-col gap-6 lg:gap-8">
             {/* Medium Card */}
             <div className="group">
-              <div className="bg-moore-white p-8 lg:p-10 border border-transparent hover:border-moore-gold transition-all duration-500 relative overflow-hidden">
+              <div className="bg-moore-white p-8 lg:p-10 rounded-2xl border border-transparent hover:border-moore-gold transition-all duration-500 relative overflow-hidden shadow-sm">
                 <div className="absolute top-0 left-0 w-0 h-1 bg-moore-gold transition-all duration-500 group-hover:w-full" />
 
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
@@ -150,7 +150,7 @@ export function ServicesSection() {
 
             {/* Small Card - Different styling */}
             <div className="group">
-              <div className="bg-moore-navy p-8 lg:p-10 relative overflow-hidden">
+              <div className="bg-moore-navy p-8 lg:p-10 rounded-2xl relative overflow-hidden shadow-sm">
                 <div className="absolute top-0 left-0 w-0 h-1 bg-moore-gold transition-all duration-500 group-hover:w-full" />
 
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">

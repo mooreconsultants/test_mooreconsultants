@@ -68,7 +68,7 @@ export function CTASection() {
               placeholder="Your Name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="bg-transparent border border-moore-offwhite/30 px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
+              className="bg-transparent border border-moore-offwhite/30 rounded-xl px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
               required
             />
             <input
@@ -76,7 +76,7 @@ export function CTASection() {
               placeholder="Email Address"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="bg-transparent border border-moore-offwhite/30 px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
+              className="bg-transparent border border-moore-offwhite/30 rounded-xl px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
               required
             />
             <input
@@ -84,7 +84,7 @@ export function CTASection() {
               placeholder="Phone Number"
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="bg-transparent border border-moore-offwhite/30 px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
+              className="bg-transparent border border-moore-offwhite/30 rounded-xl px-6 py-4 text-moore-offwhite placeholder:text-moore-offwhite/50 focus:border-moore-gold focus:outline-none transition-colors"
             />
           </div>
 
@@ -92,7 +92,7 @@ export function CTASection() {
             <select
               value={formData.goal}
               onChange={(e) => setFormData({ ...formData, goal: e.target.value })}
-              className="bg-transparent border border-moore-offwhite/30 px-6 py-4 text-moore-offwhite focus:border-moore-gold focus:outline-none transition-colors appearance-none cursor-pointer"
+              className="bg-transparent border border-moore-offwhite/30 rounded-xl px-6 py-4 text-moore-offwhite focus:border-moore-gold focus:outline-none transition-colors appearance-none cursor-pointer"
               required
             >
               <option value="" className="bg-moore-navy">
@@ -114,7 +114,7 @@ export function CTASection() {
             <select
               value={formData.budget}
               onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-              className="bg-transparent border border-moore-offwhite/30 px-6 py-4 text-moore-offwhite focus:border-moore-gold focus:outline-none transition-colors appearance-none cursor-pointer"
+              className="bg-transparent border border-moore-offwhite/30 rounded-xl px-6 py-4 text-moore-offwhite focus:border-moore-gold focus:outline-none transition-colors appearance-none cursor-pointer"
               required
             >
               <option value="" className="bg-moore-navy">
@@ -138,7 +138,7 @@ export function CTASection() {
           <div className="text-center pt-4">
             <button
               type="submit"
-              className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-navy px-12 py-5 text-sm tracking-widest uppercase transition-all hover:bg-moore-offwhite font-medium"
+              className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-white px-12 py-5 rounded-xl text-sm tracking-widest uppercase transition-all hover:bg-moore-blue font-medium shadow-lg"
             >
               Book Free Consultation
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

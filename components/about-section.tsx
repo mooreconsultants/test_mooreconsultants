@@ -30,7 +30,7 @@ export function AboutSection() {
       <div ref={sectionRef} className="max-w-[1400px] mx-auto opacity-0 transition-opacity duration-1000">
         <div className="grid lg:grid-cols-12 min-h-[800px]">
           {/* Left - Large Portrait */}
-          <div className="lg:col-span-6 relative h-[500px] lg:h-auto">
+          <div className="lg:col-span-6 relative h-[500px] lg:h-auto overflow-hidden rounded-r-2xl lg:rounded-2xl">
             <img src="/guy-moore-portrait.jpg" alt="Guy Moore" className="w-full h-full object-cover object-top" />
             {/* Vertical accent */}
             <div className="hidden lg:block absolute right-0 top-1/4 bottom-1/4 w-px bg-moore-gold" />
