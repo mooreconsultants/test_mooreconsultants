@@ -87,7 +87,7 @@ export function LpaOnTheGround() {
                   <video
                     className="w-full h-full object-cover"
                     controls
-                    poster="/aerial-view-of-residential-development-site.jpg"
+                    poster="/development_site.JPG"
                   >
                     <source
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Video_Revision_Request_Granted-H2mpoYTRyghufHilHZuaBqV6bLxeRm.mp4"
@@ -97,11 +97,6 @@ export function LpaOnTheGround() {
                   </video>
                 </div>
               </div>
-
-              <p className="text-moore-offwhite/40 text-sm mt-6 italic">
-                A recent site assessment in Adelaide's coastal suburbs -- identifying a development opportunity the
-                vendor had missed entirely.
-              </p>
             </div>
 
             {/* Content Side */}
