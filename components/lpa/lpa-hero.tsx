@@ -89,8 +89,7 @@ export function LpaHero() {
               <button
                 onClick={() => setActiveModal("discovery")}
                 className="group inline-flex items-center justify-center gap-3 bg-moore-navy text-moore-offwhite px-8 py-4 text-sm tracking-widest uppercase transition-all hover:bg-moore-charcoal"
-              >
-                Book a Free Adelaide Consultation
+              >Book a Free Adelaide Consultation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
