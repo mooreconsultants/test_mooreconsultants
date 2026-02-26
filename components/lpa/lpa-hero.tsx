@@ -96,6 +96,7 @@ export function LpaHero() {
           </div>
         </div>
 
+
         {/* Trust Bar */}
         <div className="absolute bottom-0 left-0 right-0 lg:left-[10%] lg:right-auto lg:bottom-12 lg:w-auto">
           <div className="bg-moore-navy text-moore-offwhite px-8 lg:px-12 py-6 lg:py-8 flex flex-col sm:flex-row gap-6 lg:gap-16">
