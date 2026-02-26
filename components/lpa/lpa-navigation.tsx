@@ -35,22 +35,7 @@ export function LpaNavigation() {
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
           <a href="#" className="flex flex-col">
-            <span
-              className={cn(
-                "text-sm tracking-[0.3em] font-light transition-colors",
-                isScrolled ? "text-moore-offwhite" : "text-moore-navy lg:text-moore-offwhite",
-              )}
-            >
-              MOORE
-            </span>
-            <span
-              className={cn(
-                "text-[10px] tracking-[0.2em] transition-colors",
-                isScrolled ? "text-moore-gold" : "text-moore-charcoal lg:text-moore-gold",
-              )}
-            >
-              CONSULTANTS
-            </span>
+            <img src="/mooreconsultantslogo.png" alt="Moore Consultants Logo"/>
           </a>
 
           <div className="hidden lg:flex items-center gap-12">
