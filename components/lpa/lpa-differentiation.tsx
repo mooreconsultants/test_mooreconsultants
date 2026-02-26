@@ -99,7 +99,7 @@ export function LpaDifferentiation() {
         {/* Right - Image with Stat Overlay */}
         <div className="relative h-[500px] lg:h-auto">
           <img
-            src="/modern-luxury-property-development-aerial-view-ade.jpg"
+            src="/Why-Moore-Consultants.jpg"
             alt="Completed Moore Consultants Adelaide development project"
             className="w-full h-full object-cover"
           />

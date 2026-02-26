@@ -10,7 +10,7 @@ const steps = [
     subtitle: "Tour de Coastal — $500",
     description:
       "Start with the Tour de Coastal where Guy will personally drive you to all his recently development sites. He will talk through the challenges, opportunities, and lessons learned from each site. You will have the opportunity to ask any question on this 2 hour tour.",
-    icon: BookOpen,
+    icon: HardHat,
     optional: null,
   },
   {
