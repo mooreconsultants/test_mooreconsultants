@@ -35,7 +35,7 @@ export function LpaNavigation() {
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
           <a href="#" className="flex flex-col">
-            <img src="/mooreconsultantslogo.png" alt="Moore Consultants Logo"/>
+            <img src="/mooreconsultantslogo.png" width="25%" height="25%" alt="Moore Consultants Logo"/>
           </a>
 
           <div className="hidden lg:flex items-center gap-12">
