@@ -94,14 +94,6 @@ export function LpaHero() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
-
-            /*
-            <a href="#" className="inline-flex items-center gap-2 text-moore-charcoal text-sm tracking-wide hover:text-moore-gold transition-colors">
-              <Download className="w-4 h-4" />
-              Download Free Adelaide Feasibility Checklist
-            </a>
-            */
-    
           </div>
         </div>
 
