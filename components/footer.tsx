@@ -8,10 +8,11 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           {/* Logo */}
           <div className="mb-8 lg:mb-0">
-            <div className="flex flex-col">
-              <span className="text-moore-offwhite text-sm tracking-[0.3em] font-light">MOORE</span>
-              <span className="text-moore-gold text-[10px] tracking-[0.2em]">CONSULTANTS</span>
-            </div>
+            <img
+              src="/moore-consultants-logo.png"
+              alt="Moore Consultants"
+              className="h-12 w-auto lg:h-14"
+            />
           </div>
 
           {/* Navigation */}

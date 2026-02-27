@@ -20,27 +20,18 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled ? "bg-moore-navy/95 backdrop-blur-md py-4 rounded-b-2xl" : "bg-transparent py-6",
+        isScrolled
+          ? "bg-moore-navy/95 backdrop-blur-md py-4 rounded-b-2xl"
+          : "bg-moore-navy/70 backdrop-blur-sm py-6",
       )}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
-        <a href="#" className="flex flex-col">
-          <span
-            className={cn(
-              "text-sm tracking-[0.3em] font-light transition-colors",
-              isScrolled ? "text-moore-offwhite" : "text-moore-navy lg:text-moore-offwhite",
-            )}
-          >
-            MOORE
-          </span>
-          <span
-            className={cn(
-              "text-[10px] tracking-[0.2em] transition-colors",
-              isScrolled ? "text-moore-gold" : "text-moore-charcoal lg:text-moore-gold",
-            )}
-          >
-            CONSULTANTS
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src="/moore-consultants-logo.png"
+            alt="Moore Consultants"
+            className="h-10 w-auto lg:h-12"
+          />
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
@@ -50,7 +41,7 @@ export function Navigation() {
               href={`#${item.toLowerCase().replace(" ", "-")}`}
               className={cn(
                 "text-xs tracking-widest uppercase transition-colors hover:text-moore-gold",
-                isScrolled ? "text-moore-offwhite/80" : "text-moore-offwhite/80",
+                isScrolled ? "text-moore-offwhite/85" : "text-moore-offwhite",
               )}
             >
               {item}
@@ -71,9 +62,9 @@ export function Navigation() {
 
         <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? (
-            <X className={isScrolled ? "text-moore-offwhite" : "text-moore-navy"} />
+            <X className="text-moore-offwhite" />
           ) : (
-            <Menu className={isScrolled ? "text-moore-offwhite" : "text-moore-navy"} />
+            <Menu className="text-moore-offwhite" />
           )}
         </button>
       </div>
