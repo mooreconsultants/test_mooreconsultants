@@ -20,9 +20,7 @@ export function Navigation() {
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        isScrolled
-          ? "bg-moore-navy/95 backdrop-blur-md py-4 rounded-b-2xl"
-          : "bg-moore-navy/70 backdrop-blur-sm py-6",
+        isScrolled ? "bg-white/95 backdrop-blur-md py-4 rounded-b-2xl shadow-sm" : "bg-white py-6 shadow-sm",
       )}
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
@@ -41,7 +39,7 @@ export function Navigation() {
               href={`#${item.toLowerCase().replace(" ", "-")}`}
               className={cn(
                 "text-xs tracking-widest uppercase transition-colors hover:text-moore-gold",
-                isScrolled ? "text-moore-offwhite/85" : "text-moore-offwhite",
+                "text-black",
               )}
             >
               {item}
@@ -62,9 +60,9 @@ export function Navigation() {
 
         <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           {isMobileMenuOpen ? (
-            <X className="text-moore-offwhite" />
+            <X className="text-black" />
           ) : (
-            <Menu className="text-moore-offwhite" />
+            <Menu className="text-black" />
           )}
         </button>
       </div>
