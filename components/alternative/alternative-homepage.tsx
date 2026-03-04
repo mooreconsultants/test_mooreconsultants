@@ -68,48 +68,12 @@ const processSteps = [
   { num: "05", title: "Profit & Scale", body: "Strategic sales execution and planning for your next profitable development." },
 ]
 
-/* ───────────────────────── CSS KEYFRAMES (injected once) ───────────────────────── */
-
-const styleId = "alt-page-keyframes"
-
-function injectKeyframes() {
-  if (typeof document === "undefined") return
-  if (document.getElementById(styleId)) return
-  const style = document.createElement("style")
-  style.id = styleId
-  style.textContent = `
-    @keyframes alt-float { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-12px) } }
-    @keyframes alt-glow-pulse { 0%,100%{ opacity: 0.04 } 50%{ opacity: 0.08 } }
-    @keyframes alt-scale-in { from { opacity:0; transform: scale(0.92) translateY(40px); } to { opacity:1; transform: scale(1) translateY(0); } }
-    @keyframes alt-slide-up { from { opacity:0; transform: translateY(60px) rotate(2deg); } to { opacity:1; transform: translateY(0) rotate(0deg); } }
-    @keyframes alt-slide-right { from { opacity:0; transform: translateX(-80px); } to { opacity:1; transform: translateX(0); } }
-    @keyframes alt-slide-left { from { opacity:0; transform: translateX(80px); } to { opacity:1; transform: translateX(0); } }
-    @keyframes alt-counter-spin { from { opacity:0; transform: scale(0.9) rotate(-3deg); } to { opacity:1; transform: scale(1) rotate(0deg); } }
-    @keyframes alt-line-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    @keyframes alt-number-count { from { opacity:0; transform: translateY(20px) scale(1.3); } to { opacity:1; transform: translateY(0) scale(1); } }
-
-    [data-anim] { opacity: 0; }
-    [data-anim].is-visible { animation-fill-mode: both; }
-    [data-anim="scale-in"].is-visible { animation: alt-scale-in 1s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-    [data-anim="slide-up"].is-visible { animation: alt-slide-up 1s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-    [data-anim="slide-right"].is-visible { animation: alt-slide-right 1.2s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-    [data-anim="slide-left"].is-visible { animation: alt-slide-left 1.2s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-    [data-anim="counter-spin"].is-visible { animation: alt-counter-spin 1s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-    [data-anim="number-count"].is-visible { animation: alt-number-count 0.8s cubic-bezier(0.22,1,0.36,1) var(--delay, 0s) both; }
-  `
-  document.head.appendChild(style)
-}
-
 /* ───────────────────────── COMPONENT ───────────────────────── */
 
 export function AlternativeHomepage() {
   const [scrollY, setScrollY] = useState(0)
   const [vh, setVh] = useState(0)
   const heroRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    injectKeyframes()
-  }, [])
 
   useEffect(() => {
     setVh(window.innerHeight)
@@ -440,18 +404,10 @@ export function AlternativeHomepage() {
         </div>
       </div>
 
-      {/* ── TEXTURE STRIP with parallax quote ── */}
+      {/* ── TEXTURE STRIP ── */}
       <div className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
         <img src="/alternative-texture.jpg" alt="Architectural material detail" className="w-full h-full object-cover" style={{ transform: `translateY(${Math.max(0, (scrollY - vh * 3) * 0.15)}px)` }} />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #f8fafb 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.5) 65%, #f8fafb 100%)" }} />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="max-w-xl mx-6 px-8 text-center">
-            <p className="text-white/40 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">Philosophy</p>
-            <p className="text-white" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 300, letterSpacing: "0.01em", lineHeight: 1.8, textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
-              We don&apos;t sell information. We build alongside you — with real money, real risk, and real accountability.
-            </p>
-          </div>
-        </div>
       </div>
 
       {/* ── PROCESS ── sticky heading + cascading cards (Apple-style) */}

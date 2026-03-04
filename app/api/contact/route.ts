@@ -1,8 +1,14 @@
 import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 import type { ContactSubmissionPayload } from "@/lib/contact-submit"
 
 const ADMIN_RECIPIENTS = ["gmoore@mooreconsultants.com.au", "alex@3pdigital.com.au"]
+
+function getResendClient(): Resend {
+  const key = process.env.RESEND_API_KEY
+  if (!key) throw new Error("RESEND_API_KEY is not set")
+  return new Resend(key)
+}
 
 function escapeHtml(value: string): string {
   return value
@@ -142,27 +148,6 @@ function buildAdminEmailHtml(payload: ContactSubmissionPayload, requestMeta: Rec
   `
 }
 
-function getSmtpTransporter() {
-  const host = process.env.SMTP_HOST
-  const port = Number(process.env.SMTP_PORT || "587")
-  const user = process.env.SMTP_USER
-  const pass = process.env.SMTP_PASS
-
-  if (!host || !user || !pass) {
-    throw new Error("SMTP_HOST, SMTP_USER, and SMTP_PASS must be set")
-  }
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: {
-      user,
-      pass,
-    },
-  })
-}
-
 function validatePayload(body: unknown): body is ContactSubmissionPayload {
   if (!body || typeof body !== "object") return false
   const record = body as Record<string, unknown>
@@ -212,12 +197,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid name and email address." }, { status: 400 })
     }
 
-    const transporter = getSmtpTransporter()
-    const fromAddress = process.env.CONTACT_FROM_EMAIL || process.env.SMTP_USER
-
-    if (!fromAddress) {
-      return NextResponse.json({ error: "CONTACT_FROM_EMAIL or SMTP_USER must be set." }, { status: 500 })
-    }
+    const resend = getResendClient()
+    const fromAddress = process.env.RESEND_FROM_EMAIL || "Moore Consultants <onboarding@resend.dev>"
 
     const requestMeta = {
       "IP Address": request.headers.get("x-forwarded-for") || "Unavailable",
@@ -226,17 +207,17 @@ export async function POST(request: Request) {
       Host: request.headers.get("host") || "Unavailable",
     }
 
-    await transporter.sendMail({
+    await resend.emails.send({
       from: fromAddress,
       to: payload.email,
-      replyTo: ADMIN_RECIPIENTS.join(", "),
+      replyTo: ADMIN_RECIPIENTS,
       subject: "We received your Moore Consultants submission",
       html: buildUserEmailHtml(payload),
     })
 
-    await transporter.sendMail({
+    await resend.emails.send({
       from: fromAddress,
-      to: ADMIN_RECIPIENTS.join(", "),
+      to: ADMIN_RECIPIENTS,
       replyTo: payload.email,
       subject: `[Moore Consultants] ${payload.triggerLabel} from ${payload.name}`,
       html: buildAdminEmailHtml(payload, requestMeta),
