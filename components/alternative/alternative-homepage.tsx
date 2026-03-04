@@ -194,8 +194,8 @@ export function AlternativeHomepage() {
           style={{ transform: `translateY(${heroParallax}px) scale(1.1)` }}
         >
           <img
-            src="/alternative-hero.jpg"
-            alt="Premium coastal development at golden hour"
+            src="/Hero.jpg"
+            alt="Completed Adelaide property development"
             className="w-full h-full object-cover"
           />
         </div>
@@ -306,7 +306,7 @@ export function AlternativeHomepage() {
               style={{ opacity: 0, transform: "translateY(30px) rotate(1deg)", transition: "all 1.2s cubic-bezier(0.22, 1, 0.36, 1)" }}
             >
               <div className="relative rounded-3xl overflow-hidden shadow-[0_40px_80px_rgba(0,0,0,0.12)]">
-                <img src="/alternative-portrait.jpg" alt="Guy Moore on site" className="w-full aspect-[3/4] object-cover" />
+                <img src="/guy-moore-portrait.jpg" alt="Guy Moore on site" className="w-full aspect-[3/4] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
               <div
@@ -353,11 +353,14 @@ export function AlternativeHomepage() {
       {/* ── FULL-BLEED IMAGE INTERLUDE ── */}
       <div className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
         <img src="/alternative-aerial.jpg" alt="Aerial view of active coastal development" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafb] via-transparent to-[#f8fafb]" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #f8fafb 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.55) 65%, #f8fafb 100%)" }} />
         <div className="absolute inset-0 flex items-center justify-center" data-reveal style={{ opacity: 0, transform: "translateY(20px)", transition: "all 1s cubic-bezier(0.22, 1, 0.36, 1)" }}>
-          <p className="text-white text-center max-w-2xl px-6 drop-shadow-lg" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.5rem)", fontWeight: 300, letterSpacing: "-0.01em", lineHeight: 1.3 }}>
-            &ldquo;Most buyers see a block of land. I see setback requirements, easement constraints, slope percentages, and council overlays.&rdquo;
-          </p>
+          <div className="max-w-3xl mx-6 px-8 text-center">
+            <p className="text-white/40 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">Guy Moore</p>
+            <p className="text-white" style={{ fontSize: "clamp(1.5rem, 3.5vw, 2.25rem)", fontWeight: 300, letterSpacing: "-0.01em", lineHeight: 1.5, textShadow: "0 2px 30px rgba(0,0,0,0.5)" }}>
+              &ldquo;Most buyers see a block of land. I see setback requirements, easement constraints, slope percentages, and council overlays.&rdquo;
+            </p>
+          </div>
         </div>
       </div>
 
@@ -440,12 +443,14 @@ export function AlternativeHomepage() {
       {/* ── TEXTURE STRIP with parallax quote ── */}
       <div className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
         <img src="/alternative-texture.jpg" alt="Architectural material detail" className="w-full h-full object-cover" style={{ transform: `translateY(${Math.max(0, (scrollY - vh * 3) * 0.15)}px)` }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #f8fafb 0%, rgba(248,250,251,0.3) 30%, rgba(248,250,251,0.3) 70%, #f8fafb 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #f8fafb 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.5) 65%, #f8fafb 100%)" }} />
         <div className="absolute inset-0 flex items-center justify-center">
-          <p data-anim="scale-in" className="text-[#4a4a4a] text-center max-w-lg px-6" style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)", fontWeight: 300, letterSpacing: "0.05em", lineHeight: 1.8 }}>
-            <span className="text-[#2a9dbe] font-mono text-[10px] tracking-[0.4em] uppercase block mb-4">Philosophy</span>
-            We don&apos;t sell information. We build alongside you — with real money, real risk, and real accountability.
-          </p>
+          <div className="max-w-xl mx-6 px-8 text-center">
+            <p className="text-white/40 font-mono text-[10px] tracking-[0.5em] uppercase mb-6">Philosophy</p>
+            <p className="text-white" style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.4rem)", fontWeight: 300, letterSpacing: "0.01em", lineHeight: 1.8, textShadow: "0 2px 20px rgba(0,0,0,0.5)" }}>
+              We don&apos;t sell information. We build alongside you — with real money, real risk, and real accountability.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -578,7 +583,7 @@ export function AlternativeHomepage() {
       </div>
 
       {/* ── SITE VISIT VIDEO ── cinematic dark with slide-in panels */}
-      <div className="relative py-24 lg:py-40 overflow-hidden" style={{ background: "linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 30%, #1a1a1a 70%, #0f0f0f 100%)" }}>
+      <div className="relative py-24 lg:py-40 overflow-hidden" style={{ background: "linear-gradient(180deg, #f8fafb 0%, #1a1a1a 15%, #1a1a1a 85%, #f8fafb 100%)" }}>
         <div className="absolute top-0 right-0 w-[60%] h-[60%] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(42,157,190,0.06), transparent 60%)", animation: "alt-glow-pulse 10s ease-in-out infinite" }} />
         <div className="absolute bottom-0 left-0 w-[40%] h-[40%] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(42,157,190,0.04), transparent 60%)", animation: "alt-glow-pulse 12s ease-in-out infinite 4s" }} />
 
@@ -670,6 +675,9 @@ export function AlternativeHomepage() {
         </div>
       </div>
 
+      {/* transition strip */}
+      <div className="h-16 lg:h-24" style={{ background: "linear-gradient(180deg, #f8fafb 0%, #141414 100%)" }} />
+
       {/* ── CONTACT ── split cinematic layout */}
       <ContactSection />
 
@@ -740,7 +748,7 @@ function ContactSection() {
   const selectCls = "w-full bg-transparent border border-white/10 rounded-xl px-6 py-4 text-white text-[15px] focus:border-[#2a9dbe] focus:outline-none transition-all duration-300 hover:border-white/20 appearance-none cursor-pointer"
 
   return (
-    <div id="contact" className="relative py-24 lg:py-40 overflow-hidden" style={{ background: "linear-gradient(180deg, #0a0a0a 0%, #141414 30%, #141414 70%, #0a0a0a 100%)" }}>
+    <div id="contact" className="relative py-16 lg:py-24 overflow-hidden" style={{ background: "#141414" }}>
       {/* pulsing ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] rounded-full pointer-events-none" style={{ background: "radial-gradient(circle, rgba(42,157,190,0.04), transparent 50%)", animation: "alt-glow-pulse 8s ease-in-out infinite" }} />
 
@@ -748,16 +756,16 @@ function ContactSection() {
         <div className="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
           {/* left — large typography */}
           <div className="lg:col-span-5 mb-12 lg:mb-0">
-            <p data-anim="slide-right" className="text-[#2a9dbe] text-[11px] tracking-[0.5em] uppercase mb-6 font-mono" style={{ "--delay": "0s" } as React.CSSProperties}>Index 06 · Get Started</p>
-            <h2 data-anim="slide-right" className="text-white leading-[1.05] mb-8" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 200, letterSpacing: "-0.03em", "--delay": "0.1s" } as React.CSSProperties}>
+            <p className="text-[#2a9dbe] text-[11px] tracking-[0.5em] uppercase mb-6 font-mono">Index 06 · Get Started</p>
+            <h2 className="text-white leading-[1.05] mb-8" style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 200, letterSpacing: "-0.03em" }}>
               Ready to Build Your First
               <br />
               <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic", fontWeight: 300 }}>Profitable Development?</span>
             </h2>
-            <p data-anim="slide-right" className="text-white/30 text-lg leading-relaxed mb-8" style={{ fontWeight: 300, "--delay": "0.2s" } as React.CSSProperties}>
+            <p className="text-white/30 text-lg leading-relaxed mb-8" style={{ fontWeight: 300 }}>
               Book a free 30-minute consultation. No obligation. No sales pitch. Just honest advice from someone who&apos;s done it.
             </p>
-            <div data-anim="slide-right" className="flex items-center gap-6 text-white/20 text-[12px]" style={{ "--delay": "0.3s" } as React.CSSProperties}>
+            <div className="flex items-center gap-6 text-white/20 text-[12px]">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#2a9dbe]/60" />
                 Free consultation
@@ -772,15 +780,13 @@ function ContactSection() {
           {/* right — floating form card */}
           <div className="lg:col-span-7">
             <div
-              data-anim="scale-in"
               className="rounded-[2rem] p-8 lg:p-12"
               style={{
-                "--delay": "0.15s",
                 background: "rgba(255,255,255,0.03)",
                 backdropFilter: "blur(20px)",
                 border: "1px solid rgba(255,255,255,0.06)",
                 boxShadow: "0 40px 80px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05)",
-              } as React.CSSProperties}
+              }}
             >
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-4">
