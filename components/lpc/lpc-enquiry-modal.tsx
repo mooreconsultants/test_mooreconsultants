@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, CheckCircle, Clock } from "lucide-react"
+import { submitContactSubmission } from "@/lib/contact-submit"
 
 export type EarlyBirdKey =
   | "tour"
@@ -127,6 +128,8 @@ export function LpcEnquiryModal({ service, onClose }: LpcEnquiryModalProps) {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -151,10 +154,34 @@ export function LpcEnquiryModal({ service, onClose }: LpcEnquiryModalProps) {
 
   const content = modalContent[service]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Early bird enquiry submitted:", { service, name, email, phone, message })
-    setSubmitted(true)
+    setSubmitError("")
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission({
+        sourcePage: "/lpc",
+        sourceComponent: "LpcEnquiryModal",
+        triggerLabel: content.eyebrow,
+        name,
+        email,
+        phone,
+        message,
+        details: {
+          "Selected service key": service,
+          "Offer headline": content.headline,
+          "Early bird price": content.earlyBirdPrice,
+          "Standard price": content.standardPrice || "-",
+          Saving: content.saving || "-",
+        },
+      })
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to send your enquiry.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -227,10 +254,11 @@ export function LpcEnquiryModal({ service, onClose }: LpcEnquiryModalProps) {
                   <label className="block text-xs tracking-widest uppercase text-moore-charcoal/60 mb-2">Where are you in your Adelaide property journey?</label>
                   <textarea value={message} onChange={(e) => setMessage(e.target.value)} rows={3} placeholder="A brief note about your situation helps Guy prepare for your call..." className="w-full border border-moore-charcoal/20 bg-moore-offwhite px-4 py-3 text-sm text-moore-navy placeholder:text-moore-charcoal/40 focus:outline-none focus:border-moore-gold transition-colors resize-none" />
                 </div>
-                <button type="submit" className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3">
-                  {content.ctaLabel}
+                <button type="submit" disabled={isSubmitting} className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-60">
+                  {isSubmitting ? "Sending..." : content.ctaLabel}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
+                {submitError && <p className="text-red-500 text-xs text-center leading-relaxed">{submitError}</p>}
                 <p className="text-moore-charcoal/40 text-xs text-center leading-relaxed">
                   Guy personally reviews every enquiry. No sales team. No automated responses.
                 </p>

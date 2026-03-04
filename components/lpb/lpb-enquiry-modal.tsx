@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, CheckCircle } from "lucide-react"
+import { submitContactSubmission } from "@/lib/contact-submit"
 
 export type BundleKey = "tour-foundations" | "tour-to-foundations" | "full-pathway" | "full-journey" | "discovery"
 
@@ -110,6 +111,8 @@ export function LpbEnquiryModal({ bundle, onClose }: LpbEnquiryModalProps) {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -134,11 +137,33 @@ export function LpbEnquiryModal({ bundle, onClose }: LpbEnquiryModalProps) {
 
   const content = modalContent[bundle]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Resend API integration to be wired in post-approval
-    console.log("Bundle enquiry submitted:", { bundle, name, email, phone, message })
-    setSubmitted(true)
+    setSubmitError("")
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission({
+        sourcePage: "/lpb",
+        sourceComponent: "LpbEnquiryModal",
+        triggerLabel: content.eyebrow,
+        name,
+        email,
+        phone,
+        message,
+        details: {
+          "Selected bundle key": bundle,
+          "Offer headline": content.headline,
+          "Offer price": content.price,
+          Saving: content.saving || "-",
+        },
+      })
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to send your enquiry.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -269,12 +294,14 @@ export function LpbEnquiryModal({ bundle, onClose }: LpbEnquiryModalProps) {
 
                 <button
                   type="submit"
-                  className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3"
+                  disabled={isSubmitting}
+                  className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-60"
                 >
-                  {content.ctaLabel}
+                  {isSubmitting ? "Sending..." : content.ctaLabel}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
 
+                {submitError && <p className="text-red-500 text-xs text-center leading-relaxed">{submitError}</p>}
                 <p className="text-moore-charcoal/40 text-xs text-center leading-relaxed">
                   Guy personally reviews every enquiry. No sales team. No automated responses. Proudly Adelaide-based since 2014.
                 </p>

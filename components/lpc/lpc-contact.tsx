@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { ArrowRight, CheckCircle } from "lucide-react"
+import { submitContactSubmission } from "@/lib/contact-submit"
 
 export function LpcContact() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -14,6 +15,8 @@ export function LpcContact() {
     message: "",
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,11 +37,30 @@ export function LpcContact() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Placeholder: Resend API integration to be connected on client approval
-    console.log("Form submission:", formData)
-    setSubmitted(true)
+    setSubmitError("")
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission({
+        sourcePage: "/lpc",
+        sourceComponent: "LpcContact",
+        triggerLabel: "Book Free Adelaide Consultation",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        details: {
+          "Service interest": formData.service,
+        },
+      })
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to send your enquiry.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -142,12 +164,14 @@ export function LpcContact() {
             <div className="text-center pt-4">
               <button
                 type="submit"
-                className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-navy px-12 py-5 text-sm tracking-widest uppercase transition-all hover:bg-moore-offwhite font-medium"
+                disabled={isSubmitting}
+                className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-navy px-12 py-5 text-sm tracking-widest uppercase transition-all hover:bg-moore-offwhite font-medium disabled:opacity-60"
               >
-                Book My Free Adelaide Consultation
+                {isSubmitting ? "Sending..." : "Book My Free Adelaide Consultation"}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
 
+              {submitError && <p className="text-red-300 text-sm mt-4">{submitError}</p>}
               <p className="text-moore-offwhite/50 text-sm mt-6">
                 No obligation. No sales pitch. Just an honest conversation about your Adelaide development goals.
                 Proudly Adelaide-based since 2014.

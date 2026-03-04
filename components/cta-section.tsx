@@ -4,6 +4,7 @@ import type React from "react"
 
 import { useState, useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
+import { submitContactSubmission } from "@/lib/contact-submit"
 
 export function CTASection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -14,6 +15,9 @@ export function CTASection() {
     goal: "",
     budget: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
+  const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,10 +38,31 @@ export function CTASection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formData)
+    setSubmitError("")
+    setSubmitted(false)
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission({
+        sourcePage: "/",
+        sourceComponent: "CTASection",
+        triggerLabel: "Book Free Consultation",
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        details: {
+          "Primary goal": formData.goal,
+          "Estimated budget": formData.budget,
+        },
+      })
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to send your enquiry.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -138,12 +163,15 @@ export function CTASection() {
           <div className="text-center pt-4">
             <button
               type="submit"
+              disabled={isSubmitting}
               className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-white px-12 py-5 rounded-xl text-sm tracking-widest uppercase transition-all hover:bg-moore-blue font-medium shadow-lg"
             >
-              Book Free Consultation
+              {isSubmitting ? "Sending..." : "Book Free Consultation"}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </button>
 
+            {submitError && <p className="text-red-300 text-sm mt-4">{submitError}</p>}
+            {submitted && <p className="text-moore-gold text-sm mt-4">Thanks, your enquiry has been sent.</p>}
             <p className="text-moore-offwhite/50 text-sm mt-6">No obligation. No sales pitch. Just honest advice.</p>
           </div>
         </form>

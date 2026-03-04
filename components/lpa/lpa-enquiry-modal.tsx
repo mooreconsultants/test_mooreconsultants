@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { X, ArrowRight, CheckCircle } from "lucide-react"
+import { submitContactSubmission } from "@/lib/contact-submit"
 
 export type ServiceKey = "tour" | "foundations" | "livedeals" | "pm" | "discovery"
 
@@ -106,6 +107,8 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
   const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
   const [submitted, setSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState("")
 
   // Close on Escape key
   useEffect(() => {
@@ -132,11 +135,32 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
 
   const content = modalContent[service]
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Resend API integration to be wired in post-approval
-    console.log("Enquiry submitted:", { service, name, email, phone, message })
-    setSubmitted(true)
+    setSubmitError("")
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission({
+        sourcePage: "/lpa",
+        sourceComponent: "LpaEnquiryModal",
+        triggerLabel: content.eyebrow,
+        name,
+        email,
+        phone,
+        message,
+        details: {
+          "Selected service key": service,
+          "Offer headline": content.headline,
+          "Offer price": content.price,
+        },
+      })
+      setSubmitted(true)
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Unable to send your enquiry.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -266,12 +290,14 @@ export function LpaEnquiryModal({ service, onClose }: LpaEnquiryModalProps) {
 
                 <button
                   type="submit"
-                  className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3"
+                  disabled={isSubmitting}
+                  className="group w-full bg-moore-navy text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:bg-moore-gold hover:text-moore-navy transition-all duration-300 flex items-center justify-center gap-3 disabled:opacity-60"
                 >
-                  {content.ctaLabel}
+                  {isSubmitting ? "Sending..." : content.ctaLabel}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
 
+                {submitError && <p className="text-red-500 text-xs text-center leading-relaxed">{submitError}</p>}
                 <p className="text-moore-charcoal/40 text-xs text-center leading-relaxed">
                   Guy personally reviews every enquiry. No sales team. No automated responses. Proudly Adelaide-based since 2014.
                 </p>
