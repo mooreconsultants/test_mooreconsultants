@@ -404,12 +404,6 @@ export function AlternativeHomepage() {
         </div>
       </div>
 
-      {/* ── TEXTURE STRIP ── */}
-      <div className="relative h-[40vh] lg:h-[50vh] overflow-hidden">
-        <img src="/alternative-texture.jpg" alt="Architectural material detail" className="w-full h-full object-cover" style={{ transform: `translateY(${Math.max(0, (scrollY - vh * 3) * 0.15)}px)` }} />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, #f8fafb 0%, rgba(0,0,0,0.45) 35%, rgba(0,0,0,0.5) 65%, #f8fafb 100%)" }} />
-      </div>
-
       {/* ── PROCESS ── sticky heading + cascading cards (Apple-style) */}
       <div id="process" className="relative py-24 lg:py-40 overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
