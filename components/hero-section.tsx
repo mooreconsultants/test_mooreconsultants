@@ -34,8 +34,7 @@ export function HeroSection() {
           alt="Modern architectural development"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-moore-navy/70 via-moore-navy/40 to-transparent" />
-        <div className="absolute inset-0 bg-moore-offwhite/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-moore-offwhite/95 via-moore-offwhite/80 to-moore-offwhite/20" />
       </div>
 
       {/* Content overlay – left-aligned, max-width, with space for nav at top */}
