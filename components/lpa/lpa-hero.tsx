@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 import { ArrowRight, Download } from "lucide-react"
 import { LpaEnquiryModal, type ServiceKey } from "@/components/lpa/lpa-enquiry-modal"
 
@@ -32,10 +33,13 @@ export function LpaHero() {
       <section className="relative min-h-screen flex">
         {/* Mobile background */}
         <div className="lg:hidden absolute inset-0 z-0">
-          <img
+          <Image
             src="/guy-moore-site-visit-mobile.jpg"
             alt="Guy Moore reviewing development plans on site in Adelaide"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-moore-offwhite/90 via-moore-offwhite/85 to-moore-offwhite/95" />
         </div>
@@ -43,10 +47,13 @@ export function LpaHero() {
         {/* Left Image - Desktop */}
         <div className="hidden lg:block w-[60%] relative">
           <div className="absolute inset-0 bg-moore-navy/20" />
-          <img
+          <Image
             src="/Hero.jpg"
             alt="Completed Adelaide property development"
-            className="w-full h-full object-cover"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute left-8 top-1/2 -translate-y-1/2 -rotate-90 origin-center">
             <span className="text-moore-offwhite/30 text-xs tracking-[0.5em] uppercase">

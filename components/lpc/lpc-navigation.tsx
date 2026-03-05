@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 import { LpcEnquiryModal, type EarlyBirdKey } from "@/components/lpc/lpc-enquiry-modal"
@@ -35,9 +36,12 @@ export function LpcNavigation() {
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
           <a href="#" className="flex items-center">
-            <img
+            <Image
               src="/moore-consultants-logo.png"
               alt="Moore Consultants"
+              width={180}
+              height={40}
+              priority
               className="h-10 w-auto lg:h-12"
             />
           </a>

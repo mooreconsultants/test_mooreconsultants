@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState, useEffect, useRef } from "react"
+import Image from "next/image"
 import { ArrowRight, CheckCircle } from "lucide-react"
 import { submitContactSubmission } from "@/lib/contact-submit"
 
@@ -67,10 +68,11 @@ export function LpbContact() {
     <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/modern-architectural-home-interior-with-natural-li.jpg"
           alt="Modern Adelaide property development interior"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-moore-navy/90" />
       </div>

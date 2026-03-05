@@ -5,6 +5,7 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { submitContactSubmission } from "@/lib/contact-submit"
+import Image from "next/image"
 
 export function CTASection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -69,7 +70,7 @@ export function CTASection() {
     <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src="/modern-architectural-home-interior-with-natural-li.jpg" alt="Background" className="w-full h-full object-cover" />
+        <Image src="/modern-architectural-home-interior-with-natural-li.jpg" alt="Background" className="w-full h-full object-cover" fill sizes="100vw" />
         <div className="absolute inset-0 bg-moore-navy/90" />
       </div>
 

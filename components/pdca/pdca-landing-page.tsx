@@ -26,6 +26,7 @@ import {
   Phone,
   Mail,
 } from "lucide-react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { submitContactSubmission } from "@/lib/contact-submit"
 
@@ -50,7 +51,7 @@ function PdcaNavigation() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <img src="/moore-consultants-logo.png" alt="Moore Consultants" className="h-10 w-auto lg:h-12" />
+          <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={180} height={40} priority className="h-10 w-auto lg:h-12" />
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
@@ -116,7 +117,7 @@ function PdcaHero() {
   return (
     <section className="relative min-h-screen w-full flex flex-col">
       <div className="absolute inset-0 z-0">
-        <img src="/luxury-modern-architectural-building-exterior-with.jpg" alt="Modern Adelaide property development" className="w-full h-full object-cover" />
+        <Image src="/luxury-modern-architectural-building-exterior-with.jpg" alt="Modern Adelaide property development" fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-moore-offwhite/95 via-moore-offwhite/80 to-moore-offwhite/20" />
       </div>
 
@@ -288,11 +289,15 @@ function PdcaProblem() {
 
           <div className="lg:col-span-7 relative lg:mt-24">
             <div className="relative">
-              <img
-                src="/images/gemini-generated-image-lbbn98lbbn98lbbn.jpg"
-                alt="Guy Moore consulting with Adelaide property developer"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
-              />
+              <div className="relative w-full h-[400px] lg:h-[500px]">
+                <Image
+                  src="/images/gemini-generated-image-lbbn98lbbn98lbbn.jpg"
+                  alt="Guy Moore consulting with Adelaide property developer"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="bg-moore-navy p-8 lg:p-12 lg:absolute lg:-bottom-16 lg:-left-24 lg:w-[90%]">
                 <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE SOLUTION</span>
                 <h3 className="font-serif text-2xl lg:text-3xl text-moore-offwhite mb-6">
@@ -339,7 +344,7 @@ function PdcaAbout() {
       <div ref={ref} className="max-w-[1400px] mx-auto opacity-0 transition-opacity duration-1000">
         <div className="grid lg:grid-cols-12 min-h-[800px]">
           <div className="lg:col-span-6 relative h-[500px] lg:h-auto overflow-hidden rounded-r-2xl lg:rounded-2xl">
-            <img src="/guy-moore-portrait.jpg" alt="Guy Moore — Adelaide property development consultant" className="w-full h-full object-cover object-top" />
+            <Image src="/guy-moore-portrait.jpg" alt="Guy Moore — Adelaide property development consultant" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover object-top" />
             <div className="hidden lg:block absolute right-0 top-1/4 bottom-1/4 w-px bg-moore-gold" />
           </div>
 
@@ -723,7 +728,7 @@ function PdcaDifferentiation() {
         </div>
 
         <div className="relative h-[500px] lg:h-auto">
-          <img src="/modern-luxury-property-development-aerial-view-ade.jpg" alt="Adelaide coastal property development" className="w-full h-full object-cover" />
+          <Image src="/modern-luxury-property-development-aerial-view-ade.jpg" alt="Adelaide coastal property development" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/80 via-transparent to-transparent flex items-end p-8 lg:p-12">
             <div>
               <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">$23M+</div>
@@ -784,7 +789,7 @@ function PdcaCta() {
   return (
     <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/modern-architectural-home-interior-with-natural-li.jpg" alt="Background" className="w-full h-full object-cover" />
+        <Image src="/modern-architectural-home-interior-with-natural-li.jpg" alt="Background" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-moore-navy/90" />
       </div>
 
@@ -915,7 +920,7 @@ function PdcaFooter() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           <div className="mb-8 lg:mb-0">
             <a href="/">
-              <img src="/moore-consultants-logo.png" alt="Moore Consultants" className="h-12 w-auto lg:h-14" />
+              <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={210} height={56} className="h-12 w-auto lg:h-14" />
             </a>
           </div>
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">

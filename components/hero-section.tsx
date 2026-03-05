@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight, Download } from "lucide-react"
+import Image from "next/image"
 
 export function HeroSection() {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -29,10 +30,13 @@ export function HeroSection() {
     <section className="relative min-h-screen w-full flex flex-col">
       {/* Full-width background image */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Image
           src="/luxury-modern-architectural-building-exterior-with.jpg"
           alt="Modern architectural development"
           className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-moore-offwhite/95 via-moore-offwhite/80 to-moore-offwhite/20" />
       </div>

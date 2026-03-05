@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 const problems = [
   {
@@ -64,11 +65,14 @@ export function LpaProblem() {
 
           <div className="lg:col-span-8">
             <div className="relative">
-              <img
-                src="/professional-consultant-reviewing-architectural-pl.jpg"
-                alt="Guy Moore reviewing Adelaide development plans with a client"
-                className="w-full h-[350px] lg:h-[420px] object-cover mb-0"
-              />
+              <div className="relative w-full h-[350px] lg:h-[420px]">
+                <Image
+                  src="/professional-consultant-reviewing-architectural-pl.jpg"
+                  alt="Guy Moore reviewing Adelaide development plans with a client"
+                  fill
+                  className="object-cover"
+                />
+              </div>
 
               <div className="bg-moore-navy p-8 lg:p-12 lg:absolute lg:-bottom-12 lg:-left-16 lg:w-[85%]">
                 <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE SOLUTION</span>

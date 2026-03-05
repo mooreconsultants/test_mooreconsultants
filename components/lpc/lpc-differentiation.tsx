@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 import { Target, Award, Users, MapPin, ShieldCheck, TrendingUp } from "lucide-react"
 
 const differentiators = [
@@ -98,10 +99,11 @@ export function LpcDifferentiation() {
 
         {/* Right - Image with Stat Overlay */}
         <div className="relative h-[500px] lg:h-auto">
-          <img
+          <Image
             src="/modern-luxury-property-development-aerial-view-ade.jpg"
             alt="Completed Moore Consultants Adelaide development project"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
 
           {/* Overlay Stats */}

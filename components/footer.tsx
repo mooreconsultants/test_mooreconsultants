@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Facebook } from "lucide-react"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,10 +9,12 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           {/* Logo */}
           <div className="mb-8 lg:mb-0">
-            <img
+            <Image
               src="/moore-consultants-logo.png"
               alt="Moore Consultants"
               className="h-12 w-auto lg:h-14"
+              width={210}
+              height={56}
             />
           </div>
 

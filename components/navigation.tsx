@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -25,10 +26,13 @@ export function Navigation() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <img
+          <Image
             src="/moore-consultants-logo.png"
             alt="Moore Consultants"
             className="h-10 w-auto lg:h-12"
+            width={180}
+            height={48}
+            priority
           />
         </a>
 

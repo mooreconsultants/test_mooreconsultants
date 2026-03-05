@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export function LpcAbout() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -30,7 +31,7 @@ export function LpcAbout() {
         <div className="grid lg:grid-cols-12 min-h-[800px]">
           {/* Portrait */}
           <div className="lg:col-span-6 relative h-[500px] lg:h-auto">
-            <img src="/guy-moore-portrait.jpg" alt="Guy Moore, Adelaide property developer" className="w-full h-full object-cover object-top" />
+            <Image src="/guy-moore-portrait.jpg" alt="Guy Moore, Adelaide property developer" fill className="object-cover object-top" />
             <div className="hidden lg:block absolute right-0 top-1/4 bottom-1/4 w-px bg-moore-gold" />
           </div>
 

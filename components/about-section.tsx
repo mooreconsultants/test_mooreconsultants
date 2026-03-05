@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -31,7 +32,7 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-12 min-h-[800px]">
           {/* Left - Large Portrait */}
           <div className="lg:col-span-6 relative h-[500px] lg:h-auto overflow-hidden rounded-r-2xl lg:rounded-2xl">
-            <img src="/guy-moore-portrait.jpg" alt="Guy Moore" className="w-full h-full object-cover object-top" />
+            <Image src="/guy-moore-portrait.jpg" alt="Guy Moore" className="w-full h-full object-cover object-top" fill sizes="(max-width: 1024px) 100vw, 50vw" />
             {/* Vertical accent */}
             <div className="hidden lg:block absolute right-0 top-1/4 bottom-1/4 w-px bg-moore-gold" />
           </div>

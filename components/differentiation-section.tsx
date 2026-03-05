@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { Target, Award, Users, Handshake } from "lucide-react"
+import Image from "next/image"
 
 const differentiators = [
   {
@@ -77,10 +78,12 @@ export function DifferentiationSection() {
 
         {/* Right - Image with Quote */}
         <div className="relative h-[500px] lg:h-auto">
-          <img
+          <Image
             src="/modern-luxury-property-development-aerial-view-ade.jpg"
             alt="Moore Consultants project"
             className="w-full h-full object-cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
 
           {/* Overlay Quote */}

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Image from "next/image"
 
 export function ProblemSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -54,11 +55,15 @@ export function ProblemSection() {
           {/* Right Column - Solution with Image */}
           <div className="lg:col-span-7 relative lg:mt-24">
             <div className="relative">
-              <img
-                src="/images/gemini-generated-image-lbbn98lbbn98lbbn.jpg"
-                alt="Guy Moore reviewing architectural plans with client"
-                className="w-full h-[400px] lg:h-[500px] object-cover"
-              />
+              <div className="relative w-full h-[400px] lg:h-[500px]">
+                <Image
+                  src="/images/gemini-generated-image-lbbn98lbbn98lbbn.jpg"
+                  alt="Guy Moore reviewing architectural plans with client"
+                  className="object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                />
+              </div>
 
               {/* Overlapping Solution Box */}
               <div className="bg-moore-navy p-8 lg:p-12 lg:absolute lg:-bottom-16 lg:-left-24 lg:w-[90%]">
