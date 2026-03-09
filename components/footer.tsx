@@ -1,5 +1,10 @@
-import { Linkedin, Instagram, Facebook } from "lucide-react"
+import { Linkedin, Instagram } from "lucide-react"
 import Image from "next/image"
+
+const socialLinks = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
+]
 
 export function Footer() {
   return (
@@ -33,10 +38,12 @@ export function Footer() {
 
           {/* Social Icons */}
           <div className="flex items-center gap-4">
-            {[Linkedin, Instagram, Facebook].map((Icon, index) => (
+            {socialLinks.map(({ icon: Icon, href }, index) => (
               <a
                 key={index}
-                href="#"
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
                 className="w-10 h-10 border border-moore-offwhite/20 flex items-center justify-center text-moore-offwhite/70 hover:border-moore-gold hover:text-moore-gold transition-colors"
               >
                 <Icon className="w-4 h-4" />

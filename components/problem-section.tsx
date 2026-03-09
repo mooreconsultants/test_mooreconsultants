@@ -57,7 +57,7 @@ export function ProblemSection() {
             <div className="relative">
               <div className="relative w-full h-[400px] lg:h-[500px]">
                 <Image
-                  src="/images/gemini-generated-image-lbbn98lbbn98lbbn.jpg"
+                  src="/professional-consultant-reviewing-architectural-pl.jpg"
                   alt="Guy Moore reviewing architectural plans with client"
                   className="object-cover"
                   fill

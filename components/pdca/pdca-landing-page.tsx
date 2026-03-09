@@ -18,7 +18,6 @@ import {
   Handshake,
   Linkedin,
   Instagram,
-  Facebook,
   Menu,
   X,
   ChevronDown,
@@ -879,6 +878,11 @@ function PdcaFaq() {
     },
   ]
 
+const socialLinks = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
+]
+
   return (
     <section className="py-24 lg:py-32 bg-moore-offwhite">
       <div ref={ref} className="max-w-[900px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
@@ -932,8 +936,14 @@ function PdcaFooter() {
             ))}
           </nav>
           <div className="flex items-center gap-4">
-            {[Linkedin, Instagram, Facebook].map((Icon, index) => (
-              <a key={index} href="#" className="w-10 h-10 border border-moore-offwhite/20 flex items-center justify-center text-moore-offwhite/70 hover:border-moore-gold hover:text-moore-gold transition-colors">
+            {socialLinks.map(({ icon: Icon, href }, index) => (
+              <a
+                key={index}
+                href={href}
+                target={href.startsWith("http") ? "_blank" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                className="w-10 h-10 border border-moore-offwhite/20 flex items-center justify-center text-moore-offwhite/70 hover:border-moore-gold hover:text-moore-gold transition-colors"
+              >
                 <Icon className="w-4 h-4" />
               </a>
             ))}

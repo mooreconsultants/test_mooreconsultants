@@ -35,9 +35,8 @@ export function LpbStatement() {
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-offwhite/70 text-lg leading-relaxed mb-6">
-              Not because they lack the capital. Not because the opportunity is not there in Glenelg, Brighton, Unley,
-              or Burnside. But because they have no one to validate their decisions, and the cost of getting it wrong
-              feels too high.
+              Not because they lack the capital. Not because the opportunity is not there in Adelaide. But because
+              they have no one to validate their decisions, and the cost of getting it wrong feels too high.
             </p>
             <p className="text-moore-offwhite/70 text-lg leading-relaxed">
               You have consumed the courses. You understand feasibility, zoning, and development margins. But when it
@@ -54,8 +53,8 @@ export function LpbStatement() {
                 looked at."
               </p>
               <div className="mt-6 pt-6 border-t border-moore-gold/20">
-                <div className="text-moore-gold text-sm tracking-wide">Dr. Sarah</div>
-                <div className="text-moore-offwhite/50 text-xs mt-1">Surgeon · Glenelg East, Adelaide</div>
+                <div className="text-moore-gold text-sm tracking-wide">Scott Applebee</div>
+                <div className="text-moore-offwhite/50 text-xs mt-1">First time developer - Adelaide</div>
               </div>
             </div>
           </div>

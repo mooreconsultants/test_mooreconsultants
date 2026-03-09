@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { X, ArrowRight, CheckCircle } from "lucide-react"
 import { submitContactSubmission } from "@/lib/contact-submit"
 
-export type BundleKey = "tour-foundations" | "tour-to-foundations" | "full-pathway" | "full-journey" | "discovery"
+export type BundleKey = "tour-foundations" | "tour-to-foundations" | "full-pathway" | "project-management" | "discovery"
 
 interface BundleModalContent {
   eyebrow: string
@@ -67,36 +67,31 @@ const modalContent: Record<BundleKey, BundleModalContent> = {
     saving: "Save up to $625 if you proceed to Foundations",
   },
   "full-pathway": {
-    eyebrow: "BUNDLE 03 -- FULL DEVELOPMENT PATHWAY",
+    eyebrow: "BUNDLE 03 -- FULL SITE FIND PATHWAY",
     headline: "From ready to go, to Adelaide site secured. One programme, one price.",
     subheadline:
-      "The Full Development Pathway combines Foundations and Live Deals into a single end-to-end coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. Flexible milestone-based payments mean you are never paying for a stage you have not started.",
+      "The Full Site Find Pathway combines Foundations and Live Deals into a single end-to-end site-find coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. This pathway is about getting your structures right and finding the right site, not project managing the build. Flexible milestone-based payments mean you are never paying for a stage you have not started.",
     bullets: [
       "Foundations: entity structuring, finance readiness, and first Adelaide project strategy",
       "Live Deals: Adelaide site identification, feasibility modelling, due diligence, and negotiation coaching",
       "Valued at $10,500 purchased separately",
       "Flexible payment plan: 20% upfront ($2,000), then 3 x 25% ($2,500 each) at agreed milestones",
     ],
-    formHeading: "Enquire about the Full Development Pathway",
+    formHeading: "Enquire about the Full Site Find Pathway",
     ctaLabel: "ENQUIRE NOW",
-    price: "$10,000",
-    saving: "Save $500 + flexible milestone payments",
+    price: "$9,500",
+    saving: "Save $1,000 + flexible milestone payments",
   },
-  "full-journey": {
-    eyebrow: "BUNDLE 04 -- FULL JOURNEY",
-    headline: "The complete Adelaide coaching track, from first site visit to deal secured.",
+  "project-management": {
+    eyebrow: "FURTHER IN YOUR JOURNEY?",
+    headline: "Full Project Management",
     subheadline:
-      "The Full Journey bundles all three coaching programmes: Tour de Coastal, Foundations, and Live Deals. It is the most comprehensive way to work with Guy Moore and the clearest path from zero to a completed, profitable Adelaide development. Milestone-based payments available so you are never paying ahead of where you are.",
-    bullets: [
-      "Tour de Coastal: see real Adelaide projects and real financials before you commit",
-      "Foundations: get your structures, finance, and Adelaide strategy right",
-      "Live Deals: find, assess, and secure your first profitable Adelaide site",
-      "Valued at $13,000 purchased separately -- bundle price $11,500",
-    ],
-    formHeading: "Enquire about the Full Journey",
-    ctaLabel: "ENQUIRE NOW",
-    price: "$11,500",
-    saving: "Save $1,500 + flexible milestone payments",
+      "For clients who have completed the coaching programmes and are ready to execute their first Adelaide development. Guy manages the entire project alongside you, from DA coordination and builder selection through to construction oversight and final sale. You make the major decisions. He handles everything else. Typically suited to clients who have completed Foundations and Live Deals and are ready to build.",
+    bullets: [],
+    formHeading: "Enquire about Full Project Management",
+    ctaLabel: "ENQUIRE",
+    price: "From $50,000",
+    saving: "",
   },
 }
 

@@ -69,19 +69,19 @@ const services = [
     key: "full-pathway" as EarlyBirdKey,
     number: "04",
     eyebrow: "COMPLETE COACHING TRACK",
-    name: "Full Development Pathway",
+    name: "Full Site Find Pathway",
     tagline: "From strategy to Adelaide site secured",
-    earlyBirdPrice: "$10,000",
+    earlyBirdPrice: "$9,500",
     standardPrice: "$12,000",
-    saving: "Save $2,000 + milestone payment plan",
+    saving: "Save $2,500 + milestone payment plan",
     highlight: false,
     description:
-      "Foundations and Live Deals combined into a single end-to-end coaching programme for the Adelaide market. Both at early bird rates. Pay in milestones, not upfront. From strategy to site secured.",
+      "Foundations and Live Deals combined into a single end-to-end site find coaching programme for the Adelaide market. Both at early bird rates. Pay in milestones, not upfront. From strategy to site secured.",
     includes: [
       "Foundations at early bird rate ($2,000)",
-      "Live Deals at early bird rate ($8,000)",
-      "Flexible payment plan: 20% upfront, then 3 x 25% at milestones",
-      "Total saving: $2,000 versus standard bundle price",
+      "Live Deals at early bird rate ($7,500)",
+      "Flexible payment plan: $2,000 upfront, then 3 x $2,500 at agreed milestones",
+      "Total saving: $2,500 versus standard bundle price",
     ],
     cta: "CLAIM EARLY BIRD RATE",
   },
@@ -203,7 +203,7 @@ export function LpcServices() {
                   For clients who have completed the coaching programmes and are ready to execute their first Adelaide
                   development. Guy manages the entire project alongside you, from DA coordination with Adelaide councils
                   and builder selection through to construction oversight and final sale. Typically suited to clients who
-                  have completed the Full Development Pathway or Full Journey bundle and are ready to build.
+                  have completed Foundations and Live Deals and are ready to build.
                 </p>
               </div>
               <div className="flex-shrink-0 text-right lg:text-left">

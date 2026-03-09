@@ -88,7 +88,7 @@ export function LpcHero() {
                   { name: "Tour de Coastal", early: "$500", standard: "$650", saving: "Save $150" },
                   { name: "Foundations", early: "$2,000", standard: "$2,500", saving: "Save $500" },
                   { name: "Tour + Foundations Bundle", early: "$2,500", standard: "$3,200", saving: "Save $700" },
-                  { name: "Full Development Pathway", early: "$10,000", standard: "$12,000", saving: "Save $2,000" },
+                  { name: "Full Site Find Pathway", early: "$9,500", standard: "$12,000", saving: "Save $2,500" },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center justify-between py-4 border-b border-moore-offwhite/10 last:border-0">
                     <div>

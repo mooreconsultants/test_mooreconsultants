@@ -52,9 +52,8 @@ export function LpbAbout() {
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-6 max-w-lg relative z-10">
-              Guy Moore is not a course creator. He is an active Adelaide property developer who has built a $23M
-              portfolio from a $450k starting point over more than a decade, working exclusively in Adelaide's coastal
-              and eastern suburbs. Glenelg. Brighton. Somerton Park. Burnside. These are not case studies from
+              Guy Moore is not a course creator. He is an active Adelaide property developer who has developed over $23M
+              in property from a $450k starting point in under 7 years, working mostly in the coastal suburbs of Adelaide. These are not case studies from
               someone else's portfolio. They are his own projects, and he shares the real numbers with every client.
             </p>
 
@@ -74,7 +73,7 @@ export function LpbAbout() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 relative z-10">
               {[
-                { value: "$23M", label: "Adelaide Projects" },
+                { value: "$23M+", label: "Adelaide Projects" },
                 { value: "10+", label: "Years in Adelaide" },
                 { value: "163%", label: "Best CoC Return" },
               ].map((stat, index) => (

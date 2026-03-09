@@ -6,15 +6,24 @@ import { BookOpen, MapPin, HardHat } from "lucide-react"
 const steps = [
   {
     number: "01",
+    title: "Site Tour",
+    subtitle: "Tour de Coastal — $500",
+    description:
+      "Start with the Tour de Coastal where Guy will personally drive you to all his recently development sites. He will talk through the challenges, opportunities, and lessons learned from each site. You will have the opportunity to ask any question on this 2 hour tour.",
+    icon: HardHat,
+    optional: null,
+  },
+  {
+    number: "02",
     title: "Get Ready",
     subtitle: "Foundations — $2,000",
     description:
       "Start with the Foundations programme to get your structures, finance position, and Adelaide-specific strategy right. This is the groundwork every successful developer needs before they look at a single site. You will leave with an entity structure, a finance readiness assessment, and a first project action plan tailored to the Adelaide market.",
     icon: BookOpen,
-    optional: "Or begin with the Tour de Coastal ($500) to walk active Adelaide development sites with Guy before committing to anything further.",
+    optional: null,
   },
   {
-    number: "02",
+    number: "03",
     title: "Find Your Site",
     subtitle: "Live Deals — $8,000",
     description:
@@ -23,7 +32,7 @@ const steps = [
     optional: null,
   },
   {
-    number: "03",
+    number: "04",
     title: "Build and Profit",
     subtitle: "Project Management — From $50,000",
     description:

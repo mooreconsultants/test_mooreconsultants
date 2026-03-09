@@ -6,28 +6,8 @@ import { LpbEnquiryModal, type BundleKey } from "@/components/lpb/lpb-enquiry-mo
 
 const bundles = [
   {
-    key: "tour-foundations" as BundleKey,
-    number: "01",
-    eyebrow: "Most Popular Starting Point",
-    name: "Tour + Foundations",
-    tagline: "See it, then build the strategy",
-    price: "$2,500",
-    originalPrice: "$3,000",
-    saving: "Save $500 — Tour included free",
-    highlight: false,
-    description:
-      "The ideal entry point for Adelaide professionals who want to see the reality before they commit. Walk active development sites in Glenelg, Brighton, and Somerton Park with Guy Moore, then move straight into the Foundations coaching programme. The Tour de Coastal is included at no extra cost.",
-    includes: [
-      "Tour de Coastal (valued at $500) — included free",
-      "Foundations one-on-one coaching programme",
-      "Entity structuring and Adelaide finance readiness",
-      "First Adelaide project action plan",
-    ],
-    cta: "Claim This Bundle",
-  },
-  {
     key: "tour-to-foundations" as BundleKey,
-    number: "02",
+    number: "01",
     eyebrow: "Lowest Entry Point",
     name: "Tour to Foundations",
     tagline: "Book the Tour. Unlock 25% off Foundations.",
@@ -46,17 +26,36 @@ const bundles = [
     cta: "Book the Tour",
   },
   {
+    key: "tour-foundations" as BundleKey,
+    number: "02",
+    eyebrow: "Most Popular Starting Point",
+    name: "Tour + Foundations",
+    tagline: "See it, then build the strategy",
+    price: "$2,500",
+    originalPrice: "$3,000",
+    saving: "Save $500 — Tour included free",
+    highlight: false,
+    description:
+      "The ideal entry point for Adelaide professionals who want to see the reality before they commit. Walk active development sites in Glenelg, Brighton, and Somerton Park with Guy Moore, then move straight into the Foundations coaching programme. The Tour de Coastal is included at no extra cost.",
+    includes: [
+      "Tour de Coastal (valued at $500) — included free",
+      "Foundations one-on-one coaching programme",
+      "Entity structuring and Adelaide finance readiness",
+    ],
+    cta: "Claim This Bundle",
+  },
+  {
     key: "full-pathway" as BundleKey,
     number: "03",
     eyebrow: "Best Value",
-    name: "Full Development Pathway",
+    name: "Full Site Find Pathway",
     tagline: "From ready to go, to Adelaide site secured",
-    price: "$10,000",
+    price: "$9,500",
     originalPrice: "$10,500",
-    saving: "Save $500 + flexible milestone payments",
+    saving: "Save $1,000 + flexible milestone payments",
     highlight: true,
     description:
-      "Foundations and Live Deals combined into a single end-to-end coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. Pay in milestones, not upfront.",
+      "Foundations and Live Deals combined into a single end-to-end site-find coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. This is about getting your structures right and finding the right site, not project managing the build.",
     includes: [
       "Foundations: entity structuring, finance readiness, first Adelaide project strategy",
       "Live Deals: Adelaide site identification, feasibility modelling, due diligence, negotiation",
@@ -66,24 +65,19 @@ const bundles = [
     cta: "Enquire Now",
   },
   {
-    key: "full-journey" as BundleKey,
+    key: "project-management" as BundleKey,
     number: "04",
-    eyebrow: "Complete Track",
-    name: "Full Journey",
-    tagline: "The complete Adelaide coaching track, start to finish",
-    price: "$11,500",
-    originalPrice: "$13,000",
-    saving: "Save $1,500 + flexible milestone payments",
+    eyebrow: "FURTHER IN YOUR JOURNEY?",
+    name: "Full Project Management",
+    tagline: "",
+    price: "From $50,000",
+    originalPrice: null,
+    saving: "",
     highlight: false,
     description:
-      "All three coaching programmes bundled into one. Tour de Coastal, Foundations, and Live Deals. The most comprehensive way to work with Guy Moore and the clearest path from zero to a completed, profitable Adelaide development. Milestone payments available.",
-    includes: [
-      "Tour de Coastal: see real Adelaide projects and real financials",
-      "Foundations: get your structures, finance, and Adelaide strategy right",
-      "Live Deals: find, assess, and secure your first profitable Adelaide site",
-      "Flexible milestone payment plan available",
-    ],
-    cta: "Enquire Now",
+      "For clients who have completed the coaching programmes and are ready to execute their first Adelaide development. Guy manages the entire project alongside you, from DA coordination and builder selection through to construction oversight and final sale. You make the major decisions. He handles everything else. Typically suited to clients who have completed Foundations and Live Deals and are ready to build.",
+    includes: [],
+    cta: "Enquire",
   },
 ]
 
@@ -170,13 +164,15 @@ export function LpbServices() {
                   >
                     {bundle.name}
                   </h3>
-                  <p
-                    className={`text-sm mb-6 ${
-                      bundle.highlight ? "text-moore-offwhite/60" : "text-moore-charcoal/60"
-                    }`}
-                  >
-                    {bundle.tagline}
-                  </p>
+                  {bundle.tagline && (
+                    <p
+                      className={`text-sm mb-6 ${
+                        bundle.highlight ? "text-moore-offwhite/60" : "text-moore-charcoal/60"
+                      }`}
+                    >
+                      {bundle.tagline}
+                    </p>
+                  )}
 
                   {/* Pricing */}
                   <div className="mb-4">
@@ -198,10 +194,12 @@ export function LpbServices() {
                         </span>
                       )}
                     </div>
-                    <div className="inline-flex items-center gap-1.5">
-                      <Tag className="w-3 h-3 text-moore-gold" />
-                      <span className="text-moore-gold text-xs tracking-wide">{bundle.saving}</span>
-                    </div>
+                    {bundle.saving && (
+                      <div className="inline-flex items-center gap-1.5">
+                        <Tag className="w-3 h-3 text-moore-gold" />
+                        <span className="text-moore-gold text-xs tracking-wide">{bundle.saving}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Divider */}
@@ -221,16 +219,18 @@ export function LpbServices() {
                   </p>
 
                   {/* Includes */}
-                  <ul className="space-y-3 mb-8 flex-1">
-                    {bundle.includes.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm">
-                        <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-moore-gold" />
-                        <span className={bundle.highlight ? "text-moore-offwhite/80" : "text-moore-charcoal/80"}>
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                  {bundle.includes.length > 0 && (
+                    <ul className="space-y-3 mb-8 flex-1">
+                      {bundle.includes.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-sm">
+                          <CheckCircle className="w-4 h-4 flex-shrink-0 mt-0.5 text-moore-gold" />
+                          <span className={bundle.highlight ? "text-moore-offwhite/80" : "text-moore-charcoal/80"}>
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
 
                   {/* CTA */}
                   <button

@@ -30,14 +30,26 @@ export function HeroSection() {
     <section className="relative min-h-screen w-full flex flex-col">
       {/* Full-width background image */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/luxury-modern-architectural-building-exterior-with.jpg"
-          alt="Modern architectural development"
-          className="w-full h-full object-cover"
-          fill
-          sizes="100vw"
-          priority
-        />
+        <div className="lg:hidden absolute inset-0">
+          <Image
+            src="/guy-moore-site-visit-mobile.jpg"
+            alt="Guy Moore reviewing development plans on site in Adelaide"
+            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </div>
+        <div className="hidden lg:block absolute inset-0">
+          <Image
+            src="/Hero.jpg"
+            alt="Completed Adelaide property development"
+            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            priority
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-moore-offwhite/95 via-moore-offwhite/80 to-moore-offwhite/20" />
       </div>
 

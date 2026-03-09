@@ -7,17 +7,17 @@ const testimonials = [
   {
     quote:
       "I had done three property development courses before I found Guy. I understood the theory completely. But I was frozen. I could not pull the trigger on a site because I had no one to tell me whether I was reading it correctly. Guy changed that. He walked me through his own Glenelg East project financials on our first meeting. Real numbers. Real margins. Real lessons. I went from paralysed to completing my first development in 18 months.",
-    name: "Dr. Sarah",
-    role: "Surgeon, Adelaide",
-    location: "Glenelg East, SA",
+    name: "Ben",
+    role: "First time developer, Adelaide",
+    location: "Somerton Park, SA",
     result: "$187k profit",
     size: "large",
   },
   {
     quote:
-      "As a senior engineer, I am used to managing complex projects. But property development in Adelaide has its own rules, its own councils, and its own traps. Having Guy validate every major decision, from site selection in Brighton through to builder contracts, gave me the confidence to execute without second-guessing myself at every turn.",
-    name: "Mark",
-    role: "Senior Engineer, Adelaide",
+      "Guy showed me his actual financials from his own projects. That was the moment I knew this was different from every other course or coach I had looked at.",
+    name: "Scott",
+    role: "First time developer, Adelaide",
     location: "Brighton, SA",
     result: "$234k profit",
     size: "medium",
@@ -25,10 +25,10 @@ const testimonials = [
   {
     quote:
       "I was sceptical. I had seen enough property gurus to know the difference between someone who teaches and someone who does. Guy does. He is active in the Adelaide market right now. That is what made the difference.",
-    name: "James",
-    role: "Corporate Lawyer, Adelaide",
+    name: "Bianca",
+    role: "First time developer, Adelaide",
     location: "Somerton Park, SA",
-    result: "$156k profit",
+    result: "$96k profit",
     size: "small",
   },
 ]

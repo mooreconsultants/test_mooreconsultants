@@ -9,19 +9,19 @@ const visitHighlights = [
     icon: Eye,
     title: "Adelaide Zoning and Overlay Analysis",
     description:
-      "Identify development potential and planning constraints specific to Adelaide councils before you commit a single dollar.",
+      "Identify development potential and planning constraints specific to Adelaide councils .",
   },
   {
     icon: Ruler,
-    title: "Site Measurements and Yield Assessment",
+    title: "Site Measurements",
     description:
-      "Assess dimensions, setbacks, and buildable area for maximum yield. Guy reads a block the way most buyers never will.",
+      "Assess dimensions, setbacks, and buildable area for maximum yield.",
   },
   {
     icon: MapPin,
     title: "Suburb and Neighbourhood Context",
     description:
-      "Evaluate surrounding developments, demographics, and real demand in Adelaide's coastal and eastern suburbs.",
+      "Evaluate surrounding developments, demographics, and real demand spots in Adelaide.",
   },
   {
     icon: FileText,
@@ -63,7 +63,7 @@ export function LpbOnTheGround() {
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">ON THE GROUND</span>
             <div className="lg:flex lg:items-end lg:justify-between">
               <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-moore-offwhite max-w-2xl leading-tight">
-                See Opportunity Where Others See Obstacles
+                Find your next development site
               </h2>
               <p className="text-moore-offwhite/60 max-w-md mt-6 lg:mt-0 leading-relaxed">
                 The Tour de Coastal is where the coaching begins. You walk active and completed development sites in
@@ -87,7 +87,7 @@ export function LpbOnTheGround() {
                   <video
                     className="w-full h-full object-cover"
                     controls
-                    poster="/aerial-view-of-residential-development-site.jpg"
+                    poster="/development_site.JPG"
                   >
                     <source
                       src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Video_Revision_Request_Granted-H2mpoYTRyghufHilHZuaBqV6bLxeRm.mp4"
@@ -98,10 +98,6 @@ export function LpbOnTheGround() {
                 </div>
               </div>
 
-              <p className="text-moore-offwhite/40 text-sm mt-6 italic">
-                A recent site assessment in Adelaide's coastal suburbs -- identifying a development opportunity the
-                vendor had missed entirely.
-              </p>
             </div>
 
             {/* Content Side */}
@@ -111,10 +107,8 @@ export function LpbOnTheGround() {
                   What You Learn on the Tour
                 </h3>
                 <p className="text-moore-offwhite/70 leading-relaxed mb-6">
-                  Most buyers see a block of land. Guy sees setback requirements, easement constraints, slope
-                  percentages, and Adelaide council overlays. On the Tour de Coastal, you learn to see what he sees.
-                  In a few hours on the ground in Adelaide's coastal suburbs, you will gain more actionable knowledge
-                  than weeks of desktop research.
+                  Most buyers see a block of land wth a large slope, or problematic trees. On the Tour de Coastal, you learn to see what he sees.
+                  In a few hours on the ground in Adelaide's coastal suburbs, you will gain more actionable knowledge than months of desktop research.
                 </p>
                 <p className="text-moore-offwhite/70 leading-relaxed mb-10">
                   This is not a seminar. It is not a webinar. It is Guy Moore, on the ground, in the Adelaide suburbs

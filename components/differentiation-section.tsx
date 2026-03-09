@@ -79,7 +79,7 @@ export function DifferentiationSection() {
         {/* Right - Image with Quote */}
         <div className="relative h-[500px] lg:h-auto">
           <Image
-            src="/modern-luxury-property-development-aerial-view-ade.jpg"
+            src="/Why-Moore-Consultants.jpg"
             alt="Moore Consultants project"
             className="w-full h-full object-cover"
             fill
