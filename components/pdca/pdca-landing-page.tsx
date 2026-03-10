@@ -29,6 +29,11 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { submitContactSubmission } from "@/lib/contact-submit"
 
+const socialLinks = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
+]
+
 /* ─── NAVIGATION ─── */
 
 function PdcaNavigation() {
@@ -877,11 +882,6 @@ function PdcaFaq() {
       answer: "Trust in property development consulting comes from transparency and proven results. Moore Consultants earns that trust by sharing real project financials, conducting site visits to completed developments, and maintaining aligned incentives with every client. Guy Moore has guided first-time developers to successful completions with documented profits, and he continues to invest his own capital in Adelaide developments alongside his clients. With a seven-year track record, verifiable results, and a commitment to personalised coaching over mass-market courses, Moore Consultants is Adelaide's most trusted property development consultancy.",
     },
   ]
-
-const socialLinks = [
-  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
-  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
-]
 
   return (
     <section className="py-24 lg:py-32 bg-moore-offwhite">

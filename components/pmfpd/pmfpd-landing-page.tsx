@@ -29,6 +29,11 @@ import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { submitContactSubmission } from "@/lib/contact-submit"
 
+const socialLinks = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
+]
+
 /* ─── NAVIGATION ─── */
 
 function PmNavigation() {
@@ -839,11 +844,6 @@ function PmFaq() {
       answer: "Trust in property development project management is earned through transparency, accountability, and results. Moore Consultants earns that trust by sharing real project financials from completed developments, maintaining aligned incentives with every client, and providing hands-on oversight rather than delegating to junior staff. Guy Moore has guided first-time developers to successful project completions with documented profits, and he continues to invest his own capital in developments alongside his clients. With a seven-year track record, a $23M+ portfolio of completed projects, and a commitment to personalised project management over generic consulting, Moore Consultants is the trusted choice for property development project management.",
     },
   ]
-
-const socialLinks = [
-  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
-  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
-]
 
   return (
     <section className="py-24 lg:py-32 bg-moore-offwhite">
