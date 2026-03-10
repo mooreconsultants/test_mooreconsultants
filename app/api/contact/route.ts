@@ -251,7 +251,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: fromAddress,
       to: ADMIN_RECIPIENTS,
-      replyTo: replyToAddress,
+      replyTo: payload.email,
       subject: `[Moore Consultants] ${payload.triggerLabel} from ${payload.name}`,
       html: buildAdminEmailHtml(payload, requestMeta),
     })
