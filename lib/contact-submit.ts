@@ -30,4 +30,8 @@ export async function submitContactSubmission(payload: ContactSubmissionPayload)
     }
     throw new Error(message)
   }
+
+  if (typeof window !== "undefined") {
+    window.location.assign("/thankyou")
+  }
 }
