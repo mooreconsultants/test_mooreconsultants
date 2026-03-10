@@ -1,13 +1,36 @@
 import { NextResponse } from "next/server"
-import { Resend } from "resend"
+import nodemailer from "nodemailer"
 import type { ContactSubmissionPayload } from "@/lib/contact-submit"
 
 const ADMIN_RECIPIENTS = ["gmoore@mooreconsultants.com.au", "alex@3pdigital.com.au"]
 
-function getResendClient(): Resend {
-  const key = process.env.RESEND_API_KEY
-  if (!key) throw new Error("RESEND_API_KEY is not set")
-  return new Resend(key)
+function getSmtpTransporter() {
+  const host = process.env.SMTP_HOST
+  const portValue = process.env.SMTP_PORT
+  const user = process.env.SMTP_USER
+  const pass = process.env.SMTP_PASS
+
+  if (!host) throw new Error("SMTP_HOST is not set")
+  if (!portValue) throw new Error("SMTP_PORT is not set")
+  if (!user) throw new Error("SMTP_USER is not set")
+  if (!pass) throw new Error("SMTP_PASS is not set")
+
+  const port = Number.parseInt(portValue, 10)
+  if (Number.isNaN(port)) throw new Error("SMTP_PORT must be a valid number")
+
+  const secure = process.env.SMTP_SECURE
+    ? process.env.SMTP_SECURE === "true"
+    : port === 465
+
+  return nodemailer.createTransport({
+    host,
+    port,
+    secure,
+    auth: {
+      user,
+      pass,
+    },
+  })
 }
 
 function escapeHtml(value: string): string {
@@ -175,6 +198,10 @@ function sanitizeDetails(value: unknown): Record<string, string> | undefined {
   return entries.length > 0 ? Object.fromEntries(entries) : undefined
 }
 
+function getFromAddress(): string {
+  return process.env.SMTP_FROM_EMAIL || "Moore Consultants <forms@3pdigital.com.au>"
+}
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json()) as unknown
@@ -197,8 +224,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid name and email address." }, { status: 400 })
     }
 
-    const resend = getResendClient()
-    const fromAddress = process.env.RESEND_FROM_EMAIL || "Moore Consultants <onboarding@resend.dev>"
+    const transporter = getSmtpTransporter()
+    const fromAddress = getFromAddress()
 
     const requestMeta = {
       "IP Address": request.headers.get("x-forwarded-for") || "Unavailable",
@@ -207,15 +234,15 @@ export async function POST(request: Request) {
       Host: request.headers.get("host") || "Unavailable",
     }
 
-    await resend.emails.send({
+    await transporter.sendMail({
       from: fromAddress,
       to: payload.email,
-      replyTo: ADMIN_RECIPIENTS,
+      replyTo: ADMIN_RECIPIENTS.join(", "),
       subject: "We received your Moore Consultants submission",
       html: buildUserEmailHtml(payload),
     })
 
-    await resend.emails.send({
+    await transporter.sendMail({
       from: fromAddress,
       to: ADMIN_RECIPIENTS,
       replyTo: payload.email,
