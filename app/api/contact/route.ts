@@ -2,7 +2,8 @@ import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 import type { ContactSubmissionPayload } from "@/lib/contact-submit"
 
-const ADMIN_RECIPIENTS = ["gmoore@mooreconsultants.com.au", "alex@3pdigital.com.au"]
+const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
+const ADMIN_RECIPIENTS = [GUY_EMAIL, "alex@3pdigital.com.au"]
 
 function getSmtpTransporter() {
   const host = process.env.SMTP_HOST
@@ -199,7 +200,11 @@ function sanitizeDetails(value: unknown): Record<string, string> | undefined {
 }
 
 function getFromAddress(): string {
-  return process.env.SMTP_FROM_EMAIL || "Moore Consultants <forms@3pdigital.com.au>"
+  return process.env.SMTP_FROM_EMAIL || `Moore Consultants <${GUY_EMAIL}>`
+}
+
+function getReplyToAddress(): string {
+  return GUY_EMAIL
 }
 
 export async function POST(request: Request) {
@@ -226,6 +231,7 @@ export async function POST(request: Request) {
 
     const transporter = getSmtpTransporter()
     const fromAddress = getFromAddress()
+    const replyToAddress = getReplyToAddress()
 
     const requestMeta = {
       "IP Address": request.headers.get("x-forwarded-for") || "Unavailable",
@@ -237,7 +243,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: fromAddress,
       to: payload.email,
-      replyTo: ADMIN_RECIPIENTS.join(", "),
+      replyTo: replyToAddress,
       subject: "We received your Moore Consultants submission",
       html: buildUserEmailHtml(payload),
     })
@@ -245,7 +251,7 @@ export async function POST(request: Request) {
     await transporter.sendMail({
       from: fromAddress,
       to: ADMIN_RECIPIENTS,
-      replyTo: payload.email,
+      replyTo: replyToAddress,
       subject: `[Moore Consultants] ${payload.triggerLabel} from ${payload.name}`,
       html: buildAdminEmailHtml(payload, requestMeta),
     })
