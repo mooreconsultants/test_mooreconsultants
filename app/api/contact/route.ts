@@ -239,6 +239,29 @@ export async function POST(request: Request) {
       html: buildAdminEmailHtml(payload, requestMeta),
     })
 
+    // Submit to HubSpot CRM (fire-and-forget — don't block or fail on CRM errors)
+    const hsPortalId = process.env.HUBSPOT_PORTAL_ID
+    const hsFormGuid = process.env.HUBSPOT_FORM_GUID
+    if (hsPortalId && hsFormGuid) {
+      fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${hsPortalId}/${hsFormGuid}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fields: [
+            { name: "firstname", value: payload.name.split(" ")[0] },
+            { name: "lastname", value: payload.name.split(" ").slice(1).join(" ") || "" },
+            { name: "email", value: payload.email },
+            { name: "phone", value: payload.phone || "" },
+            { name: "message", value: payload.message || "" },
+          ],
+          context: {
+            pageUri: payload.sourcePage,
+            pageName: payload.triggerLabel,
+          },
+        }),
+      }).catch(() => { /* silently ignore CRM errors */ })
+    }
+
     return NextResponse.json({ ok: true })
   } catch (error) {
     console.error("Failed to send contact emails:", error)
