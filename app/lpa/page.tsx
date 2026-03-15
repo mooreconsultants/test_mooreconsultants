@@ -11,10 +11,18 @@ import { LpaTestimonials } from "@/components/lpa/lpa-testimonials"
 import { LpaContact } from "@/components/lpa/lpa-contact"
 import { Footer } from "@/components/footer"
 
-export const metadata = {
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
   title: "Your First Property Development, Done Right | Moore Consultants",
   description:
-    "One-on-one property development coaching for Australians ready to build real wealth. Tour de Coastal, Foundations, and Live Deals programmes available. Book a free discovery call.",
+    "One-on-one property development coaching for Australians ready to build real wealth. Tour de Coastal, Foundations, and Site Find programmes available. Book a free discovery call.",
+  openGraph: {
+    title: "Your First Property Development, Done Right | Moore Consultants",
+    description: "One-on-one coaching and end-to-end project management for your first Adelaide development.",
+    url: "https://mooreconsultants.com.au/lpa",
+    images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
+  },
 }
 
 export default function LandingPageA() {

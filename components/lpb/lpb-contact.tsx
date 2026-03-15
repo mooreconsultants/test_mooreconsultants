@@ -139,16 +139,16 @@ export function LpbContact() {
                 Which service are you interested in?
               </option>
               <option value="tour" className="bg-moore-navy">
-                Tour de Coastal — See Adelaide development sites with Guy ($500)
+                Tour de Coastal — See Adelaide development sites with Guy ($650)
               </option>
               <option value="foundations" className="bg-moore-navy">
-                Foundations — Get your structures and strategy right ($2,000)
+                Foundations — Get your structures and strategy right ($2,500)
               </option>
-              <option value="live-deals" className="bg-moore-navy">
-                Live Deals — Find and secure your first Adelaide site ($8,000)
+              <option value="site-find" className="bg-moore-navy">
+                Site Find — Find and secure your first Adelaide site ($10,500)
               </option>
               <option value="project-management" className="bg-moore-navy">
-                Project Management — End-to-end development management ($50,000+)
+                Project Management — End-to-end development management (Custom Pricing)
               </option>
               <option value="not-sure" className="bg-moore-navy">
                 Not sure yet — I would like to talk it through

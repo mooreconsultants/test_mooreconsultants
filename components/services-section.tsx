@@ -6,7 +6,7 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 const services = [
   {
     number: "01",
-    title: "Site Acquisition & Feasibility",
+    title: "Site Find",
     description: "We find and validate profitable development sites for you",
     deliverables: [
       "Market analysis & site identification",
@@ -14,7 +14,7 @@ const services = [
       "Risk assessment & due diligence",
       "Negotiation support",
     ],
-    investment: "From $10,000",
+    investment: "$10,500",
     size: "large",
   },
   {
@@ -35,7 +35,7 @@ const services = [
     title: "Tour de Coastal",
     description: "In-person tour of completed Adelaide projects",
     deliverables: ["Site visits to 3+ projects", "Behind-the-scenes insights", "Q&A with Guy"],
-    investment: "Limited Availability",
+    investment: "$650",
     size: "small",
   },
 ]

@@ -112,7 +112,7 @@ export function LpbOnTheGround() {
                 </p>
                 <p className="text-moore-offwhite/70 leading-relaxed mb-10">
                   This is not a seminar. It is not a webinar. It is Guy Moore, on the ground, in the Adelaide suburbs
-                  where he has completed $23M in projects, showing you exactly how he evaluates a site. For $500, it
+                  where he has completed $23M in projects, showing you exactly how he evaluates a site. For $650, it
                   is the lowest-risk way to find out whether property development is right for you.
                 </p>
 
@@ -139,7 +139,7 @@ export function LpbOnTheGround() {
                 {/* CTA */}
                 <div className="mt-10 pt-8 border-t border-moore-gold/20">
                   <p className="text-moore-offwhite/60 text-sm mb-4">
-                    The Tour de Coastal is $500 and the ideal first step before committing to anything further.
+                    The Tour de Coastal is $650 and the ideal first step before committing to anything further.
                     No obligation. Just clarity.
                   </p>
                   <button

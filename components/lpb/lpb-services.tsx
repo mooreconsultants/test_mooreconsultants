@@ -11,17 +11,17 @@ const bundles = [
     eyebrow: "Lowest Entry Point",
     name: "Tour to Foundations",
     tagline: "Book the Tour. Unlock 25% off Foundations.",
-    price: "$500 to start",
+    price: "$650 to start",
     originalPrice: null,
     saving: "Save $625 on Foundations if you proceed within 3 months",
     highlight: false,
     description:
-      "The easiest way to get started. Book the Tour de Coastal for $500 and walk real Adelaide development sites with Guy. If you decide to proceed to Foundations within three months, Guy personally honours a 25% discount. No automated codes. No fine print. Just his word.",
+      "The easiest way to get started. Book the Tour de Coastal for $650 and walk real Adelaide development sites with Guy. If you decide to proceed to Foundations within three months, Guy personally honours a 25% discount. No automated codes. No fine print. Just his word.",
     includes: [
-      "Tour de Coastal at standard price: $500",
+      "Tour de Coastal at standard price: $650",
       "25% off Foundations if you proceed within 3 months",
       "No obligation after the tour",
-      "Total if you proceed: $2,375 (versus $3,000 separately)",
+      "Total if you proceed: $2,525 (versus $3,150 separately)",
     ],
     cta: "Book the Tour",
   },
@@ -32,13 +32,13 @@ const bundles = [
     name: "Tour + Foundations",
     tagline: "See it, then build the strategy",
     price: "$2,500",
-    originalPrice: "$3,000",
-    saving: "Save $500 — Tour included free",
+    originalPrice: "$3,150",
+    saving: "Save $650 — Tour included free",
     highlight: false,
     description:
       "The ideal entry point for Adelaide professionals who want to see the reality before they commit. Walk active development sites in Glenelg, Brighton, and Somerton Park with Guy Moore, then move straight into the Foundations coaching programme. The Tour de Coastal is included at no extra cost.",
     includes: [
-      "Tour de Coastal (valued at $500) — included free",
+      "Tour de Coastal (valued at $650) — included free",
       "Foundations one-on-one coaching programme",
       "Entity structuring and Adelaide finance readiness",
     ],
@@ -51,16 +51,16 @@ const bundles = [
     name: "Full Site Find Pathway",
     tagline: "From ready to go, to Adelaide site secured",
     price: "$9,500",
-    originalPrice: "$10,500",
-    saving: "Save $1,000 + flexible milestone payments",
+    originalPrice: "$13,650",
+    saving: "Save $4,150 — 30% off $13,650 separately",
     highlight: true,
     description:
-      "Foundations and Live Deals combined into a single end-to-end site-find coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. This is about getting your structures right and finding the right site, not project managing the build.",
+      "Foundations and Site Find combined into a single end-to-end site-find coaching programme for the Adelaide market. You get the preparation and the execution, with Guy alongside you from your first strategy session through to securing your first site. This is about getting your structures right and finding the right site, not project managing the build.",
     includes: [
       "Foundations: entity structuring, finance readiness, first Adelaide project strategy",
-      "Live Deals: Adelaide site identification, feasibility modelling, due diligence, negotiation",
+      "Site Find: Adelaide site identification, feasibility modelling, due diligence, negotiation",
       "Flexible payment plan available",
-      "20% upfront ($2,000), then 3 x 25% ($2,500 each) at agreed milestones",
+      "Save $4,150 versus $13,650 purchased separately",
     ],
     cta: "Enquire Now",
   },
@@ -70,7 +70,7 @@ const bundles = [
     eyebrow: "FURTHER IN YOUR JOURNEY?",
     name: "Full Project Management",
     tagline: "",
-    price: "From $50,000",
+    price: "Custom Pricing",
     originalPrice: null,
     saving: "",
     highlight: false,
@@ -259,11 +259,11 @@ export function LpbServices() {
                   For clients who have completed the coaching programmes and are ready to execute their first Adelaide
                   development. Guy manages the entire project alongside you, from DA coordination with Adelaide councils
                   and builder selection through to construction oversight and final sale. Typically suited to clients who
-                  have completed the Full Development Pathway or Full Journey bundle and are ready to build.
+                  have completed the Full Site Find Pathway and are ready to build.
                 </p>
               </div>
               <div className="flex-shrink-0 text-right lg:text-left">
-                <div className="text-moore-navy text-2xl font-light mb-1">From $50,000</div>
+                <div className="text-moore-navy text-2xl font-light mb-1">Custom Pricing</div>
                 <button
                   onClick={() => setActiveModal("discovery")}
                   className="group inline-flex items-center gap-2 text-moore-gold hover:text-moore-navy transition-colors text-sm tracking-wide"

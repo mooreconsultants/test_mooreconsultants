@@ -587,7 +587,7 @@ function PmTestimonials() {
     },
     {
       quote: "The project management was worth every cent. Guy caught cost overruns early and kept the build on schedule when I would have missed them entirely.",
-      name: "Bianca",
+      name: "Brooke",
       role: "First-time developer",
       result: "$96k profit",
     },
@@ -911,11 +911,6 @@ function PmFooter() {
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
           <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
-          <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Service"].map((item) => (
-              <a key={item} href="#" className="text-moore-offwhite/50 text-sm hover:text-moore-gold transition-colors">{item}</a>
-            ))}
-          </div>
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>
           </div>

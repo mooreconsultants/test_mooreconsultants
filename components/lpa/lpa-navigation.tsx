@@ -35,7 +35,7 @@ export function LpaNavigation() {
         )}
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
-          <a href="#" className="flex items-center">
+          <a href="/" className="flex items-center">
             <Image
               src="/moore-consultants-logo.png"
               alt="Moore Consultants"
@@ -67,7 +67,7 @@ export function LpaNavigation() {
             </button>
           </div>
 
-          <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="lg:hidden" aria-label="Toggle menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <X className="text-black" />
             ) : (

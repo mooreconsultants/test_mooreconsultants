@@ -67,7 +67,7 @@ export function LpbNavigation() {
             </button>
           </div>
 
-          <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <button className="lg:hidden" aria-label="Toggle menu" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
             {isMobileMenuOpen ? (
               <X className="text-black" />
             ) : (
@@ -108,7 +108,7 @@ export function LpbNavigation() {
       </nav>
 
       <LpbEnquiryModal
-        service={activeModal}
+        bundle={activeModal}
         onClose={() => setActiveModal(null)}
       />
     </>

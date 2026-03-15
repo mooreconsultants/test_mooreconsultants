@@ -17,7 +17,7 @@ export function Footer() {
             <Image
               src="/moore-consultants-logo.png"
               alt="Moore Consultants"
-              className="h-12 w-auto lg:h-14"
+              className="h-12 w-auto lg:h-14 brightness-0 invert opacity-50"
               width={210}
               height={56}
             />
@@ -55,14 +55,6 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
           <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">© 2025 Moore Consultants. All rights reserved.</p>
-
-          <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Service"].map((item) => (
-              <a key={item} href="#" className="text-moore-offwhite/50 text-sm hover:text-moore-gold transition-colors">
-                {item}
-              </a>
-            ))}
-          </div>
 
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>

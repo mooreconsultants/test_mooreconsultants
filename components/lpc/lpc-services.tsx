@@ -50,20 +50,20 @@ const services = [
     number: "03",
     eyebrow: "BEST VALUE ENTRY",
     name: "Tour + Foundations Bundle",
-    tagline: "See it, then build the strategy. Both at early bird rates.",
+    tagline: "See it, then build the strategy. Tour included free.",
     earlyBirdPrice: "$2,500",
-    standardPrice: "$3,200",
-    saving: "Save $700 -- both at early bird rates",
+    standardPrice: "$3,150",
+    saving: "Save $650 — Tour included free",
     highlight: false,
     description:
-      "The Tour de Coastal and Foundations combined at early bird pricing. Walk Adelaide development sites with Guy, then move straight into the Foundations coaching programme. The most efficient way to start.",
+      "The Tour de Coastal and Foundations combined at bundle pricing. Walk Adelaide development sites with Guy, then move straight into the Foundations coaching programme. The most efficient way to start.",
     includes: [
-      "Tour de Coastal at early bird rate ($500)",
-      "Foundations at early bird rate ($2,000)",
+      "Tour de Coastal (valued at $650) — included free",
+      "Foundations one-on-one coaching programme ($2,500)",
       "Seamless progression from seeing it to planning it",
-      "Total saving: $700 versus standard individual prices",
+      "Save $650 versus $3,150 purchased separately",
     ],
-    cta: "CLAIM EARLY BIRD RATE",
+    cta: "CLAIM THIS BUNDLE",
   },
   {
     key: "full-pathway" as EarlyBirdKey,
@@ -72,18 +72,18 @@ const services = [
     name: "Full Site Find Pathway",
     tagline: "From strategy to Adelaide site secured",
     earlyBirdPrice: "$9,500",
-    standardPrice: "$12,000",
-    saving: "Save $2,500 + milestone payment plan",
+    standardPrice: "$13,650",
+    saving: "Save $4,150 — 30% off $13,650 separately",
     highlight: false,
     description:
-      "Foundations and Live Deals combined into a single end-to-end site find coaching programme for the Adelaide market. Both at early bird rates. Pay in milestones, not upfront. From strategy to site secured.",
+      "Foundations and Site Find combined into a single end-to-end site find coaching programme for the Adelaide market. Pay in milestones, not upfront. From strategy to site secured.",
     includes: [
-      "Foundations at early bird rate ($2,000)",
-      "Live Deals at early bird rate ($7,500)",
+      "Foundations coaching programme ($2,500 standard)",
+      "Site Find coaching programme ($10,500 standard)",
       "Flexible payment plan: $2,000 upfront, then 3 x $2,500 at agreed milestones",
-      "Total saving: $2,500 versus standard bundle price",
+      "Save $4,150 versus $13,650 purchased separately",
     ],
-    cta: "CLAIM EARLY BIRD RATE",
+    cta: "CLAIM THIS BUNDLE",
   },
 ]
 
@@ -207,7 +207,7 @@ export function LpcServices() {
                 </p>
               </div>
               <div className="flex-shrink-0 text-right lg:text-left">
-                <div className="text-moore-navy text-2xl font-light mb-1">From $50,000</div>
+                <div className="text-moore-navy text-2xl font-light mb-1">Custom Pricing</div>
                 <button
                   onClick={() => setActiveModal("discovery")}
                   className="group inline-flex items-center gap-2 text-moore-gold hover:text-moore-navy transition-colors text-sm tracking-wide"

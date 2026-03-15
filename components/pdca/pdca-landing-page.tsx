@@ -625,7 +625,7 @@ function PdcaTestimonials() {
     },
     {
       quote: "Guy showed me his actual financials from his own Adelaide projects. That was the moment I knew this was different.",
-      name: "Bianca",
+      name: "Brooke",
       role: "First-time developer, Adelaide",
       result: "$96k profit",
     },
@@ -952,11 +952,6 @@ function PdcaFooter() {
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
           <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
-          <div className="flex gap-6">
-            {["Privacy Policy", "Terms of Service"].map((item) => (
-              <a key={item} href="#" className="text-moore-offwhite/50 text-sm hover:text-moore-gold transition-colors">{item}</a>
-            ))}
-          </div>
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>
           </div>

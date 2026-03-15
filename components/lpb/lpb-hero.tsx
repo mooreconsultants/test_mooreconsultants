@@ -48,7 +48,7 @@ export function LpbHero() {
         <div className="hidden lg:block w-[60%] relative">
           <div className="absolute inset-0 bg-moore-navy/20" />
           <Image
-            src="/luxury-modern-architectural-building-exterior-with.jpg"
+            src="/Hero.jpg"
             alt="Modern Adelaide property development"
             fill
             priority
@@ -71,7 +71,7 @@ export function LpbHero() {
             }}
           />
 
-          <div ref={contentRef} className="relative opacity-0 transition-opacity duration-1000">
+          <div ref={contentRef} className="relative opacity-0 transition-opacity duration-1000 lg:pt-32">
             <div className="inline-flex items-center gap-2 bg-moore-gold/10 border border-moore-gold/30 px-3 py-1.5 mb-6">
               <Tag className="w-3 h-3 text-moore-gold" />
               <span className="text-moore-gold text-xs tracking-[0.3em] uppercase">Bundle Packages</span>
@@ -81,8 +81,6 @@ export function LpbHero() {
               More of Guy.
               <br />
               <span className="text-moore-charcoal">Less to Pay.</span>
-              <br />
-              Done Right.
             </h1>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
@@ -107,7 +105,7 @@ export function LpbHero() {
               </button>
             </div>
 
-            <p className="text-moore-charcoal/50 text-sm">
+            <p className="text-moore-charcoal/50 text-sm mb-8">
               No obligation. Guy will tell you honestly which bundle, if any, is right for your situation.
             </p>
           </div>

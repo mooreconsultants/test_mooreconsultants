@@ -46,15 +46,17 @@ export function LpcHero() {
 
   return (
     <>
-      <section id="hero" className="relative min-h-screen flex items-center overflow-hidden bg-moore-navy">
+      <section id="hero" className="relative min-h-screen flex items-center bg-moore-navy">
+        <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80')" }} />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-r from-moore-navy via-moore-navy/90 to-moore-navy/60" />
         <div className="absolute left-8 top-1/2 -translate-y-1/2 hidden lg:block">
           <span className="text-moore-offwhite/20 text-xs tracking-[0.5em] uppercase [writing-mode:vertical-rl] rotate-180">Adelaide Property Development</span>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-16 py-32 lg:py-0 grid lg:grid-cols-2 gap-16 items-center w-full">
-          <div>
+          <div className="lg:pt-24">
             <span className="text-moore-gold text-xs tracking-[0.4em] uppercase mb-6 block">EARLY BIRD PRICING -- LIMITED TIME ONLY</span>
             <h1 className="font-serif text-5xl lg:text-7xl text-moore-offwhite leading-[1.05] mb-6">
               Your First<br />Development.<br /><span className="text-moore-gold">For Less.</span>
@@ -75,7 +77,7 @@ export function LpcHero() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
               <button onClick={() => setActiveModal("tour")} className="group border border-moore-offwhite/30 text-moore-offwhite text-xs tracking-widest uppercase px-8 py-4 hover:border-moore-gold hover:text-moore-gold transition-all duration-300">
-                START WITH THE TOUR ($500)
+                START WITH THE TOUR ($650)
               </button>
             </div>
           </div>
@@ -87,17 +89,17 @@ export function LpcHero() {
                 {[
                   { name: "Tour de Coastal", early: "$500", standard: "$650", saving: "Save $150" },
                   { name: "Foundations", early: "$2,000", standard: "$2,500", saving: "Save $500" },
-                  { name: "Tour + Foundations Bundle", early: "$2,500", standard: "$3,200", saving: "Save $700" },
-                  { name: "Full Site Find Pathway", early: "$9,500", standard: "$12,000", saving: "Save $2,500" },
+                  { name: "Tour + Foundations Bundle", early: "$2,500", standard: "$3,150", saving: "Save $650" },
+                  { name: "Full Site Find Pathway", early: "$9,500", standard: "$13,650", saving: "Save $4,150" },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center justify-between py-4 border-b border-moore-offwhite/10 last:border-0">
                     <div>
                       <p className="text-moore-offwhite text-sm">{item.name}</p>
-                      <p className="text-moore-gold text-xs mt-0.5">{item.saving}</p>
+                      {item.saving && <p className="text-moore-gold text-xs mt-0.5">{item.saving}</p>}
                     </div>
                     <div className="text-right">
                       <p className="text-moore-gold text-xl font-light">{item.early}</p>
-                      <p className="text-moore-offwhite/30 text-xs line-through">{item.standard}</p>
+                      {item.standard && <p className="text-moore-offwhite/30 text-xs line-through">{item.standard}</p>}
                     </div>
                   </div>
                 ))}

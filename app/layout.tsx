@@ -23,7 +23,10 @@ export const metadata: Metadata = {
     title: "Moore Consultants | Property Development Consulting",
     description: "Your partner in profitable property development",
     type: "website",
+    url: "https://mooreconsultants.com.au",
+    images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
   },
+  metadataBase: new URL("https://mooreconsultants.com.au"),
   icons: {
     icon: [
       {

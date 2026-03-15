@@ -34,7 +34,7 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     price: "Free",
   },
   tour: {
-    eyebrow: "TOUR DE COASTAL · $500",
+    eyebrow: "TOUR DE COASTAL · $650",
     headline: "See a real Adelaide development before you commit to anything",
     subheadline:
       "The Tour de Coastal is a private site visit with Guy Moore across active and completed development projects in Adelaide's coastal suburbs. Glenelg. Brighton. Somerton Park. You will see how Guy reads a block, runs a preliminary feasibility, and identifies the opportunities most buyers walk straight past. It is the lowest-risk way to find out if property development is right for you.",
@@ -46,10 +46,10 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     ],
     formHeading: "Book your Tour de Coastal",
     ctaLabel: "BOOK MY TOUR",
-    price: "$500",
+    price: "$650",
   },
   foundations: {
-    eyebrow: "FOUNDATIONS · $2,000",
+    eyebrow: "FOUNDATIONS · $2,500",
     headline: "Get your structures and strategy right before you spend a dollar on an Adelaide site",
     subheadline:
       "Most first-time developers get this wrong. They find a site before they have the right entity structure, the right finance position, or a clear strategy for the Adelaide market. Foundations fixes that. It is the one-on-one coaching programme that gets you genuinely ready to develop.",
@@ -61,26 +61,26 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     ],
     formHeading: "Enquire about Foundations",
     ctaLabel: "ENQUIRE NOW",
-    price: "$2,000",
+    price: "$2,500",
   },
   livedeals: {
-    eyebrow: "LIVE DEALS · $4,000 UPFRONT + $4,000 ON SUCCESS",
+    eyebrow: "SITE FIND · $10,500",
     headline: "Find and secure your first profitable Adelaide development site",
     subheadline:
-      "This is the most critical step in any development. Live Deals takes you through the entire site identification and acquisition process in the Adelaide market, with Guy Moore coaching you on real sites in real time. Glenelg. Brighton. Burnside. Unley. You do not just learn the theory -- you apply it, with Guy alongside you at every decision point.",
+      "This is the most critical step in any development. Site Find takes you through the entire site identification and acquisition process in the Adelaide market, with Guy Moore coaching you on real sites in real time. Glenelg. Brighton. Burnside. Unley. You do not just learn the theory -- you apply it, with Guy alongside you at every decision point.",
     bullets: [
       "Adelaide site identification criteria and search strategy tailored to your capital",
       "Full financial feasibility modelling with real Adelaide suburb numbers",
       "Due diligence process, Adelaide planning checks, and risk assessment",
       "Negotiation coaching and acquisition support through to contract",
     ],
-    formHeading: "Enquire about Live Deals",
+    formHeading: "Enquire about Site Find",
     ctaLabel: "ENQUIRE NOW",
-    price: "$8,000",
-    priceNote: "$4,000 upfront. $4,000 payable on successful site acquisition.",
+    price: "$10,500",
+    priceNote: "$5,250 upfront. $5,250 payable on successful site acquisition.",
   },
   pm: {
-    eyebrow: "PROJECT MANAGEMENT · FROM $50,000",
+    eyebrow: "PROJECT MANAGEMENT · CUSTOM PRICING",
     headline: "Guy Moore alongside you for the entire Adelaide development",
     subheadline:
       "For clients who have completed the coaching programmes and are ready to execute their first Adelaide development. This is a true end-to-end partnership. Guy manages the entire project alongside you, from DA coordination with Adelaide councils through to builder selection, construction oversight, and final sale. You make the major decisions. He handles everything else.",
@@ -92,7 +92,7 @@ const modalContent: Record<ServiceKey, ServiceModalContent> = {
     ],
     formHeading: "Enquire about Project Management",
     ctaLabel: "ENQUIRE NOW",
-    price: "From $50,000",
+    price: "Custom Pricing",
   },
 }
 

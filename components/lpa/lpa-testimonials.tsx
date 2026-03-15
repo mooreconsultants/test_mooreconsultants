@@ -27,9 +27,9 @@ const testimonials = [
   {
     quote:
       "I was sceptical. I had seen enough property gurus to know the difference between someone who teaches and someone who does. Guy does. He is active in the Adelaide market right now. That is what made the difference.",
-    name: "Bianca",
+    name: "Brooke",
     role: "First time developer, Adelaide",
-    location: "Somerton Park, SA",
+    location: "Glengowrie, SA",
     result: "$96k profit",
     size: "small",
   },

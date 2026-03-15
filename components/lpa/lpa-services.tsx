@@ -18,7 +18,7 @@ const coreServices: {
   {
     number: "01",
     title: "Tour de Coastal",
-    price: "$500",
+    price: "$650",
     tagline: "The lowest-risk first step",
     description:
       "Walk active and completed development sites in Adelaide's coastal suburbs with Guy Moore. See how he reads a block, runs a preliminary feasibility, and identifies the opportunities most buyers walk straight past. This is not a seminar. It is Guy, on the ground, in the Adelaide suburbs where he has completed $23M in projects.",
@@ -34,7 +34,7 @@ const coreServices: {
   {
     number: "02",
     title: "Foundations",
-    price: "$2,000",
+    price: "$2,500",
     tagline: "Get your structures and strategy right",
     description:
       "The essential groundwork before you look at a single Adelaide site. This one-on-one coaching programme covers how to structure your entity, understand your finance position, and build a clear strategy for your first project. Most property courses skip this step entirely. Guy does not.",
@@ -49,9 +49,9 @@ const coreServices: {
   },
   {
     number: "03",
-    title: "Live Deals",
-    price: "$8,000",
-    priceDetail: "$4,000 upfront + $4,000 on success",
+    title: "Site Find",
+    price: "$10,500",
+    priceDetail: "$5,250 upfront + $5,250 on success",
     tagline: "Find and secure your first profitable Adelaide site",
     description:
       "The most critical step in any development. This coaching programme takes you through the entire site identification and acquisition process in the Adelaide market, from understanding what to look for in Glenelg, Brighton, Burnside, and Unley, to running a full feasibility and negotiating the deal. Guy is alongside you at every decision point.",
@@ -216,11 +216,11 @@ export function LpaServices() {
                   For clients who have completed the coaching programmes and are ready to execute their first Adelaide
                   development. Guy manages the entire project alongside you, from DA coordination and builder selection
                   through to construction oversight and final sale. You make the major decisions. He handles everything
-                  else. Typically suited to clients who have completed Foundations and Live Deals and are ready to build.
+                  else. Typically suited to clients who have completed Foundations and Site Find and are ready to build.
                 </p>
               </div>
               <div className="flex flex-col items-start lg:items-end gap-4 flex-shrink-0">
-                <div className="text-moore-navy text-2xl font-light">From $50,000</div>
+                <div className="text-moore-navy text-2xl font-light">Custom Pricing</div>
                 <button
                   onClick={() => setActiveService("pm")}
                   className="group/link inline-flex items-center gap-2 text-moore-charcoal text-sm tracking-widest uppercase hover:text-moore-gold transition-colors"

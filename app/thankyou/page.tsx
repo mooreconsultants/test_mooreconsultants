@@ -48,10 +48,9 @@ const contactOptions = [
 export default function ThankYouPage() {
   return (
     <main className="min-h-screen bg-moore-offwhite text-moore-navy">
-      <div className="relative overflow-hidden border-b border-moore-charcoal/10 bg-moore-navy">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,172,108,0.22),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.1),transparent_30%)]" />
-
-        <div className="relative mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-12">
+      {/* Top nav bar — white background matching other pages */}
+      <div className="border-b border-moore-charcoal/10 bg-white">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-12">
           <Link href="/" className="flex items-center">
             <Image
               src="/moore-consultants-logo.png"
@@ -65,12 +64,17 @@ export default function ThankYouPage() {
 
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-moore-offwhite/80 transition-colors hover:text-moore-gold"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-moore-charcoal/70 transition-colors hover:text-moore-gold"
           >
             Back to Home
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+      </div>
+
+      {/* Hero section — navy */}
+      <div className="relative overflow-hidden bg-moore-navy">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,172,108,0.22),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(255,255,255,0.1),transparent_30%)]" />
 
         <section className="relative mx-auto max-w-[1100px] px-6 pb-20 pt-10 text-center lg:px-12 lg:pb-28 lg:pt-16">
           <div className="mx-auto mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-moore-gold/40 bg-moore-gold/10">

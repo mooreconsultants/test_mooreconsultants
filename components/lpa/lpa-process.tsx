@@ -7,7 +7,7 @@ const steps = [
   {
     number: "01",
     title: "Site Tour",
-    subtitle: "Tour de Coastal — $500",
+    subtitle: "Tour de Coastal — $650",
     description:
       "Start with the Tour de Coastal where Guy will personally drive you to all his recently development sites. He will talk through the challenges, opportunities, and lessons learned from each site. You will have the opportunity to ask any question on this 2 hour tour.",
     icon: HardHat,
@@ -16,7 +16,7 @@ const steps = [
   {
     number: "02",
     title: "Get Ready",
-    subtitle: "Foundations — $2,000",
+    subtitle: "Foundations — $2,500",
     description:
       "Start with the Foundations programme to get your structures, finance position, and Adelaide-specific strategy right. This is the groundwork every successful developer needs before they look at a single site. You will leave with an entity structure, a finance readiness assessment, and a first project action plan tailored to the Adelaide market.",
     icon: BookOpen,
@@ -25,7 +25,7 @@ const steps = [
   {
     number: "03",
     title: "Find Your Site",
-    subtitle: "Live Deals — $8,000",
+    subtitle: "Site Find — $10,500",
     description:
       "Work with Guy to identify, evaluate, and secure a profitable development site in Adelaide. This is where the real coaching happens. Guy is alongside you at every decision point, from initial site search through feasibility modelling, due diligence, and negotiation. You are never making a $100,000 decision alone.",
     icon: MapPin,
@@ -34,7 +34,7 @@ const steps = [
   {
     number: "04",
     title: "Build and Profit",
-    subtitle: "Project Management — From $50,000",
+    subtitle: "Project Management — Custom Pricing",
     description:
       "For clients who have completed the coaching programmes and are ready to execute, Guy can manage the entire Adelaide development alongside you. DA coordination, builder selection, construction oversight, and sales strategy. You make the major decisions. Guy handles everything else.",
     icon: HardHat,

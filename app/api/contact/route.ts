@@ -1,38 +1,24 @@
 import { NextResponse } from "next/server"
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 import type { ContactSubmissionPayload } from "@/lib/contact-submit"
 
+// Simple in-memory rate limiter: max 3 submissions per IP per 10 minutes
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip)
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + 10 * 60 * 1000 })
+    return true
+  }
+  if (entry.count >= 3) return false
+  entry.count++
+  return true
+}
+
+const FROM_ADDRESS = "Moore Consultants <gmoore@updates.mooreconsultants.com.au>"
 const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
 const ADMIN_RECIPIENTS = [GUY_EMAIL, "alex@3pdigital.com.au"]
-
-function getSmtpTransporter() {
-  const host = process.env.SMTP_HOST
-  const portValue = process.env.SMTP_PORT
-  const user = process.env.SMTP_USER
-  const pass = process.env.SMTP_PASS
-
-  if (!host) throw new Error("SMTP_HOST is not set")
-  if (!portValue) throw new Error("SMTP_PORT is not set")
-  if (!user) throw new Error("SMTP_USER is not set")
-  if (!pass) throw new Error("SMTP_PASS is not set")
-
-  const port = Number.parseInt(portValue, 10)
-  if (Number.isNaN(port)) throw new Error("SMTP_PORT must be a valid number")
-
-  const secure = process.env.SMTP_SECURE
-    ? process.env.SMTP_SECURE === "true"
-    : port === 465
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure,
-    auth: {
-      user,
-      pass,
-    },
-  })
-}
 
 function escapeHtml(value: string): string {
   return value
@@ -83,12 +69,6 @@ function buildUserEmailHtml(payload: ContactSubmissionPayload): string {
                 <p style="margin:0 0 18px;color:#334155;font-size:15px;line-height:1.6;">
                   We aim to respond within one business day.
                 </p>
-
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e2e8f0;background:#f8fafc;padding:0 16px;">
-                  <tr><td style="padding:14px 0 8px;color:#64748b;font-size:12px;letter-spacing:1px;text-transform:uppercase;">Submission Details</td></tr>
-                  <tr><td style="padding:4px 0;color:#0f172a;font-size:14px;"><strong>Submitted from:</strong> ${escapeHtml(payload.sourcePage)} (${escapeHtml(payload.sourceComponent)})</td></tr>
-                  <tr><td style="padding:4px 0 14px;color:#0f172a;font-size:14px;"><strong>Request type:</strong> ${escapeHtml(payload.triggerLabel)}</td></tr>
-                </table>
 
                 <p style="margin:20px 0 0;color:#64748b;font-size:13px;">
                   If you need to add anything, just reply to this email.
@@ -199,15 +179,18 @@ function sanitizeDetails(value: unknown): Record<string, string> | undefined {
   return entries.length > 0 ? Object.fromEntries(entries) : undefined
 }
 
-function getFromAddress(): string {
-  return process.env.SMTP_FROM_EMAIL || `Moore Consultants <${GUY_EMAIL}>`
-}
-
-function getReplyToAddress(): string {
-  return GUY_EMAIL
-}
-
 export async function POST(request: Request) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown"
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json({ error: "Too many submissions. Please wait a few minutes and try again." }, { status: 429 })
+  }
+
+  const apiKey = process.env.RESEND_API_KEY
+  if (!apiKey) {
+    console.error("RESEND_API_KEY is not set")
+    return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
+  }
+
   try {
     const body = (await request.json()) as unknown
     if (!validatePayload(body)) {
@@ -229,9 +212,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid name and email address." }, { status: 400 })
     }
 
-    const transporter = getSmtpTransporter()
-    const fromAddress = getFromAddress()
-    const replyToAddress = getReplyToAddress()
+    const resend = new Resend(apiKey)
 
     const requestMeta = {
       "IP Address": request.headers.get("x-forwarded-for") || "Unavailable",
@@ -240,16 +221,18 @@ export async function POST(request: Request) {
       Host: request.headers.get("host") || "Unavailable",
     }
 
-    await transporter.sendMail({
-      from: fromAddress,
+    // Confirmation email to the person who submitted
+    await resend.emails.send({
+      from: FROM_ADDRESS,
       to: payload.email,
-      replyTo: replyToAddress,
+      replyTo: GUY_EMAIL,
       subject: "We received your Moore Consultants submission",
       html: buildUserEmailHtml(payload),
     })
 
-    await transporter.sendMail({
-      from: fromAddress,
+    // Notification email to admin recipients
+    await resend.emails.send({
+      from: FROM_ADDRESS,
       to: ADMIN_RECIPIENTS,
       replyTo: payload.email,
       subject: `[Moore Consultants] ${payload.triggerLabel} from ${payload.name}`,
