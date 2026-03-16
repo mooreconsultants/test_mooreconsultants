@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 10-Point No-Go Checklist | Moore Consultants</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  /* ── BRAND TOKENS (from mooreconsultants.com.au) ── */
+  :root {
+    --charcoal:    #3C3C3C;
+    --charcoal-dk: #252525;
+    --blue:        #37A3D0;
+    --blue-dk:     #2683A8;
+    --blue-pale:   #EBF6FB;
+    --white:       #FFFFFF;
+    --off-white:   #F5F7FA;
+    --grey-light:  #E4E8ED;
+    --grey-mid:    #8A9AAB;
+    --grey-dark:   #5C6B78;
+    --page-bg:     #ECEEF1;
+    --red-flag:    #B83030;
+    --green:       #3A9E6A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--page-bg);
+    font-family: 'Lato', sans-serif;
+    color: var(--charcoal);
+    padding: 48px 20px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05), 0 20px 60px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--charcoal-dk);
+    padding: 40px 52px 36px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle circle ornament matching site hero */
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgba(55,163,208,0.08);
+    pointer-events: none;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(55,163,208,0.12);
+    pointer-events: none;
+  }
+
+  /* Logo — real image with fallback text */
+
+
+  .logo-img { display: none; }
+
+  /* Gold eyebrow label */
+  .doc-eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    max-width: 580px;
+    margin-bottom: 12px;
+  }
+
+  .header h1 em {
+    color: var(--blue);
+    font-style: normal;
+  }
+
+  .header-sub {
+    font-size: 13.5px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 1.75;
+    max-width: 520px;
+  }
+
+  /* Gold rule under header title area */
+  .header-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--blue);
+    margin: 18px 0 0;
+  }
+
+  /* ── PHASE BANNER ── */
+  .phase-banner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    background: var(--charcoal);
+  }
+
+  .phase-block {
+    padding: 20px 28px;
+  }
+
+  .phase-block.active {
+    background: rgba(55,163,208,0.10);
+    border-bottom: 2px solid var(--blue);
+  }
+
+  .phase-block.passive {
+    border-bottom: 2px solid rgba(255,255,255,0.06);
+  }
+
+  .phase-label {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .phase-block.active .phase-label { color: var(--blue); }
+  .phase-block.passive .phase-label { color: rgba(148,163,184,0.6); }
+
+  .phase-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .phase-block.active .phase-heading { color: var(--white); }
+  .phase-block.passive .phase-heading { color: var(--grey-mid); }
+
+  .phase-detail {
+    font-size: 11.5px;
+    font-weight: 300;
+    line-height: 1.55;
+    margin-top: 4px;
+  }
+
+  .phase-block.active .phase-detail { color: rgba(55,163,208,0.85); }
+  .phase-block.passive .phase-detail { color: rgba(255,255,255,0.45); }
+
+  .phase-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    color: rgba(55,163,208,0.4);
+    font-size: 18px;
+  }
+
+  /* ── INTRO ── */
+  .intro {
+    padding: 28px 52px 24px;
+    border-bottom: 1px solid var(--grey-light);
+  }
+
+  .intro p {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: #555;
+    font-weight: 300;
+  }
+
+  .intro p strong { color: var(--charcoal-dk); font-weight: 700; }
+  .intro p em { color: var(--blue); font-style: normal; font-weight: 700; }
+
+  /* ── CHECKLIST ── */
+  .checklist {
+    padding: 4px 52px 8px;
+  }
+
+  .check-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--grey-light);
+    gap: 0;
+    align-items: start;
+  }
+
+  .check-item:last-child {
+    border-bottom: none;
+  }
+
+  .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--grey-light);
+    line-height: 1;
+    padding-top: 3px;
+    user-select: none;
+  }
+
+  .check-item.flag .num {
+    color: rgba(184,48,48,0.18);
+  }
+
+  .body {}
+
+  /* Title row */
+  .title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 7px;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--charcoal-dk);
+    line-height: 1.25;
+    flex: 1;
+  }
+
+  /* Tags */
+  .tag {
+    font-family: 'Lato', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 3px 8px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .tag-nogo    { background: rgba(184,48,48,0.08); color: var(--red-flag); }
+  .tag-quick   { background: rgba(55,163,208,0.10); color: #2683A8; }
+  .tag-numbers { background: rgba(11,17,32,0.06);   color: #4a5568; }
+
+  .detail {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .detail strong { color: var(--charcoal-dk); font-weight: 400; }
+  .detail em { color: var(--charcoal-dk); font-style: normal; font-weight: 400; }
+
+  /* Cooling-off note */
+  .sprint-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    padding: 7px 12px;
+    background: rgba(11,17,32,0.04);
+    font-size: 11px;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .sprint-note .icon { color: var(--blue); font-size: 12px; flex-shrink: 0; }
+
+  /* ── CALLOUT BOXES ── */
+  .callout {
+    margin: 8px 52px 24px;
+    display: grid;
+    grid-template-columns: 3px 1fr;
+    gap: 0;
+  }
+
+  .callout-bar { background: var(--blue); }
+
+  .callout-inner {
+    padding: 20px 22px;
+  }
+
+  .callout.dark { background: var(--charcoal-dk); }
+  .callout.dark .callout-bar { background: var(--blue); }
+  .callout.light { background: #EBF6FB; border: 1px solid rgba(55,163,208,0.2); border-left: none; }
+
+  .callout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+
+  .callout.dark .callout-title { color: var(--blue); }
+  .callout.light .callout-title { color: var(--charcoal-dk); }
+
+  .callout-body {
+    font-size: 12.5px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .callout.dark .callout-body { color: rgba(255,255,255,0.72); }
+  .callout.dark .callout-body strong { color: var(--white); font-weight: 700; }
+  .callout.light .callout-body { color: #555; }
+  .callout.light .callout-body strong { color: var(--charcoal-dk); font-weight: 700; }
+
+  /* ── 2-DAY SPRINT SECTION ── */
+  .sprint-section {
+    background: var(--charcoal-dk);
+    margin: 16px 52px 28px;
+    padding: 28px 28px 24px;
+  }
+
+  .sprint-eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sprint-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(55,163,208,0.2);
+  }
+
+  .sprint-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .sprint-intro {
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.72);
+    font-weight: 300;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .sprint-intro strong { color: var(--white); font-weight: 700; }
+
+  .sprint-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .sprint-item {
+    background: rgba(255,255,255,0.03);
+    padding: 15px 16px;
+  }
+
+  .sprint-item-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .sprint-item-body {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+    line-height: 1.55;
+  }
+
+  .sprint-item-body strong { color: var(--white); font-weight: 700; }
+
+  /* ── GUY QUOTE ── */
+  .quote-section {
+    margin: 0 52px 32px;
+    padding: 24px 28px;
+    background: #faf8f5;
+    border-left: 3px solid var(--blue);
+  }
+
+  .quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 14.5px;
+    font-style: italic;
+    color: var(--charcoal-dk);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .quote-attr {
+    font-size: 11px;
+    color: var(--blue);
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .quote-creds {
+    font-size: 11px;
+    color: var(--grey-mid);
+    font-weight: 300;
+    margin-top: 2px;
+  }
+
+  /* ── FOOTER ── matches site footer style ── */
+  .footer {
+    background: var(--charcoal-dk);
+    padding: 32px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .footer-left {}
+
+  .footer-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .footer-headline em { color: var(--blue); font-style: normal; }
+
+  .footer-sub {
+    font-size: 12px;
+    color: var(--grey-mid);
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .footer-contact {
+    font-size: 11px;
+    color: rgba(148,163,184,0.6);
+    margin-top: 5px;
+  }
+
+  /* CTA button — matching site's Book Consultation button */
+  .btn-cta {
+    display: inline-block;
+    background: var(--blue);
+    color: var(--charcoal-dk);
+    font-family: 'Lato', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 26px;
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+
+  .btn-cta:hover { background: var(--blue-dk); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ── LOGO PANEL ── -->
+  <div style="background:#fff;padding:18px 52px 14px;border-bottom:3px solid #37A3D0;display:flex;align-items:center;justify-content:space-between;">
+    <img style="height:42px;width:auto;display:block;" src="data:image/png;base64,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" alt="Moore Consultants">
+    <span style="font-family:Lato,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8A9AAB;font-weight:700;text-align:right;">Developer's Field Guide<br>Pre-Offer Assessment</span>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <div class="header">
+
+    <div class="doc-eyebrow">Developer's Field Guide · Pre-Offer Assessment</div>
+    <h1>The 10-Point "No-Go" Checklist</h1>
+    <p class="header-sub">What I check before making an offer — built from $23M+ of completed Adelaide coastal projects. Ordered by deal-killer severity. Run through this before you call the agent.</p>
+    <div class="header-rule"></div>
+  </div>
+
+  <!-- ── TWO PHASE BANNER ── -->
+  <div class="phase-banner">
+    <div class="phase-block active">
+      <div class="phase-label">Stage 1 · This document</div>
+      <div class="phase-heading">Pre-Offer Assessment</div>
+      <div class="phase-detail">Desktop checks in 30–60 minutes. Kill bad sites fast before you spend any money or emotional energy.</div>
+    </div>
+    <div class="phase-arrow">›</div>
+    <div class="phase-block passive">
+      <div class="phase-label">Stage 2 · After offer accepted</div>
+      <div class="phase-heading">2-Day Cooling-Off Sprint</div>
+      <div class="phase-detail">Secure the site first. Then call your surveyor, arborist, designer, builder, and planning consultant. Cross-reference everything.</div>
+    </div>
+  </div>
+
+  <!-- ── INTRO ── -->
+  <div class="intro">
+    <p>Ten checks before you make an offer. All of them are potential deal killers — not margin adjustments. If you hit one, stop and investigate before going further.</p>
+  </div>
+
+  <!-- ── CHECKLIST ── -->
+  <div class="checklist">
+
+    <div class="check-item flag">
+      <div class="num">01</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Does the zoning permit what you want to build?</div>
+        </div>
+        <div class="detail">Open the SA Planning Portal and check the zone and every overlay. A Character Overlay is a near-automatic no-go — even when development is permitted, the design requirements it imposes will almost always make the project unviable.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">02</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Are there protected trees on or near the frontage?</div>
+        </div>
+        <div class="detail">SA tree legislation has tightened significantly. Council verge trees are protected — you cannot remove them and cannot position a crossover too close to them. If a tree sits where your crossover needs to go, parking compliance becomes impossible. If you're unsure, engage a highly regarded arborist before you commit.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">03</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Can you get a crossover in at the right position?</div>
+        </div>
+        <div class="detail">Scan every metre of the frontage on Google Street View. SA Water pits, electricity plinths, power poles, bus stops, road islands, and median strips can all block a crossover. You need a legal crossover position for each dwelling's parking — if you can't get one, the project doesn't proceed regardless of everything else.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">04</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">What type of road is it?</div>
+        </div>
+        <div class="detail">A quiet residential street is ideal. A narrow street is worth a closer look — access and parking can become complicated. A semi-main road introduces noise, traffic, and buyer hesitation that will discount your end value. A main road — avoid it entirely. The lifestyle discount is structural and won't go away.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">05</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Are there easements that will kill the design?</div>
+        </div>
+        <div class="detail">Ask the agent for the title — they'll provide it for free. It shows SA Water, electricity, gas, and stormwater easements. An easement through the building envelope ends the project — and the vendor has no obligation to disclose it. Do this before you offer, not after.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">06</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Does the lot meet the minimum allotment size?</div>
+        </div>
+        <div class="detail">Check the Planning and Design Code for the minimum for your development type and zone. Council may allow up to approximately 5% below the minimum, but only if everything else in your application is perfect and nothing else is being varied.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">07</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Does the frontage meet the minimum?</div>
+        </div>
+        <div class="detail">General Neighbourhood minimums: 9m for a 2-site development, 7m for a 3-site row. Confirm on the title — SA titles are often in imperial, so convert to metric. Council may allow the same approximate 5% tolerance on frontage, but again only if everything else in the application is perfect.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">08</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">Has someone already tried to develop this and failed?</div>
+        </div>
+        <div class="detail">Ask the agent why the vendor is selling. Estate sales and financial pressure are fine. A vendor who applied for development approval and was refused is a red flag — find out why. It may be fixable, or it may be permanent.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">09</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">How does the site slope?</div>
+        </div>
+        <div class="detail">Every metre of fall adds $8,000–$15,000 in earthworks. Drive past — you'll see it immediately. A site draining away from the street with no outlet may need a pump system. Your surveyor will quantify it precisely once you're under contract.</div>
+      </div>
+    </div>
+
+    <div class="check-item flag">
+      <div class="num">10</div>
+      <div class="body">
+        <div class="title-row">
+          <div class="title">What's on the site, and is demolition clean?</div>
+        </div>
+        <div class="detail">Pre-1990 buildings in Adelaide almost certainly contain asbestos — add $8,000–$25,000 to demolition. Check Street View for granny flats, separate meters, or structures that may need council approval to remove.</div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- ── 2-DAY COOLING-OFF SPRINT ── -->
+  <div class="sprint-section">
+    <div class="sprint-eyebrow">Once Your Offer Is Accepted</div>
+    <div class="sprint-title">The Cooling-Off Sprint — Who to Call and Why</div>
+    <div class="sprint-intro">Secure the site first. Once you're under contract the clock starts and everyone has a reason to engage. The goal is to cross-reference everything and leave no stone unturned. The more people you speak to, the clearer the picture.</div>
+
+    <div class="sprint-grid">
+      <div class="sprint-item">
+        <div class="sprint-item-title">📐 Surveyor — First call</div>
+        <div class="sprint-item-body">Don't approach a surveyor with a hypothetical before you've secured the site — you'll wear out goodwill you'll need later. Once you're under contract, call them immediately and ask for their initial read on viability. You're not asking for a full report — just their experienced opinion on the site. That's a different conversation and they're usually happy to have it.</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-item-title">🌳 Arborist — If trees are in play</div>
+        <div class="sprint-item-body">If there are trees near the crossover position or on the verge, engage a highly regarded arborist immediately. SA tree legislation has tightened. You need a qualified, respected opinion on what's protected, what can be removed, and what constraints apply. Don't guess on this one.</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-item-title">✏️ Designer — Early in the sprint</div>
+        <div class="sprint-item-body">Brief your designer as soon as you have the surveyor's initial read. You need a concept layout that confirms the design is viable, parking works, and private open space is achievable. This is the document that tells you whether everything fits within the real constraints of the site.</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-item-title">🔨 Builder — Site visit if possible</div>
+        <div class="sprint-item-body">A good builder will often be willing to walk the site with you during cooling-off. That's enormously valuable — they see cost implications you won't. At minimum you need a rough construction cost range to confirm the feasibility still works. Not a quote — a range.</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-item-title">🏛 Planning Consultant — Worth their weight in gold</div>
+        <div class="sprint-item-body">Find someone who is ex-council and knows how to navigate the specific council your site sits in. These people understand how an assessment team actually thinks — not just what the code says. They will also often know about any local issues, overlays, or nuances that aren't obvious from a desktop review. They are worth every dollar.</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-item-title">📋 Building Permit Consultant</div>
+        <div class="sprint-item-body">People who specialise in building permit applications at council level — often also ex-council — can flag compliance issues early and advise on how to frame your application for the best outcome. Getting this right from the start saves months of back-and-forth later in the process.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── GUY QUOTE ── -->
+  <div class="quote-section">
+    <div class="quote-text">"This checklist covers the site assessment. It deliberately leaves out feasibility — build costs, acquisition price, operational costs, resale values, how to get accurate numbers from agents and builders. That's a separate discipline and it's covered elsewhere. What I've found after 25+ years in sales is that the hardest part isn't finding a site or even running the numbers. It's closing — knowing how to secure a site when you're confident it works. Most people hesitate at exactly that moment. That's where I can help most. If you've got a site you're looking at and you're not sure how to move on it, call me."</div>
+    <div class="quote-attr">Guy Moore</div>
+    <div class="quote-creds">Founder, Moore Consultants · $23M+ Completed Adelaide Coastal Projects</div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <div class="footer-left">
+      <div class="footer-headline">Got a site you're looking at?</div>
+      <div class="footer-sub">Bring it to a free 30-minute consultation. Guy will tell you whether it's worth pursuing — or save you from one that isn't.</div>
+      <div class="footer-contact">mooreconsultants.com.au · gmoore@mooreconsultants.com.au</div>
+    </div>
+    <a href="https://mooreconsultants.com.au" class="btn-cta">Book Free Consultation</a>
+  </div>
+
+</div>
+</body>
+</html>
