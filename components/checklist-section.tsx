@@ -95,7 +95,7 @@ export function ChecklistSection() {
               ))}
               <div className="border-t border-moore-navy/10 pt-6">
                 <p className="text-moore-charcoal/40 text-sm italic">
-                  + 5 more checks in the full 12-page document — easements, road type, allotment size, frontage minimums, and site slope. Each one includes the exact numbers to look for, where to find them, and what to do when you strike a problem.
+                  + 5 more checks in the full document — easements, road type, allotment size, frontage minimums, and site slope. Each one includes the exact numbers to look for, where to find them, and what to do when you strike a problem. Plus a bonus section: the Cooling-Off Sprint — exactly who to call the moment your offer is accepted and why.
                 </p>
               </div>
             </div>
