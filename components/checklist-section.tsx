@@ -63,15 +63,57 @@ export function ChecklistSection() {
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
         {/* Header */}
-        <div className="mb-16">
-          <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">FREE DOWNLOAD</span>
-          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy mb-6 leading-tight">
-            Most development sites fail one of these 10 checks.<br />
-            <em className="not-italic text-moore-gold">Do you know which ones?</em>
-          </h2>
-          <p className="text-moore-charcoal/70 text-xl leading-relaxed max-w-2xl">
-            Guy has assessed hundreds of Adelaide sites over 25+ years. The same problems kill deals over and over — and most buyers never see them coming until they've already spent money on due diligence.
-          </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
+          <div>
+            <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">FREE DOWNLOAD</span>
+            <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy mb-6 leading-tight">
+              Most development sites fail one of these 10 checks.<br />
+              <em className="not-italic text-moore-gold">Do you know which ones?</em>
+            </h2>
+            <p className="text-moore-charcoal/70 text-xl leading-relaxed">
+              Guy has assessed hundreds of Adelaide sites over 25+ years. The same problems kill deals over and over — and most buyers never see them coming until they've already spent money on due diligence.
+            </p>
+          </div>
+
+          {/* Document preview mockup */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              {/* Drop shadow page */}
+              <div className="absolute inset-0 translate-x-4 translate-y-4 bg-moore-navy/15" />
+              {/* Document card */}
+              <div className="relative bg-moore-navy p-8 w-72 shadow-2xl">
+                <p className="text-moore-gold/60 text-[9px] tracking-[0.25em] uppercase mb-1">Developer's Field Guide</p>
+                <p className="text-white/30 text-[9px] tracking-[0.2em] uppercase mb-5">Pre-Offer Assessment</p>
+                <h3 className="font-serif text-white text-2xl leading-tight mb-4">
+                  The 10-Point<br />"No-Go"<br />Checklist
+                </h3>
+                <p className="text-white/40 text-xs leading-relaxed mb-6">
+                  Built from $23M+ of completed Adelaide coastal projects. Ordered by deal-killer severity.
+                </p>
+                <div className="space-y-2 mb-6">
+                  {[
+                    "01 · Zoning check",
+                    "02 · Protected trees",
+                    "03 · Crossover access",
+                    "04 · Road type",
+                    "05 · Easements",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <div className="w-1 h-1 bg-moore-gold flex-shrink-0" />
+                      <p className="text-white/40 text-[10px] tracking-wide">{item}</p>
+                    </div>
+                  ))}
+                  <div className="flex items-center gap-2">
+                    <div className="w-1 h-1 bg-white/15 flex-shrink-0" />
+                    <p className="text-white/20 text-[10px] tracking-wide">+ 5 more checks &amp; cooling-off guide</p>
+                  </div>
+                </div>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="text-moore-gold text-[9px] tracking-[0.3em] uppercase">Moore Consultants</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
