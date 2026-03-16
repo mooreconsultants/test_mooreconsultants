@@ -63,7 +63,7 @@ export function ChecklistSection() {
       <div className="max-w-[1400px] mx-auto px-8 lg:px-12">
 
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="mb-16">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">FREE DOWNLOAD</span>
           <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy mb-6 leading-tight">
             Most development sites fail one of these 10 checks.<br />
