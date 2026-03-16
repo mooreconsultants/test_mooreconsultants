@@ -27,7 +27,7 @@ const PREVIEW_ITEMS = [
   {
     num: "10",
     title: "What's on the site — and is demolition clean?",
-    sting: "Pre-1990 buildings almost certainly contain asbestos. That's $8,000–$25,000 before you've broken ground.",
+    sting: "Pre-1990 buildings almost certainly contain asbestos — and demolition costs blow out fast. Most buyers never ask until it's too late.",
   },
 ]
 
@@ -95,7 +95,7 @@ export function ChecklistSection() {
               ))}
               <div className="border-t border-moore-navy/10 pt-6">
                 <p className="text-moore-charcoal/40 text-sm italic">
-                  + 5 more checks covering easements, road type, allotment size, frontage minimums, and site slope — with exact figures and what to do when you find a problem.
+                  + 5 more checks in the full 12-page document — easements, road type, allotment size, frontage minimums, and site slope. Each one includes the exact numbers to look for, where to find them, and what to do when you strike a problem.
                 </p>
               </div>
             </div>
