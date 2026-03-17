@@ -161,7 +161,7 @@ export default function ThankYouPage() {
           <div>
             <p className="text-xs uppercase tracking-[0.36em] text-moore-gold">Meanwhile</p>
             <p className="mt-3 max-w-2xl text-base leading-7 text-moore-charcoal/75">
-              Feel free to head back to the main site if you would like to review services, case studies, or more about
+              Feel free to head back to the main site if you would like to review services, portfolio, or more about
               Guy&apos;s Adelaide development experience.
             </p>
           </div>

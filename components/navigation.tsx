@@ -37,7 +37,7 @@ export function Navigation() {
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
-          {["Services", "Case Studies", "About", "Process"].map((item) => (
+          {["Services", "Portfolio", "About", "Process"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}
@@ -79,7 +79,7 @@ export function Navigation() {
         )}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
-          {["Services", "Case Studies", "About", "Process", "Contact"].map((item) => (
+          {["Services", "Portfolio", "About", "Process", "Contact"].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(" ", "-")}`}

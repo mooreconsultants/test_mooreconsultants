@@ -83,11 +83,6 @@ export function SiteVisitSection() {
               </div>
             </div>
 
-            {/* Video Caption */}
-            <p className="text-moore-white/40 text-sm mt-6 italic">
-              A recent site assessment in Adelaide's coastal suburbs — Lot 2, 19 King George Avenue, Somerton Park.
-              One sold, one remaining. Construction underway.
-            </p>
           </div>
 
           {/* Content Side */}
