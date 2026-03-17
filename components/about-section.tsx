@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 export function AboutSection() {
@@ -72,13 +71,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 text-moore-navy text-sm tracking-widest uppercase hover:text-moore-gold transition-colors group relative z-10"
-            >
-              Read Full Story
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
+
           </div>
         </div>
       </div>
