@@ -65,7 +65,7 @@ export function CaseStudiesSection() {
   const [featured, ...rest] = projects
 
   return (
-    <section id="case-studies" className="py-24 lg:py-32 bg-moore-white">
+    <section id="portfolio" className="py-24 lg:py-32 bg-moore-white">
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
           <div>
