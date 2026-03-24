@@ -67,8 +67,8 @@ export function LpaProblem() {
             <div className="relative">
               <div className="relative w-full h-[350px] lg:h-[420px]">
                 <Image
-                  src="/professional-consultant-reviewing-architectural-pl.jpg"
-                  alt="Guy Moore reviewing Adelaide development plans with a client"
+                  src="/guy-moore-site-visit-mobile.jpg"
+                  alt="Guy Moore on site at an Adelaide development"
                   fill
                   className="object-cover"
                 />
