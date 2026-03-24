@@ -75,43 +75,14 @@ export function ChecklistSection() {
             </p>
           </div>
 
-          {/* Document preview mockup */}
+          {/* Site image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Drop shadow page */}
-              <div className="absolute inset-0 translate-x-4 translate-y-4 bg-moore-navy/15" />
-              {/* Document card */}
-              <div className="relative bg-moore-navy p-8 w-72 shadow-2xl">
-                <p className="text-moore-gold/60 text-[9px] tracking-[0.25em] uppercase mb-1">Developer's Field Guide</p>
-                <p className="text-white/30 text-[9px] tracking-[0.2em] uppercase mb-5">Pre-Offer Assessment</p>
-                <h3 className="font-serif text-white text-2xl leading-tight mb-4">
-                  The 10-Point<br />"No-Go"<br />Checklist
-                </h3>
-                <p className="text-white/40 text-xs leading-relaxed mb-6">
-                  Built from $23M+ of completed Adelaide coastal projects. Ordered by deal-killer severity.
-                </p>
-                <div className="space-y-2 mb-6">
-                  {[
-                    "01 · Zoning check",
-                    "02 · Protected trees",
-                    "03 · Crossover access",
-                    "04 · Road type",
-                    "05 · Easements",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-moore-gold flex-shrink-0" />
-                      <p className="text-white/40 text-[10px] tracking-wide">{item}</p>
-                    </div>
-                  ))}
-                  <div className="flex items-center gap-2">
-                    <div className="w-1 h-1 bg-white/15 flex-shrink-0" />
-                    <p className="text-white/20 text-[10px] tracking-wide">+ 5 more checks &amp; cooling-off guide</p>
-                  </div>
-                </div>
-                <div className="border-t border-white/10 pt-4">
-                  <p className="text-moore-gold text-[9px] tracking-[0.3em] uppercase">Moore Consultants</p>
-                </div>
-              </div>
+            <div className="relative w-full max-w-lg aspect-[4/3] overflow-hidden">
+              <img
+                src="/aerial-view-of-residential-development-site.jpg"
+                alt="Aerial view of a residential development site"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
