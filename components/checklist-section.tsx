@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 const PREVIEW_ITEMS = [
   {
     num: "01",
-    title: "Does the zoning actually permit what you want to build?",
+    title: "Does the zoning permit allow what you want to build?",
     sting: "A Character Overlay alone can make an otherwise viable site completely unworkable. Most buyers never check.",
   },
   {
