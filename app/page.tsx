@@ -9,6 +9,7 @@ import { SiteVisitSection } from "@/components/site-visit-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { DifferentiationSection } from "@/components/differentiation-section"
 import { CTASection } from "@/components/cta-section"
+import { ChecklistSection } from "@/components/checklist-section"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 
@@ -24,6 +25,7 @@ export default function Home() {
       <CaseStudiesSection />
       <ProcessSection />
       <SiteVisitSection />
+      <ChecklistSection />
       <TestimonialsSection />
       <DifferentiationSection />
       <CTASection />
