@@ -6,68 +6,6 @@ import { join } from "path"
 const FROM_ADDRESS = "Moore Consultants <gmoore@updates.mooreconsultants.com.au>"
 const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
 
-const CHECKLIST_ITEMS = [
-  {
-    num: "01",
-    title: "Does the zoning permit what you want to build?",
-    detail:
-      "Open the SA Planning Portal and check the zone and every overlay. A Character Overlay is a near-automatic no-go — even when development is permitted, the design requirements it imposes will almost always make the project unviable.",
-  },
-  {
-    num: "02",
-    title: "Are there protected trees on or near the frontage?",
-    detail:
-      "SA tree legislation has tightened significantly. Council verge trees are protected — you cannot remove them and cannot position a crossover too close to them. If a tree sits where your crossover needs to go, parking compliance becomes impossible.",
-  },
-  {
-    num: "03",
-    title: "Can you get a crossover in at the right position?",
-    detail:
-      "Scan every metre of the frontage on Google Street View. SA Water pits, electricity plinths, power poles, bus stops, road islands, and median strips can all block a crossover. You need a legal crossover position for each dwelling's parking.",
-  },
-  {
-    num: "04",
-    title: "What type of road is it?",
-    detail:
-      "A quiet residential street is ideal. A semi-main road introduces noise, traffic, and buyer hesitation that will discount your end value. A main road — avoid it entirely. The lifestyle discount is structural and won't go away.",
-  },
-  {
-    num: "05",
-    title: "Are there easements that will kill the design?",
-    detail:
-      "Ask the agent for the title — they'll provide it for free. It shows SA Water, electricity, gas, and stormwater easements. An easement through the building envelope ends the project. Do this before you offer, not after.",
-  },
-  {
-    num: "06",
-    title: "Does the lot meet the minimum allotment size?",
-    detail:
-      "Check the Planning and Design Code for the minimum for your development type and zone. Council may allow up to approximately 5% below the minimum, but only if everything else in your application is perfect.",
-  },
-  {
-    num: "07",
-    title: "Does the frontage meet the minimum?",
-    detail:
-      "General Neighbourhood minimums: 9m for a 2-site development, 7m for a 3-site row. Confirm on the title — SA titles are often in imperial, so convert to metric.",
-  },
-  {
-    num: "08",
-    title: "Has someone already tried to develop this and failed?",
-    detail:
-      "Ask the agent why the vendor is selling. Estate sales and financial pressure are fine. A vendor who applied for development approval and was refused is a red flag — find out why. It may be fixable, or it may be permanent.",
-  },
-  {
-    num: "09",
-    title: "How does the site slope?",
-    detail:
-      "Every metre of fall adds $8,000–$15,000 in earthworks. Drive past — you'll see it immediately. A site draining away from the street with no outlet may need a pump system.",
-  },
-  {
-    num: "10",
-    title: "What's on the site, and is demolition clean?",
-    detail:
-      "Pre-1990 buildings in Adelaide almost certainly contain asbestos — add $8,000–$25,000 to demolition. Check Street View for granny flats, separate meters, or structures that may need council approval to remove.",
-  },
-]
 
 function escapeHtml(value: string): string {
   return value
@@ -79,94 +17,42 @@ function escapeHtml(value: string): string {
 }
 
 function buildChecklistEmail(name: string): string {
-  const checklistRows = CHECKLIST_ITEMS.map(
-    (item) => `
-    <tr>
-      <td style="padding:20px 0;border-bottom:1px solid #e2e8f0;vertical-align:top;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-          <tr>
-            <td style="width:40px;vertical-align:top;padding-top:2px;">
-              <span style="font-size:22px;font-weight:900;color:#e2e8f0;font-family:Georgia,serif;line-height:1;">${item.num}</span>
-            </td>
-            <td style="vertical-align:top;padding-left:8px;">
-              <p style="margin:0 0 6px;font-size:15px;font-weight:700;color:#0f172a;line-height:1.35;">${escapeHtml(item.title)}</p>
-              <p style="margin:0;font-size:13px;color:#475569;line-height:1.7;font-weight:400;">${escapeHtml(item.detail)}</p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  `,
-  ).join("")
-
   return `
-  <div style="margin:0;padding:0;background:#f1f5f9;font-family:Arial,Helvetica,sans-serif;">
+  <div style="margin:0;padding:0;background:#f8fafc;font-family:Arial,Helvetica,sans-serif;">
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="padding:30px 12px;">
       <tr>
         <td align="center">
-          <table role="presentation" width="640" cellspacing="0" cellpadding="0" style="max-width:640px;background:#ffffff;border:1px solid #e2e8f0;">
+          <table role="presentation" width="620" cellspacing="0" cellpadding="0" style="max-width:620px;background:#ffffff;border:1px solid #e2e8f0;">
 
             <!-- Header -->
             <tr>
-              <td style="padding:32px 36px 28px;background:#0f172a;">
-                <p style="margin:0 0 14px;color:#94a3b8;font-size:11px;letter-spacing:3px;text-transform:uppercase;">Moore Consultants · Developer's Field Guide</p>
-                <h1 style="margin:0 0 10px;color:#ffffff;font-size:26px;line-height:1.2;font-weight:700;font-family:Georgia,serif;">The 10-Point "No-Go" Checklist</h1>
-                <p style="margin:0;color:#94a3b8;font-size:13px;line-height:1.6;">Hi ${escapeHtml(name)}, here's your checklist. Run through all 10 before you call the agent.</p>
+              <td style="padding:28px 32px;background:#0f172a;">
+                <p style="margin:0 0 10px;color:#94a3b8;font-size:11px;letter-spacing:3px;text-transform:uppercase;">Moore Consultants</p>
+                <h1 style="margin:0;color:#ffffff;font-size:24px;line-height:1.3;font-weight:600;">Your No-Go Checklist is attached.</h1>
               </td>
             </tr>
 
-            <!-- Intro -->
+            <!-- Body -->
             <tr>
-              <td style="padding:22px 36px 10px;border-bottom:1px solid #e2e8f0;">
-                <p style="margin:0;font-size:13px;color:#475569;line-height:1.7;">
-                  Ten checks before you make an offer. All of them are potential <strong style="color:#0f172a;">deal killers</strong> — not margin adjustments. If you hit one, stop and investigate before going further.
+              <td style="padding:28px 32px;">
+                <p style="margin:0 0 16px;color:#1e293b;font-size:16px;line-height:1.6;">
+                  Hi ${escapeHtml(name)},
                 </p>
-              </td>
-            </tr>
-
-            <!-- Checklist -->
-            <tr>
-              <td style="padding:4px 36px 8px;">
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-                  ${checklistRows}
-                </table>
-              </td>
-            </tr>
-
-            <!-- Quote -->
-            <tr>
-              <td style="padding:24px 36px;background:#f8fafc;border-top:3px solid #0ea5e9;border-bottom:1px solid #e2e8f0;">
-                <p style="margin:0 0 12px;font-size:14px;font-style:italic;color:#0f172a;line-height:1.7;font-family:Georgia,serif;">
-                  "This checklist covers the site assessment. The hardest part isn't finding a site or running the numbers — it's closing. Knowing how to secure a site when you're confident it works. If you've got a site you're looking at and you're not sure how to move on it, call me."
+                <p style="margin:0 0 16px;color:#334155;font-size:15px;line-height:1.7;">
+                  Thanks for downloading the 10-Point No-Go Checklist. You'll find it attached to this email — run through all 10 checks before you make an offer on any site.
                 </p>
-                <p style="margin:0;font-size:11px;color:#0ea5e9;font-weight:700;letter-spacing:1px;text-transform:uppercase;">Guy Moore</p>
-                <p style="margin:2px 0 0;font-size:11px;color:#94a3b8;">Founder, Moore Consultants · $23M+ Completed Adelaide Coastal Projects</p>
-              </td>
-            </tr>
-
-            <!-- CTA Footer -->
-            <tr>
-              <td style="padding:28px 36px;background:#0f172a;">
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="vertical-align:middle;padding-right:20px;">
-                      <p style="margin:0 0 4px;font-size:16px;font-weight:700;color:#ffffff;font-family:Georgia,serif;">Got a site you're looking at?</p>
-                      <p style="margin:0;font-size:12px;color:#94a3b8;line-height:1.5;">Bring it to a free 30-minute consultation. Guy will tell you whether it's worth pursuing.</p>
-                    </td>
-                    <td style="vertical-align:middle;white-space:nowrap;">
-                      <a href="https://mooreconsultants.com.au/#contact" style="display:inline-block;background:#0ea5e9;color:#0f172a;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:13px 22px;text-decoration:none;">
-                        Book Free Consultation
-                      </a>
-                    </td>
-                  </tr>
-                </table>
+                <p style="margin:0 0 24px;color:#334155;font-size:15px;line-height:1.7;">
+                  If you've got a site you're looking at, or any questions at all, just reply to this email and I'll get back to you.
+                </p>
+                <p style="margin:0;color:#0f172a;font-size:15px;font-weight:600;">Guy Moore</p>
+                <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Founder, Moore Consultants</p>
               </td>
             </tr>
 
             <!-- Footer -->
             <tr>
-              <td style="padding:16px 36px;background:#0f172a;border-top:1px solid rgba(255,255,255,0.08);">
-                <p style="margin:0;font-size:11px;color:#475569;">mooreconsultants.com.au · gmoore@mooreconsultants.com.au</p>
+              <td style="padding:18px 32px;background:#f8fafc;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px;">
+                Moore Consultants · Adelaide, South Australia · mooreconsultants.com.au
               </td>
             </tr>
 
