@@ -2,7 +2,7 @@ import { Linkedin, Instagram } from "lucide-react"
 import Image from "next/image"
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/mooreconsultants" },
   { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
 ]
 
@@ -43,7 +43,7 @@ export function Footer() {
                 key={index}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noreferrer" : undefined}
+                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="w-10 h-10 border border-moore-offwhite/20 flex items-center justify-center text-moore-offwhite/70 hover:border-moore-gold hover:text-moore-gold transition-colors"
               >
                 <Icon className="w-4 h-4" />
