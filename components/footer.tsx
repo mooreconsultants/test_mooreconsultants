@@ -1,9 +1,10 @@
-import { Linkedin, Instagram } from "lucide-react"
+import { Linkedin, Instagram, Facebook } from "lucide-react"
 import Image from "next/image"
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/mooreconsultants" },
   { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
+  { icon: Facebook, href: "https://www.facebook.com/mooredevelopments/" },
 ]
 
 export function Footer() {
