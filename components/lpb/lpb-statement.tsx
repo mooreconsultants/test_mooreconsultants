@@ -31,17 +31,18 @@ export function LpbStatement() {
           <div className="lg:col-span-7">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE REALITY</span>
             <h2 className="font-serif text-4xl lg:text-6xl text-moore-offwhite leading-tight mb-8">
-              Most high-achieving Adelaide professionals who want to develop property never start.
+              Every week you wait, the Adelaide market moves without you.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-offwhite/70 text-lg leading-relaxed mb-6">
-              Not because they lack the capital. Not because the opportunity is not there in Adelaide. But because
-              they have no one to validate their decisions, and the cost of getting it wrong feels too high.
+              You have already invested in property development education. You understand the fundamentals. The
+              barrier is not knowledge — it is finding someone you trust enough to commit alongside. Someone with
+              real numbers from real Adelaide projects, not polished case studies from someone else's portfolio.
             </p>
             <p className="text-moore-offwhite/70 text-lg leading-relaxed">
-              You have consumed the courses. You understand feasibility, zoning, and development margins. But when it
-              comes to committing real money to a real Adelaide site, the fear of a $100,000 mistake stops you cold.
-              That is not a knowledge problem. That is an execution problem. And it is exactly what Guy Moore solves.
+              You don't need another course. You need validation from an active developer who is navigating the
+              Adelaide market right now, with his own money, and who will tell you honestly whether a deal stacks
+              up before you commit.
             </p>
           </div>
 

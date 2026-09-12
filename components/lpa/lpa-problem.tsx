@@ -6,21 +6,21 @@ import Image from "next/image"
 const problems = [
   {
     number: "01",
-    segment: "The Paralysed Learner",
-    title: "You have consumed the courses. You are still not executing.",
-    body: "You understand feasibility. You know what a planning overlay is. You have run the numbers on paper. But when it comes to committing real money to a real Adelaide site, analysis paralysis sets in. You need expert validation at every decision point, not more theory.",
+    segment: "The Capital Holder",
+    title: "You have the money. You don't have the starting point.",
+    body: "You have $200k–$500k earmarked for property development. You know it is a better vehicle than leaving it in the bank. But without a clear first step — which suburb, what type of development, how the numbers actually work in Adelaide — the capital sits idle. That is not a problem with your resources. It is a starting-point problem.",
   },
   {
     number: "02",
-    segment: "The Time-Poor Professional",
-    title: "Your career demands 60 hours a week. You cannot afford to learn on the job.",
-    body: "As a doctor, lawyer, engineer, or senior executive, your time is worth too much to spend navigating Adelaide council approvals, vetting builders, and running feasibilities. You need a partner who handles the complexity while you focus on your career.",
+    segment: "The Risk Manager",
+    title: "You won't commit until you understand the real downside.",
+    body: "You have seen the numbers work on paper. But without seeing real Adelaide project financials — the actual margin from actual local sites — you cannot fully trust the model. Guy shares the real numbers from his own $23M Adelaide portfolio. Not estimates. His actual results from Glenelg, Brighton, and Somerton Park.",
   },
   {
     number: "03",
-    segment: "The Experienced Investor",
-    title: "Passive investment returns are no longer enough.",
-    body: "You already own investment properties in Adelaide. You understand the market. But the gap between passive investment and active development feels significant. You need someone who has made that transition successfully and can accelerate your path to your first profitable development.",
+    segment: "The Late Starter",
+    title: "You know the Adelaide market is moving. You are not in it yet.",
+    body: "Adelaide's coastal suburbs are changing. Sites that were available twelve months ago are already gone. The professionals who move in the next six months are the ones who will complete a first project in a market that is still favourable. The question is not whether to start. It is how to start right.",
   },
 ]
 
@@ -53,13 +53,13 @@ export function LpaProblem() {
           <div className="lg:col-span-4">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE CHALLENGE</span>
             <h2 className="font-serif text-3xl lg:text-4xl text-moore-navy mb-6 leading-tight">
-              Three types of Adelaide professional. One solution.
+              You have what it takes. You need what comes next.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-charcoal/70 leading-relaxed">
-              Every client Guy Moore works with is different. But the barriers they face are remarkably consistent.
-              Whether you are paralysed by fear, time-poor, or ready to scale, the path forward is the same: expert
-              guidance from someone who has done it in Adelaide, with real money, on real sites.
+              Every capital holder Guy Moore works with is different. But the starting-point barrier is consistent:
+              not knowing what to do first, and not having someone in their corner who has done it before in the
+              same market.
             </p>
           </div>
 

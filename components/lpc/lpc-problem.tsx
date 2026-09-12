@@ -6,21 +6,21 @@ import Image from "next/image"
 const problems = [
   {
     number: "01",
-    segment: "The Paralysed Learner",
-    title: "You have consumed the courses. You are still not executing.",
-    body: "You understand feasibility. You know what a planning overlay is. You have run the numbers on paper. But when it comes to committing real money to a real Adelaide site, analysis paralysis sets in. You need expert validation at every decision point, not more theory.",
+    segment: "The Capital Recycling Problem",
+    title: "Your equity is locked in the asset. You don't know how to structure the next deal.",
+    body: "After your first project, most of the profit is tied up. Understanding how to recycle that capital — refinance, equity release, joint venture structures — while managing development risk is a different skill set from the first project. Guy Moore has navigated this multiple times across Adelaide's coastal suburbs.",
   },
   {
     number: "02",
-    segment: "The Time-Poor Professional",
-    title: "Your career demands 60 hours a week. You cannot afford to learn on the job.",
-    body: "As a doctor, lawyer, engineer, or senior executive, your time is worth too much to spend navigating Adelaide council approvals, vetting builders, and running feasibilities. You need a partner who handles the complexity while you focus on your career.",
+    segment: "The Scaling Mindset",
+    title: "What got you to the first development won't get you to the portfolio.",
+    body: "Your first development was about proving the model. The second and third are about building a system — site selection discipline, builder relationships, entity structures that support multiple concurrent developments. These require a level of operational clarity that most one-off developers never develop.",
   },
   {
     number: "03",
-    segment: "The Experienced Investor",
-    title: "Passive investment returns are no longer enough.",
-    body: "You already own investment properties in Adelaide. You understand the market. But the gap between passive investment and active development feels significant. You need someone who has made that transition successfully and can accelerate your path to your first profitable development.",
+    segment: "The Market Depth Problem",
+    title: "You know one suburb. A portfolio requires knowing several.",
+    body: "You completed your first project in one area. Scaling means knowing which Adelaide coastal suburbs offer genuine development margin right now — Glenelg, Brighton, Somerton Park, Burnside, Unley — and which ones look good on paper but don't stack up when the numbers are run properly.",
   },
 ]
 
@@ -53,13 +53,13 @@ export function LpcProblem() {
           <div className="lg:col-span-4">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE CHALLENGE</span>
             <h2 className="font-serif text-3xl lg:text-4xl text-moore-navy mb-6 leading-tight">
-              Three types of Adelaide professional. One solution.
+              Three barriers that stop first-time developers from becoming portfolio developers.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-charcoal/70 leading-relaxed">
-              Every client Guy Moore works with is different. But the barriers they face are remarkably consistent.
-              Whether you are paralysed by fear, time-poor, or ready to scale, the path forward is the same: expert
-              guidance from someone who has done it in Adelaide, with real money, on real sites.
+              Every developer who has completed their first project faces a different challenge for the second.
+              Guy Moore has navigated all of them in Adelaide's coastal suburbs — with his own money, on his
+              own projects.
             </p>
           </div>
 

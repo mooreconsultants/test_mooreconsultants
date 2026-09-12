@@ -6,21 +6,21 @@ import Image from "next/image"
 const problems = [
   {
     number: "01",
-    segment: "The Paralysed Learner",
-    title: "You have consumed the courses. You are still not executing.",
-    body: "You understand feasibility. You know what a planning overlay is. You have run the numbers on paper. But when it comes to committing real money to a real Adelaide site, analysis paralysis sets in. You need expert validation at every decision point, not more theory.",
+    segment: "The Overeducated Undoer",
+    title: "You know more than most people who have already developed. You still haven't started.",
+    body: "You have completed the courses. You can talk feasibility, planning overlays, and development margins with confidence. But theoretical knowledge and the conviction to commit real money to an Adelaide site are two completely different things. Knowing is not the same as doing.",
   },
   {
     number: "02",
-    segment: "The Time-Poor Professional",
-    title: "Your career demands 60 hours a week. You cannot afford to learn on the job.",
-    body: "As a doctor, lawyer, engineer, or senior executive, your time is worth too much to spend navigating Adelaide council approvals, vetting builders, and running feasibilities. You need a partner who handles the complexity while you focus on your career.",
+    segment: "The Validation Seeker",
+    title: "Every time you think you have found a deal, the doubt sets in.",
+    body: "You run the numbers and they stack up. Then you second-guess the inputs. Then you find another reason to keep looking. What you are missing is not a better spreadsheet — it is someone who can look at the same deal and tell you honestly whether it works. Guy Moore does exactly that, from 10+ years of active development in Adelaide.",
   },
   {
     number: "03",
-    segment: "The Experienced Investor",
-    title: "Passive investment returns are no longer enough.",
-    body: "You already own investment properties in Adelaide. You understand the market. But the gap between passive investment and active development feels significant. You need someone who has made that transition successfully and can accelerate your path to your first profitable development.",
+    segment: "The Accountability Gap",
+    title: "Without someone alongside you, the trigger never gets pulled.",
+    body: "Most property courses sell you the knowledge and leave you to execute alone. There is no one to call when you find a site that looks right. No one to pressure-test the numbers. No one to tell you whether the DA risk is manageable. That is the gap Guy Moore fills — not with more education, but with presence.",
   },
 ]
 
@@ -53,13 +53,13 @@ export function LpbProblem() {
           <div className="lg:col-span-4">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE CHALLENGE</span>
             <h2 className="font-serif text-3xl lg:text-4xl text-moore-navy mb-6 leading-tight">
-              Three types of Adelaide professional. One solution.
+              You've done the courses. Something else is holding you back.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-charcoal/70 leading-relaxed">
-              Every client Guy Moore works with is different. But the barriers they face are remarkably consistent.
-              Whether you are paralysed by fear, time-poor, or ready to scale, the path forward is the same: expert
-              guidance from someone who has done it in Adelaide, with real money, on real sites.
+              The barrier for most educated property investors is not what they know. It is the absence of someone
+              to validate their decisions when real money is on the line. Guy Moore fills that role — one client
+              at a time.
             </p>
           </div>
 

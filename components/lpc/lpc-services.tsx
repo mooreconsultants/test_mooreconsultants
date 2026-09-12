@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowRight, CheckCircle, Clock } from "lucide-react"
+import { ArrowRight, CheckCircle } from "lucide-react"
 import { LpcEnquiryModal, type EarlyBirdKey } from "@/components/lpc/lpc-enquiry-modal"
 
 const services = [
@@ -96,21 +96,16 @@ export function LpcServices() {
         <div className="max-w-7xl mx-auto px-6 lg:px-16">
           {/* Header */}
           <div className="mb-16 lg:mb-20">
-            <span className="text-moore-gold text-xs tracking-[0.4em] uppercase mb-4 block">EARLY BIRD PRICING</span>
+            <span className="text-moore-gold text-xs tracking-[0.4em] uppercase mb-4 block">COACHING SERVICES</span>
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
               <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy max-w-xl leading-tight">
-                Choose Your Starting Point
+                Choose the Right Next Step
               </h2>
-              <div className="flex items-center gap-2 bg-moore-gold/10 border border-moore-gold/30 px-4 py-3 max-w-xs">
-                <Clock className="w-4 h-4 text-moore-gold flex-shrink-0" />
-                <p className="text-moore-charcoal text-xs leading-relaxed">
-                  Early bird pricing closes end of month. Standard prices resume after.
-                </p>
-              </div>
             </div>
             <p className="text-moore-charcoal/60 mt-4 max-w-2xl leading-relaxed">
-              All four coaching services are available at early bird rates this month only. Start where you are.
-              Guy will tell you honestly which service is the right entry point for your situation.
+              Whether you need to sharpen your site selection, sort your capital structure, or find and secure
+              your next Adelaide development, Guy works with you one-on-one. He will tell you honestly which
+              service is the right entry point for where you are now.
             </p>
           </div>
 

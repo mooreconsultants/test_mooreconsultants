@@ -31,17 +31,18 @@ export function LpcStatement() {
           <div className="lg:col-span-7">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE REALITY</span>
             <h2 className="font-serif text-4xl lg:text-6xl text-moore-offwhite leading-tight mb-8">
-              Most high-achieving Adelaide professionals who want to develop property never start.
+              Most first-time developers never do a second project. Not because they failed — because no one told them how to structure the next one.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-offwhite/70 text-lg leading-relaxed mb-6">
-              Not because they lack the capital. Not because the opportunity is not there in Adelaide. But because
-              they have no one to validate their decisions, and the cost of getting it wrong feels too high.
+              Your first development proved the concept. But scaling requires a different mindset: overlapping
+              timelines, recycled capital, deeper site selection criteria. Without someone who has scaled in the
+              Adelaide coastal market specifically, the second project feels as uncertain as the first.
             </p>
             <p className="text-moore-offwhite/70 text-lg leading-relaxed">
-              You have consumed the courses. You understand feasibility, zoning, and development margins. But when it
-              comes to committing real money to a real Adelaide site, the fear of a $100,000 mistake stops you cold.
-              That is not a knowledge problem. That is an execution problem. And it is exactly what Guy Moore solves.
+              The developers who build real portfolios in Adelaide are not the ones who knew the most going in.
+              They are the ones who had someone alongside them at every critical decision point — someone who had
+              already made those same decisions with their own money in the same market.
             </p>
           </div>
 

@@ -75,28 +75,29 @@ export function LpaHero() {
             <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE CONSULTANTS · ADELAIDE</span>
 
             <h1 className="font-serif text-5xl lg:text-7xl text-moore-navy leading-[1.1] mb-6">
-              From Theory
+              You Have the Capital.
               <br />
-              <span className="text-moore-charcoal">to Reality.</span>
+              <span className="text-moore-charcoal">Now What?</span>
             </h1>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <h2 className="text-xl lg:text-2xl text-moore-charcoal font-light mb-6">
-              Adelaide's Only Execution-Focused Property Development Partner
+              The First Step Is Knowing Where to Start
             </h2>
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-md">
-              You have done the research. You understand the theory. But when it comes to actually executing your first
-              Adelaide development, the fear of getting it wrong stops you cold. Guy Moore has built a $23M portfolio
-              right here in Adelaide. He does not teach theory. He builds with you.
+              You have capital set aside for property development. You understand the concept. But when it comes to
+              your first Adelaide development — which suburb, what structure, how the numbers actually work — you have
+              no clear starting point. That is not a capital problem. That is a clarity problem. Guy Moore has built
+              $23M in Adelaide developments from a $450k starting position. He knows exactly where to start.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button
                 onClick={() => setActiveModal("discovery")}
                 className="group inline-flex items-center justify-center gap-3 bg-moore-navy text-moore-offwhite px-8 py-4 text-sm tracking-widest uppercase transition-all hover:bg-moore-charcoal"
-              >Book a Free Adelaide Consultation
+              >Book a Free 30-Min Consultation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>

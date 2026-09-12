@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { ArrowRight, Tag } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { LpbEnquiryModal, type BundleKey } from "@/components/lpb/lpb-enquiry-modal"
 
 export function LpbHero() {
@@ -72,27 +72,25 @@ export function LpbHero() {
           />
 
           <div ref={contentRef} className="relative opacity-0 transition-opacity duration-1000 lg:pt-32">
-            <div className="inline-flex items-center gap-2 bg-moore-gold/10 border border-moore-gold/30 px-3 py-1.5 mb-6">
-              <Tag className="w-3 h-3 text-moore-gold" />
-              <span className="text-moore-gold text-xs tracking-[0.3em] uppercase">Bundle Packages</span>
-            </div>
+            <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE CONSULTANTS · ADELAIDE</span>
 
             <h1 className="font-serif text-5xl lg:text-7xl text-moore-navy leading-[1.1] mb-6">
-              More of Guy.
+              You Know the Theory.
               <br />
-              <span className="text-moore-charcoal">Less to Pay.</span>
+              <span className="text-moore-charcoal">Now Use It.</span>
             </h1>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <h2 className="text-xl lg:text-2xl text-moore-charcoal font-light mb-6">
-              Bundle Packages for Adelaide Professionals Ready to Commit to Their First Development
+              The gap between knowing property development and doing it is not knowledge. It's conviction.
             </h2>
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-md">
-              Guy Moore has structured four bundle packages that give you more coaching, more momentum, and more
-              value than purchasing services separately. Every bundle is built around the Adelaide market, with
-              Guy alongside you at every step.
+              You have invested in the education. You understand feasibility, zoning, and development margins. But
+              when it comes to committing real money to a real Adelaide site, something stops you cold. That is not
+              a knowledge gap. That is an execution gap — and it is exactly what Guy Moore closes. He works with
+              3–4 clients at a time, validating every decision before you commit real money.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -100,13 +98,13 @@ export function LpbHero() {
                 onClick={() => setActiveModal("discovery")}
                 className="group inline-flex items-center justify-center gap-3 bg-moore-navy text-moore-offwhite px-8 py-4 text-sm tracking-widest uppercase transition-all hover:bg-moore-charcoal"
               >
-                Book a Free Adelaide Consultation
+                Book a Free 30-Min Consultation
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </button>
             </div>
 
             <p className="text-moore-charcoal/50 text-sm mb-8">
-              No obligation. Guy will tell you honestly which bundle, if any, is right for your situation.
+              No obligation. Guy will tell you honestly whether the timing is right to move from education to execution.
             </p>
           </div>
         </div>

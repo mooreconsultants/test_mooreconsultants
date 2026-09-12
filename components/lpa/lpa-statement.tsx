@@ -31,18 +31,18 @@ export function LpaStatement() {
           <div className="lg:col-span-7">
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE REALITY</span>
             <h2 className="font-serif text-4xl lg:text-6xl text-moore-offwhite leading-tight mb-8">
-              Most high-achieving Adelaide professionals who want to develop property never start.
+              Most Adelaide professionals with development capital spend years waiting for the right moment. It never arrives.
             </h2>
             <div className="w-16 h-px bg-moore-gold mb-8" />
             <p className="text-moore-offwhite/70 text-lg leading-relaxed mb-6">
-              Not because they lack the capital. Not because the opportunity is not there in Adelaide. 
-              But because they have no one to validate their decisions, and the cost of getting it wrong
-              feels too high.
+              Not because the opportunity is not there in Adelaide's coastal suburbs. Not because the capital is not
+              there. But because without someone who has done it before in the same market, every option feels like
+              a potential $100,000 mistake.
             </p>
             <p className="text-moore-offwhite/70 text-lg leading-relaxed">
-              You have consumed the courses. You understand feasibility, zoning, and development margins. But when it
-              comes to committing real money to a real Adelaide site, the fear of a $100,000 mistake stops you cold.
-              That is not a knowledge problem. That is an execution problem. And it is exactly what Guy Moore solves.
+              You have done enough research to know the upside is real. What you need is someone to show you the
+              actual starting point — the right suburb, the right structure, the right first project — from someone
+              who has done it with their own money in Adelaide.
             </p>
           </div>
 

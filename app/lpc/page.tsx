@@ -13,9 +13,15 @@ import { LpcContact } from "@/components/lpc/lpc-contact"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Early Bird Pricing | Moore Consultants | Adelaide Property Development Coaching",
+  title: "Scale Beyond Your First Development | Moore Consultants | Adelaide",
   description:
-    "Limited time early bird pricing on all Adelaide property development coaching services. Tour de Coastal from $400, Foundations from $1,750. Offer ends end of month.",
+    "One-on-one property development coaching for Adelaide professionals who have completed their first development and are ready to build a portfolio. Capital recycling, site stacking, and portfolio strategy with Guy Moore. Book a free 30-min consultation.",
+  openGraph: {
+    title: "Scale Beyond Your First Development | Moore Consultants | Adelaide",
+    description: "You've done one. Now build the portfolio. Guy Moore works with experienced Adelaide developers navigating their second project and beyond.",
+    url: "https://mooreconsultants.com.au/lpc",
+    images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
+  },
 }
 
 export default function LpcPage() {

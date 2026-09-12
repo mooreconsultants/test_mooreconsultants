@@ -14,12 +14,12 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Your First Property Development, Done Right | Moore Consultants",
+  title: "You Have the Capital. Here's the Starting Point. | Moore Consultants",
   description:
-    "One-on-one property development coaching for Australians ready to build real wealth. Tour de Coastal, Foundations, and Site Find programmes available. Book a free discovery call.",
+    "One-on-one property development coaching for Adelaide professionals with capital ready to deploy. Clarity on the right first step, the right suburb, and the right structure. Book a free 30-min consultation.",
   openGraph: {
-    title: "Your First Property Development, Done Right | Moore Consultants",
-    description: "One-on-one coaching and end-to-end project management for your first Adelaide development.",
+    title: "You Have the Capital. Here's the Starting Point. | Moore Consultants",
+    description: "One-on-one coaching for Adelaide professionals ready to make their first development move. Real numbers. No theory.",
     url: "https://mooreconsultants.com.au/lpa",
     images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
   },
