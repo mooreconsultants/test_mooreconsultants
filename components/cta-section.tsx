@@ -5,7 +5,7 @@ import type React from "react"
 import { useState, useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import { submitContactSubmission } from "@/lib/contact-submit"
-import Image from "next/image"
+
 
 export function CTASection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -49,13 +49,13 @@ export function CTASection() {
       await submitContactSubmission({
         sourcePage: "/",
         sourceComponent: "CTASection",
-        triggerLabel: "Book Free Consultation",
+        triggerLabel: "Start a Conversation",
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         details: {
-          "Primary goal": formData.goal,
-          "Estimated budget": formData.budget,
+          "Primary area of interest": formData.goal,
+          "Engagement stage": formData.budget,
         },
       })
       setSubmitted(true)
@@ -70,7 +70,7 @@ export function CTASection() {
     <section id="contact" className="relative py-24 lg:py-32 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <Image src="/modern-architectural-home-interior-with-natural-li.jpg" alt="Background" className="w-full h-full object-cover" fill sizes="100vw" />
+        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=85" alt="Background" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-moore-navy/90" />
       </div>
 
@@ -78,12 +78,12 @@ export function CTASection() {
         <div className="text-center mb-12">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">GET STARTED</span>
           <h2 className="font-serif text-4xl lg:text-5xl text-moore-offwhite mb-6">
-            Ready to Start Your First
+            Ready to Make Better
             <br />
-            Profitable Development?
+            Technology Decisions?
           </h2>
           <p className="text-moore-offwhite/70 text-lg max-w-xl mx-auto">
-            Book a free 30-minute consultation to discuss your goals.
+            Tell us what you're working through — cybersecurity, AI or broader technology strategy.
           </p>
         </div>
 
@@ -122,16 +122,16 @@ export function CTASection() {
               required
             >
               <option value="" className="bg-moore-navy">
-                Primary Goal
+                Area of Interest
               </option>
               <option value="first-project" className="bg-moore-navy">
-                Complete First Development
+                Cybersecurity Strategy
               </option>
               <option value="scale" className="bg-moore-navy">
-                Scale Existing Portfolio
+                AI Strategy & Adoption
               </option>
               <option value="learn" className="bg-moore-navy">
-                Learn the Process
+                Technology & Transformation
               </option>
               <option value="other" className="bg-moore-navy">
                 Other
@@ -144,19 +144,19 @@ export function CTASection() {
               required
             >
               <option value="" className="bg-moore-navy">
-                Estimated Budget
+                Where Are You Now?
               </option>
               <option value="under-500k" className="bg-moore-navy">
-                Under $500k
+                Exploring Options
               </option>
               <option value="500k-1m" className="bg-moore-navy">
-                $500k - $1M
+                Planning a Project
               </option>
               <option value="1m-2m" className="bg-moore-navy">
-                $1M - $2M
+                Ready to Move Forward
               </option>
               <option value="over-2m" className="bg-moore-navy">
-                Over $2M
+                Ongoing Advisory
               </option>
             </select>
           </div>
