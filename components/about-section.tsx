@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
+
 
 export function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -31,7 +31,7 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-12 min-h-[800px]">
           {/* Left - Large Portrait */}
           <div className="lg:col-span-6 relative h-[500px] lg:h-auto overflow-hidden rounded-r-2xl lg:rounded-2xl">
-            <Image src="/guy-moore-portrait.jpg" alt="Guy Moore" className="w-full h-full object-cover object-top" fill sizes="(max-width: 1024px) 100vw, 50vw" />
+            <img src="/guy-moore-portrait.jpg" alt="Guy Moore" className="absolute inset-0 w-full h-full object-cover object-top" />
             {/* Vertical accent */}
             <div className="hidden lg:block absolute right-0 top-1/4 bottom-1/4 w-px bg-moore-gold" />
           </div>
@@ -48,21 +48,21 @@ export function AboutSection() {
             <h2 className="font-serif text-4xl lg:text-6xl text-moore-navy mb-4 relative z-10">Guy Moore</h2>
 
             <p className="text-moore-charcoal text-xl lg:text-2xl font-light mb-8 relative z-10">
-              Built and Sold Over $23M in New Adelaide Homes in 7 Years
+              Cybersecurity, Technology & Business Leader · 20+ Years' Experience
             </p>
 
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-lg relative z-10">
-              Guy Moore has spent the past seven years building and selling new homes across Adelaide's coastal suburbs, accumulating over $23M in completed projects. He is not a course seller or a theorist. He is an active developer who works alongside a small number of clients each year, sharing the same strategies, sites, and financial models he uses in his own business.
+              Guy has more than two decades of experience across cybersecurity, enterprise IT, Australian Government and Defence. At Palo Alto Networks, he helped rebuild and lead the Federal Government and Defence business, growing the Canberra operation to approximately 40 people. Today, he advises on cybersecurity strategy, AI adoption and technology-led business improvement. Outside work, Guy is passionate about HYROX, triathlon, strength and conditioning, yoga and exercise science.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mb-10 relative z-10">
               {[
-                { value: "$23M+", label: "New Homes Built & Sold" },
-                { value: "7 Years", label: "To Build the Portfolio" },
-                { value: "163%", label: "Best CoC Return" },
+                { value: "20+", label: "Years in Technology" },
+                { value: "8 Years", label: "At Palo Alto Networks" },
+                { value: "~40", label: "Canberra Operation" },
               ].map((stat, index) => (
                 <div key={index}>
                   <div className="text-moore-navy text-3xl lg:text-4xl font-light mb-2">{stat.value}</div>
