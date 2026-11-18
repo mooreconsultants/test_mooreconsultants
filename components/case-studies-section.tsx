@@ -2,40 +2,40 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
+
 
 const projects = [
   {
-    location: "SEACLIFF PARK, SA",
-    profit: "$857,000",
+    location: "FEDERAL GOVERNMENT & DEFENCE",
+    profit: "~40",
     metrics: [
-      { label: "CoC Return", value: "163%" },
-      { label: "Timeline", value: "24 Months" },
-      { label: "Type", value: "Row Terrace" },
+      { label: "Focus", value: "Leadership" },
+      { label: "Sector", value: "Federal" },
+      { label: "Domain", value: "Cyber" },
     ],
-    image: "/images/properties/seacliff-park-exterior.webp",
+    image: "https://images.unsplash.com/photo-1564457461758-8ff96e439e83?auto=format&fit=crop&w=1400&q=85",
     featured: true,
   },
   {
-    location: "SOMERTON PARK, SA",
-    profit: "$523,000",
+    location: "SOVEREIGN CYBERSECURITY",
+    profit: "IRAP",
     metrics: [
-      { label: "CoC Return", value: "112%" },
-      { label: "Timeline", value: "20 Months" },
-      { label: "Type", value: "Detached" },
+      { label: "Focus", value: "Assessment" },
+      { label: "Sector", value: "Federal" },
+      { label: "Domain", value: "Cyber" },
     ],
-    image: "/images/properties/seacliff-park-interior-living.webp",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
     featured: false,
   },
   {
-    location: "SOMERTON PARK, SA",
-    profit: "$642,000",
+    location: "STATE GOVERNMENT CYBER",
+    profit: "JAPAC",
     metrics: [
-      { label: "CoC Return", value: "128%" },
-      { label: "Timeline", value: "18 Months" },
-      { label: "Type", value: "Row Terrace" },
+      { label: "Focus", value: "Growth" },
+      { label: "Sector", value: "State" },
+      { label: "Domain", value: "Cyber" },
     ],
-    image: "/images/properties/somerton-park-interior-kitchen.webp",
+    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85",
     featured: false,
   },
 ]
@@ -69,8 +69,8 @@ export function CaseStudiesSection() {
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16">
           <div>
-            <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">PORTFOLIO</span>
-            <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Real Projects. Real Profits.</h2>
+            <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">EXPERIENCE</span>
+            <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Real Experience. Real Perspective.</h2>
           </div>
         </div>
 
@@ -79,17 +79,15 @@ export function CaseStudiesSection() {
 
           {/* Featured card — spans 3 cols */}
           <div className="lg:col-span-3 group relative h-[420px] lg:h-[640px] overflow-hidden rounded-2xl cursor-pointer shadow-md">
-            <Image
+            <img
               src={featured.image}
               alt={featured.location}
-              fill
-              sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/90 via-moore-navy/30 to-transparent" />
             <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-end">
               <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">{featured.profit}</div>
-              <span className="text-moore-offwhite/50 text-xs tracking-widest uppercase mb-6">Net Profit</span>
+              <span className="text-moore-offwhite/50 text-xs tracking-widest uppercase mb-6">Experience</span>
               <div className="flex gap-8">
                 {featured.metrics.map((m, i) => (
                   <div key={i}>
@@ -105,17 +103,15 @@ export function CaseStudiesSection() {
           <div className="lg:col-span-2 flex flex-col gap-4 lg:gap-6">
             {rest.map((project, index) => (
               <div key={index} className="group relative h-[300px] lg:h-full overflow-hidden rounded-2xl cursor-pointer shadow-md flex-1">
-                <Image
+                <img
                   src={project.image}
                   alt={project.location}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/90 via-moore-navy/30 to-transparent" />
                 <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
                   <div className="text-moore-offwhite text-3xl lg:text-4xl font-light mb-1">{project.profit}</div>
-                  <span className="text-moore-offwhite/50 text-xs tracking-widest uppercase mb-4">Net Profit</span>
+                  <span className="text-moore-offwhite/50 text-xs tracking-widest uppercase mb-4">Experience</span>
                 </div>
               </div>
             ))}
