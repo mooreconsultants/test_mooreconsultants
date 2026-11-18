@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, CheckCircle2, Instagram, Linkedin, Mail, MapPin } from "lucide-react"
+import { ArrowRight, CheckCircle2, Linkedin, Mail, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Thank You | Moore Developments",
@@ -36,12 +36,6 @@ const contactOptions = [
     value: "linkedin.com/in/gmoore",
     href: "https://www.linkedin.com/in/gmoore/",
     icon: Linkedin,
-  },
-  {
-    title: "Message on Instagram",
-    value: "@moore_consultants_sa",
-    href: "https://www.instagram.com/moore_consultants_sa/",
-    icon: Instagram,
   },
 ]
 
