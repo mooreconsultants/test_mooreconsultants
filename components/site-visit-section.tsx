@@ -6,23 +6,23 @@ import { MapPin, Eye, Ruler, FileText } from "lucide-react"
 const visitHighlights = [
   {
     icon: Eye,
-    title: "Zoning & Overlay Analysis",
-    description: "Identify development potential and planning constraints before you commit.",
+    title: "Security & Risk Review",
+    description: "Understand security priorities, exposure and risk.",
   },
   {
     icon: Ruler,
-    title: "Site Measurements",
-    description: "Assess dimensions, setbacks, and buildable area for maximum yield.",
+    title: "AI Opportunity Discovery",
+    description: "Identify valuable use cases and suitable workflows.",
   },
   {
     icon: MapPin,
-    title: "Neighbourhood Assessment",
-    description: "Evaluate surrounding developments, demographics, and market demand.",
+    title: "Systems & Integration",
+    description: "Explore connections across business applications.",
   },
   {
     icon: FileText,
-    title: "Preliminary Feasibility",
-    description: "On-the-spot analysis of costs, returns, and deal viability.",
+    title: "Strategic Roadmap",
+    description: "Turn insights into prioritised practical next steps.",
   },
 ]
 
@@ -53,14 +53,13 @@ export function SiteVisitSection() {
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         {/* Header */}
         <div className="mb-16 lg:mb-20">
-          <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">ON THE GROUND</span>
+          <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">IN PRACTICE</span>
           <div className="lg:flex lg:items-end lg:justify-between">
             <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-moore-white max-w-2xl text-balance">
-              See Opportunity Where Others See Obstacles
+              See Opportunity Where Others See Complexity
             </h2>
             <p className="text-moore-white/60 max-w-md mt-6 lg:mt-0 leading-relaxed">
-              Every profitable development starts with a site visit. Watch how I uncover hidden value and identify
-              potential pitfalls that could make or break your project.
+              A close look at existing systems, workflows and risks can reveal practical opportunities for cybersecurity, AI and technology improvement.
             </p>
           </div>
         </div>
@@ -76,10 +75,7 @@ export function SiteVisitSection() {
 
               {/* Video */}
               <div className="relative bg-moore-charcoal aspect-video rounded-2xl overflow-hidden">
-                <video className="w-full h-full object-cover" controls poster="/development_site.JPG">
-                  <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Video_Revision_Request_Granted-H2mpoYTRyghufHilHZuaBqV6bLxeRm.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1500&q=85" alt="Abstract AI and technology visualisation" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -89,12 +85,10 @@ export function SiteVisitSection() {
           <div className="lg:col-span-5">
             <div className="lg:pl-8 lg:border-l border-moore-gold/20">
               <h3 className="font-serif text-2xl lg:text-3xl text-moore-white mb-6">
-                What Happens During a Site Visit
+                What Happens During an Opportunity Review
               </h3>
               <p className="text-moore-white/70 leading-relaxed mb-10">
-                Most buyers see a block of land. I see setback requirements, easement constraints, slope percentages,
-                and council overlays. In 90 minutes on-site, I'll give you more actionable intelligence than weeks of
-                desktop research.
+                We start with the business challenge — looking at your people, systems and priorities before recommending a practical path forward.
               </p>
 
               {/* Highlights Grid */}
@@ -120,13 +114,13 @@ export function SiteVisitSection() {
               {/* CTA */}
               <div className="mt-10 pt-8 border-t border-moore-gold/20">
                 <p className="text-moore-white/60 text-sm mb-4">
-                  Have a site you're considering? Let's walk it together.
+                  Have a business challenge in mind? Let's explore it.
                 </p>
                 <a
                   href="#contact"
                   className="inline-flex items-center gap-2 text-moore-gold hover:text-moore-white transition-colors group"
                 >
-                  <span className="text-sm tracking-wide">Book a Site Assessment</span>
+                  <span className="text-sm tracking-wide">Start a Conversation</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
