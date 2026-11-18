@@ -77,7 +77,7 @@ export function TestimonialsSection() {
         <div className="mt-12 border border-moore-charcoal/10 p-8 lg:p-10">
           <div className="lg:flex lg:items-center lg:justify-between gap-8">
             <div className="mb-6 lg:mb-0">
-              <span className="text-moore-gold text-xs tracking-[0.4em] mb-2 block">MOORE CONSULTANTS TODAY</span>
+              <span className="text-moore-gold text-xs tracking-[0.4em] mb-2 block">MOORE DEVELOPMENTS TODAY</span>
               <p className="text-moore-charcoal/70 text-sm leading-relaxed max-w-2xl">Advisory across cybersecurity strategy, AI adoption and business process improvement. Recent work includes assessing potential workflow efficiencies and coaching people developing applications with AI-assisted tools.</p>
             </div>
             <div className="flex gap-8 flex-shrink-0">
