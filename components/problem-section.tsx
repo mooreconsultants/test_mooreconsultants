@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
+
 
 export function ProblemSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -34,15 +34,15 @@ export function ProblemSection() {
             <span className="text-moore-gold text-xs tracking-[0.4em] mb-6 block">THE CHALLENGE</span>
 
             <h2 className="font-serif text-3xl lg:text-4xl text-moore-navy mb-10 leading-tight">
-              The Problem with Property Development Courses
+              The Challenge with Technology Transformation
             </h2>
 
             <ul className="space-y-6">
               {[
-                "You've consumed the content but can't take action",
-                "Analysis paralysis keeps you stuck",
-                "Fear of making a $100k+ mistake",
-                "No one to validate your decisions",
+                "Cybersecurity risks and priorities are difficult to navigate",
+                "AI possibilities can outpace practical adoption plans",
+                "Technology investment does not always translate into value",
+                "Leaders need an experienced, independent perspective",
               ].map((item, index) => (
                 <li key={index} className="flex items-start gap-4">
                   <div className="w-8 h-px bg-moore-gold mt-3 flex-shrink-0" />
@@ -56,12 +56,10 @@ export function ProblemSection() {
           <div className="lg:col-span-7 relative lg:mt-24">
             <div className="relative">
               <div className="relative w-full h-[400px] lg:h-[500px]">
-                <Image
-                  src="/guy-moore-site-visit-mobile.jpg"
-                  alt="Guy Moore on site at an Adelaide development"
-                  className="object-cover"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1300&q=85"
+                  alt="Technology professionals discussing a project"
+                  className="absolute inset-0 object-cover"
                 />
               </div>
 
@@ -75,9 +73,9 @@ export function ProblemSection() {
 
                 <ul className="space-y-4">
                   {[
-                    "Personalised, hands-on guidance from site-find to sale",
-                    "Expert validation at every decision point",
-                    "Proven methodology that de-risks your investment",
+                    "Practical security and AI strategy tailored to your organisation",
+                    "Independent guidance on priorities, risks and technology choices",
+                    "Clear pathways from strategy to practical action",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 bg-moore-gold rounded-full mt-2 flex-shrink-0" />
