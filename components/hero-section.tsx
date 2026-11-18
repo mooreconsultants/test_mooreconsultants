@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
+
 
 export function HeroSection() {
   const contentRef = useRef<HTMLDivElement>(null)
@@ -31,23 +31,17 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <div className="lg:hidden absolute inset-0">
-          <Image
-            src="/guy-moore-site-visit-mobile.jpg"
-            alt="Guy Moore reviewing development plans on site in Adelaide"
-            className="w-full h-full object-cover"
-            fill
-            sizes="100vw"
-            priority
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1300&q=85"
+            alt="Technology professionals collaborating"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
         <div className="hidden lg:block absolute inset-0">
-          <Image
-            src="/Hero.jpg"
-            alt="Completed Adelaide property development"
-            className="w-full h-full object-cover object-center"
-            fill
-            sizes="100vw"
-            priority
+          <img
+            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=85"
+            alt="Modern technology infrastructure"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
         </div>
         {/* Dark left-to-right gradient — photo visible on right, dark anchor on left */}
@@ -58,7 +52,7 @@ export function HeroSection() {
       {/* Rotated side label */}
       <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden lg:block z-10">
         <span className="text-moore-offwhite/20 text-xs tracking-[0.5em] uppercase [writing-mode:vertical-rl] rotate-180">
-          Adelaide Property Development
+          Cybersecurity & AI Strategy
         </span>
       </div>
 
@@ -68,20 +62,19 @@ export function HeroSection() {
           <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block">MOORE CONSULTANTS</span>
 
           <h1 className="font-serif text-5xl lg:text-7xl text-moore-offwhite leading-[1.1] mb-6">
-            From Theory
+            From Complexity
             <br />
-            <span className="text-moore-gold">to Reality</span>
+            <span className="text-moore-gold">to Clarity</span>
           </h1>
 
           <div className="w-16 h-px bg-moore-gold mb-8" />
 
           <h2 className="text-xl lg:text-2xl text-moore-offwhite/80 font-light mb-6">
-            Your Partner in Profitable Property Development
+            Your Partner in Cybersecurity, AI & Technology Strategy
           </h2>
 
           <p className="text-moore-offwhite/60 leading-relaxed mb-10 max-w-md">
-            The only property development consultancy in Australia that provides personalised, one-on-one coaching and
-            end-to-end project management to ensure you successfully complete your first profitable development project.
+            Independent strategic advice grounded in more than 20 years across enterprise IT, Australian Government and Defence. We turn complexity into clearer decisions and meaningful business outcomes.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -89,7 +82,7 @@ export function HeroSection() {
               href="#contact"
               className="group inline-flex items-center justify-center gap-3 bg-moore-gold text-moore-navy px-8 py-4 text-sm font-medium tracking-widest uppercase transition-all hover:bg-moore-offwhite"
             >
-              Book Your Free Consultation
+              Start a Conversation
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -101,9 +94,9 @@ export function HeroSection() {
         <div className="max-w-[1400px] mx-auto">
           <div className="inline-flex flex-col sm:flex-row gap-6 lg:gap-16 bg-moore-navy/95 backdrop-blur-sm text-moore-offwhite ml-6 lg:ml-20 px-8 lg:px-12 py-6 lg:py-8 rounded-tr-3xl">
             {[
-              { value: "$23M", label: "Adelaide Projects Completed" },
-              { value: "10+", label: "Years in Adelaide Market" },
-              { value: "163%", label: "Best CoC Return" },
+              { value: "20+", label: "Years in Technology" },
+              { value: "8", label: "Years at Palo Alto Networks" },
+              { value: "~40", label: "Canberra Operation Scale" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
                 <div className="text-moore-gold text-3xl lg:text-4xl font-light mb-1">{stat.value}</div>
