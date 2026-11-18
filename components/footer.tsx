@@ -25,7 +25,7 @@ export function Footer() {
 
           {/* Navigation */}
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">
-            {["Services", "Experience", "About", "Process", "Contact"].map((item) => (
+            {["Services", "About", "Contact"].map((item) => (
               <a
                 key={item}
                 href={item === "Experience" ? "#portfolio" : `#${item.toLowerCase().replace(" ", "-")}`}
