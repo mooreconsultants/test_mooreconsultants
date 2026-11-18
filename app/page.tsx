@@ -5,24 +5,24 @@ const services = [
     number: "01",
     title: "Cybersecurity",
     subtitle: "Strategy & advisory",
-    description: "Understand your security priorities, evaluate the options and build a clearer path forward.",
-    examples: ["Security strategy and roadmaps", "Risk and capability priorities", "Solution and partner evaluation"],
+    description: "Build security strategies grounded in real-world enterprise, Australian Government and Defence experience.",
+    examples: ["Cybersecurity strategy and risk", "Sovereign and government capability considerations", "Security roadmaps and advisory"],
     icon: ShieldCheck,
   },
   {
     number: "02",
     title: "Artificial intelligence",
     subtitle: "Strategy & adoption",
-    description: "Identify meaningful opportunities for AI and design a sensible approach to bringing them into your organisation.",
-    examples: ["Use-case discovery", "AI readiness and adoption", "Implementation pathway planning"],
+    description: "Identify where AI can improve workflows, connect with business systems and create genuine operational value.",
+    examples: ["AI opportunity and workflow discovery", "ERP and business systems integration strategy", "Adoption and AI-assisted development coaching"],
     icon: BrainCircuit,
   },
   {
     number: "03",
     title: "Technology & IT",
     subtitle: "Consulting & transformation",
-    description: "Connect technology choices to organisational needs, investment priorities and practical outcomes.",
-    examples: ["Technology strategy", "Vendor and solution selection", "Transformation advisory"],
+    description: "Align technology, people and business priorities to deliver practical transformation and lasting improvement.",
+    examples: ["Technology strategy and IT advisory", "Operational efficiency and systems planning", "Leadership, partners and transformation"],
     icon: Cpu,
   },
 ]
@@ -96,7 +96,7 @@ export default function Home() {
           <nav aria-label="Main navigation" className="hidden items-center gap-8 text-[13px] font-semibold text-[#505960] lg:flex">
             <a href="#capabilities" className="transition hover:text-[#2a9dbe]">Capabilities</a>
             <a href="#use-cases" className="transition hover:text-[#2a9dbe]">Use cases</a>
-            <a href="#approach" className="transition hover:text-[#2a9dbe]">Our approach</a>
+            <a href="#approach" className="transition hover:text-[#2a9dbe]">Our approach</a><a href="#experience" className="transition hover:text-[#2a9dbe]">Experience</a><a href="#about" className="transition hover:text-[#2a9dbe]">About</a>
           </nav>
           <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#41464b] px-4 py-3 text-xs font-semibold text-white transition hover:bg-[#2a9dbe] sm:px-6 sm:text-sm">
             Let's talk <ArrowUpRight size={16}/>
@@ -110,9 +110,9 @@ export default function Home() {
           <div className="relative z-10">
             <div className="mb-7 flex items-center gap-3"><span className="h-[2px] w-8 bg-[#2a9dbe]"/><span className="text-xs font-bold uppercase tracking-[.21em] text-[#2a9dbe]">Independent technology advisory</span></div>
             <h1 className="max-w-2xl text-[clamp(3.2rem,5.5vw,5.9rem)] font-semibold leading-[1.055] tracking-[-.055em] text-[#41464b]">
-              Making sense of <span className="text-[#2a9dbe]">what&apos;s next.</span>
+              Cybersecurity and AI.<br/><span className="text-[#2a9dbe]">Strategy that delivers.</span>
             </h1>
-            <p className="mt-8 max-w-xl text-lg leading-[1.75] text-[#65717a]">Practical advice across cybersecurity, artificial intelligence and technology. We help organisations navigate complexity and turn possibilities into clearer decisions.</p>
+            <p className="mt-8 max-w-xl text-lg leading-[1.75] text-[#65717a]">Independent cybersecurity, AI and technology strategy grounded in more than 20 years of experience across enterprise IT, Australian Government and Defence. Clear thinking, practical action and meaningful business outcomes.</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a href="#capabilities" className="inline-flex items-center gap-3 rounded-full bg-[#2a9dbe] px-7 py-4 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(42,157,190,.22)] transition hover:bg-[#2386a3]">Explore our capabilities <ArrowRight size={18}/></a>
               <a href="#use-cases" className="inline-flex items-center gap-2 rounded-full border border-[#c5d0d6] bg-white px-7 py-4 text-sm font-semibold text-[#424c52] transition hover:border-[#2a9dbe] hover:text-[#2a9dbe]">See how we help <ArrowUpRight size={16}/></a>
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
           <div className="relative lg:pl-3">
             <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-[#343d44] shadow-[0_24px_70px_rgba(49,64,73,.20)] sm:min-h-[570px]">
-              <img src="https://images.unsplash.com/photo-1564457461758-8ff96e439e83?auto=format&fit=crop&w=1300&q=82" alt="Modern data centre network infrastructure" className="absolute inset-0 h-full w-full object-cover opacity-80" />
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1300&q=82" alt="Modern data centre network infrastructure" className="absolute inset-0 h-full w-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#29383f] via-[#29383f]/55 to-[#173a4a]/20"/>
               <div className="absolute left-7 top-7 flex items-center gap-3 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-[11px] font-semibold uppercase tracking-[.16em] text-white backdrop-blur-md"><span className="h-2 w-2 rounded-full bg-[#63d8f3]"/> Strategy / risk / opportunity</div>
               <div className="absolute left-7 right-7 top-[31%] sm:left-10 sm:right-10">
@@ -207,6 +207,33 @@ export default function Home() {
             </div>)}
           </div>
           <div className="mt-14 flex flex-col items-center justify-center gap-3 rounded-2xl bg-[#ecf8fb] px-8 py-7 text-center sm:flex-row sm:text-left"><Sparkles size={24} className="shrink-0 text-[#2a9dbe]"/><p className="font-medium text-[#50616a]">Independent perspective. Commercial understanding. Actionable thinking.</p></div>
+        </div>
+      </section>
+
+      <section id="experience" className="bg-[#eef5f7] py-24 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[.22em] text-[#2a9dbe]">04 / Proven experience</p>
+          <h2 className="max-w-4xl text-4xl font-semibold leading-tight tracking-[-.045em] text-[#41464b] sm:text-5xl">Enterprise experience.<br/><span className="text-[#2a9dbe]">Practical perspective.</span></h2>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {[{metric:"20+",title:"Years in technology",text:"Experience across cybersecurity, enterprise IT, consulting and business leadership."},{metric:"~40",title:"Canberra operation",text:"Helped establish and scale Palo Alto Networks' Federal Government and Defence operation to approximately 40 people."},{metric:"JAPAC",title:"Salesperson of the Year",text:"Recognised following major South Australian Government cybersecurity agreements, including Whole-of-Government wins."}].map(item=><article key={item.title} className="rounded-3xl border border-[#dbe7eb] bg-white p-8"><p className="text-4xl font-semibold tracking-tight text-[#2a9dbe]">{item.metric}</p><h3 className="mt-5 text-xl font-semibold text-[#41464b]">{item.title}</h3><p className="mt-3 text-sm leading-relaxed text-[#697780]">{item.text}</p></article>)}
+          </div>
+          <p className="mt-9 max-w-4xl text-base leading-relaxed text-[#59666c]">Experience includes leading the team responsible for achieving an IRAP assessment of multinational cybersecurity capabilities for Australian sovereign delivery. Today, advisory work includes AI adoption, integration opportunities and coaching in AI-assisted software development.</p>
+        </div>
+      </section>
+
+      <section id="about" className="bg-white py-24 lg:py-28">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:px-10">
+          <div className="relative min-h-[390px] overflow-hidden rounded-[2rem] bg-[#34444c]">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1100&q=85" alt="Technology professionals working together" className="absolute inset-0 h-full w-full object-cover"/>
+          </div>
+          <div>
+            <p className="mb-5 text-xs font-bold uppercase tracking-[.22em] text-[#2a9dbe]">05 / About Moore Consultants</p>
+            <h2 className="text-4xl font-semibold leading-tight tracking-[-.045em] text-[#41464b] sm:text-5xl">Technology expertise.<br/><span className="text-[#2a9dbe]">Human perspective.</span></h2>
+            <p className="mt-7 text-base leading-[1.85] text-[#65717a]">Led by Guy Moore, Moore Consultants combines deep experience in cybersecurity, enterprise technology and government with an entrepreneurial approach to solving business challenges. Guy's background spans running an IT solutions business, Datacom and eight years at Palo Alto Networks.</p>
+            <p className="mt-5 text-base leading-[1.85] text-[#65717a]">The focus today is cybersecurity strategy, AI adoption, technology integration and helping leaders make informed decisions. Commercial understanding supports the work — it doesn't define it.</p>
+            <p className="mt-5 text-base leading-[1.85] text-[#65717a]">Outside technology, Guy is passionate about HYROX, triathlon, strength and conditioning, yoga and exercise science. Curiosity, learning and wellbeing are important parts of the person behind the business.</p>
+            <a href="#contact" className="mt-8 inline-flex items-center gap-3 rounded-full bg-[#2a9dbe] px-7 py-4 text-sm font-semibold text-white hover:bg-[#2386a3]">Let's talk <ArrowRight size={17}/></a>
+          </div>
         </div>
       </section>
 
