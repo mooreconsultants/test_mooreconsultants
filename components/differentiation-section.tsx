@@ -2,28 +2,28 @@
 
 import { useEffect, useRef } from "react"
 import { Target, Award, Users, Handshake } from "lucide-react"
-import Image from "next/image"
+
 
 const differentiators = [
   {
     icon: Target,
-    title: "Execution-Focused",
-    description: "We build with you, not just teach theory",
+    title: "Practical Advice",
+    description: "Clear decisions and priorities, not hype or jargon",
   },
   {
     icon: Award,
-    title: "$23M Track Record",
-    description: "Proven results across Adelaide's market",
+    title: "20+ Years’ Experience",
+    description: "Technology, cybersecurity, government and Defence leadership",
   },
   {
     icon: Users,
-    title: "Personalised Approach",
-    description: "One-on-one coaching, not mass courses",
+    title: "Independent Perspective",
+    description: "Advice grounded in your organisation and priorities",
   },
   {
     icon: Handshake,
-    title: "Aligned Incentives",
-    description: "Your success is our success",
+    title: "Commercial Understanding",
+    description: "Connect technology decisions to business outcomes",
   },
 ]
 
@@ -78,19 +78,17 @@ export function DifferentiationSection() {
 
         {/* Right - Image with Quote */}
         <div className="relative h-[500px] lg:h-auto">
-          <Image
-            src="/Why-Moore-Consultants.jpg"
-            alt="Moore Consultants project"
-            className="w-full h-full object-cover"
-            fill
-            sizes="(max-width: 1024px) 100vw, 50vw"
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=85"
+            alt="Modern professional workplace"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* Overlay Quote */}
           <div className="absolute inset-0 bg-gradient-to-t from-moore-navy/80 via-transparent to-transparent flex items-end p-8 lg:p-12">
             <div>
-              <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">$23M+</div>
-              <div className="text-moore-offwhite/80 text-sm tracking-widest uppercase">In Completed Projects</div>
+              <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">20+</div>
+              <div className="text-moore-offwhite/80 text-sm tracking-widest uppercase">Years of Technology Experience</div>
             </div>
           </div>
         </div>
