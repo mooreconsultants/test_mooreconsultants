@@ -55,7 +55,7 @@ function PmNavigation() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+          <Image src="/moore-developments-logo.svg" alt="Moore Developments" width={235} height={58} className="h-11 w-auto lg:h-12" />
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
@@ -883,7 +883,7 @@ function PmFooter() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           <div className="mb-8 lg:mb-0">
             <a href="/">
-              <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+              <Image src="/moore-developments-logo-light.svg" alt="Moore Developments" width={235} height={58} className="h-11 w-auto lg:h-12" />
             </a>
           </div>
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">

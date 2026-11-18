@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Your First Property Development, Done Right | Moore Developments",
     description: "One-on-one coaching and end-to-end project management for your first Adelaide development.",
-    url: "https://mooreconsultants.com.au/lpa",
-    images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
+    url: "https://test.mooreconsultants.com.au/lpa",
+    images: [{ url: "https://test.mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],
   },
 }
 

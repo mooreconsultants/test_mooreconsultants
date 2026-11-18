@@ -46,7 +46,7 @@ export default function ThankYouPage() {
       <div className="border-b border-moore-charcoal/10 bg-white">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-12">
           <Link href="/" className="flex items-center">
-            <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+            <Image src="/moore-developments-logo.svg" alt="Moore Developments" width={235} height={58} className="h-11 w-auto lg:h-12" />
           </Link>
 
           <Link

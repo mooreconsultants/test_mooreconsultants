@@ -1,7 +1,1 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="180" height="180" rx="37" fill="white"/>
-  <!-- Teal/blue back chevron -->
-  <path d="M38 120L75 68L112 120" stroke="#2a9dbe" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-  <!-- Dark charcoal front chevron -->
-  <path d="M68 120L105 68L142 120" stroke="#4a4a4a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#152030"/><path d="M7 49V15l19 14L40 15l17 12v22h-9V32l-8-5-14 14L16 34v15z" fill="#F8F7F2"/><path d="M22 49v-8l6 5v3zm15 0V31l7-5v23z" fill="#B49A61"/></svg>

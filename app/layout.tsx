@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   description: "Adelaide property development advisory, coaching and project management. Practical guidance from site selection through to project delivery.",
   keywords: ["property development", "development advisory", "property development coaching", "project management", "Adelaide", "South Australia"],
   authors: [{ name: "Moore Developments" }],
-  alternates: { canonical: "https://mooreconsultants.com.au" },
+  alternates: { canonical: "https://test.mooreconsultants.com.au" },
   openGraph: {
     title: "Moore Developments | Adelaide Property Development & Project Advisory",
     description: "Practical property development advice and project management in Adelaide.",
     type: "website",
-    url: "https://mooreconsultants.com.au",
+    url: "https://test.mooreconsultants.com.au",
   },
-  metadataBase: new URL("https://mooreconsultants.com.au"),
+  metadataBase: new URL("https://test.mooreconsultants.com.au"),
   icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }], apple: "/icon.svg" },
 }
 
