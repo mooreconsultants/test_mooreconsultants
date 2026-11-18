@@ -3,7 +3,7 @@ import { Resend } from "resend"
 import { readFileSync } from "fs"
 import { join } from "path"
 
-const FROM_ADDRESS = "Moore Consultants <gmoore@updates.mooreconsultants.com.au>"
+const FROM_ADDRESS = "Moore Developments <gmoore@updates.mooreconsultants.com.au>"
 const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
 
 
@@ -27,7 +27,7 @@ function buildChecklistEmail(name: string): string {
             <!-- Header -->
             <tr>
               <td style="padding:28px 32px;background:#0f172a;">
-                <p style="margin:0 0 10px;color:#94a3b8;font-size:11px;letter-spacing:3px;text-transform:uppercase;">Moore Consultants</p>
+                <p style="margin:0 0 10px;color:#94a3b8;font-size:11px;letter-spacing:3px;text-transform:uppercase;">Moore Developments</p>
                 <h1 style="margin:0;color:#ffffff;font-size:24px;line-height:1.3;font-weight:600;">Your No-Go Checklist is attached.</h1>
               </td>
             </tr>
@@ -45,14 +45,14 @@ function buildChecklistEmail(name: string): string {
                   If you've got a site you're looking at, or any questions at all, just reply to this email and I'll get back to you.
                 </p>
                 <p style="margin:0;color:#0f172a;font-size:15px;font-weight:600;">Guy Moore</p>
-                <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Founder, Moore Consultants</p>
+                <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Founder, Moore Developments</p>
               </td>
             </tr>
 
             <!-- Footer -->
             <tr>
               <td style="padding:18px 32px;background:#f8fafc;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px;">
-                Moore Consultants · Adelaide, South Australia · mooreconsultants.com.au
+                Moore Developments · Adelaide, South Australia · mooreconsultants.com.au
               </td>
             </tr>
 
@@ -120,7 +120,7 @@ export async function POST(request: Request) {
     from: FROM_ADDRESS,
     to: email,
     replyTo: GUY_EMAIL,
-    subject: "Your 10-Point No-Go Checklist — Moore Consultants",
+    subject: "Your 10-Point No-Go Checklist — Moore Developments",
     html: buildChecklistEmail(name),
     attachments,
   })
