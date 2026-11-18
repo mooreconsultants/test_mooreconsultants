@@ -6,36 +6,36 @@ import { ArrowRight, CheckCircle } from "lucide-react"
 const services = [
   {
     number: "01",
-    title: "Site Find",
-    description: "We find and validate profitable development sites for you",
+    title: "Cybersecurity Strategy",
+    description: "Independent advice to understand cyber risk and build a clear security direction",
     deliverables: [
-      "Market analysis & site identification",
-      "Financial feasibility modeling",
-      "Risk assessment & due diligence",
-      "Negotiation support",
+      "Cybersecurity strategy & risk",
+      "Security roadmap planning",
+      "Government & Defence context",
+      "Sovereign capability considerations",
     ],
-    investment: "$10,500",
+    investment: "Tailored Advisory",
     size: "large",
   },
   {
     number: "02",
-    title: "Full Project Management",
-    description: "End-to-end support from approval to sale",
+    title: "AI Strategy & Adoption",
+    description: "Find meaningful AI opportunities and plan a practical adoption pathway",
     deliverables: [
-      "DA/CDC coordination",
-      "Builder selection & contracts",
-      "Construction oversight",
-      "Sales strategy & execution",
+      "AI opportunity discovery",
+      "Workflow & system integration",
+      "AI-assisted development coaching",
+      "Adoption pathway planning",
     ],
     investment: "Custom Pricing",
     size: "medium",
   },
   {
     number: "03",
-    title: "Tour de Coastal",
-    description: "In-person tour of completed Adelaide projects",
-    deliverables: ["Site visits to 3+ projects", "Behind-the-scenes insights", "Q&A with Guy"],
-    investment: "$650",
+    title: "Technology Transformation",
+    description: "Technology strategy and practical business improvement",
+    deliverables: ["Technology strategy", "Integration opportunities", "Leadership advice"],
+    investment: "Let’s Discuss",
     size: "small",
   },
 ]
@@ -71,7 +71,7 @@ export function ServicesSection() {
             <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">How We Work Together</h2>
           </div>
           <p className="text-moore-charcoal/70 max-w-md mt-6 lg:mt-0 leading-relaxed">
-            Choose the level of support that matches your experience and goals.
+            Choose the level of advice that matches your challenges and goals.
           </p>
         </div>
 
@@ -167,7 +167,7 @@ export function ServicesSection() {
                       href="#contact"
                       className="inline-flex items-center gap-2 text-moore-offwhite text-sm hover:text-moore-gold transition-colors group/link"
                     >
-                      Book Your Tour
+                      Learn More
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
                     </a>
                   </div>
