@@ -15,7 +15,7 @@ const differentiators = [
     icon: Target,
     title: "We build with you, not just teach you",
     description:
-      "Most property courses leave you stranded with theory. Moore Consultants is different. Guy is an active Adelaide developer right now, and every coaching engagement is grounded in what he is doing in the market today. You get real-world knowledge at the point it is most relevant.",
+      "Most property courses leave you stranded with theory. Moore Developments is different. Guy is an active Adelaide developer right now, and every coaching engagement is grounded in what he is doing in the market today. You get real-world knowledge at the point it is most relevant.",
   },
   {
     icon: Award,
@@ -72,11 +72,11 @@ export function LpbDifferentiation() {
         <div className="bg-moore-navy px-8 lg:px-16 py-24 lg:py-32">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-8 block">WHY CHOOSE US</span>
 
-          <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-4">Why Moore Consultants?</h2>
+          <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-4">Why Moore Developments?</h2>
 
           <p className="text-moore-offwhite/60 leading-relaxed mb-12 max-w-md">
             There is no shortage of property development courses and coaches in Australia. Most of them are national
-            operators with no local execution. Here is what makes Moore Consultants different.
+            operators with no local execution. Here is what makes Moore Developments different.
           </p>
 
           <div className="space-y-10">
@@ -101,7 +101,7 @@ export function LpbDifferentiation() {
         <div className="relative h-[500px] lg:h-auto">
           <Image
             src="/Why-Moore-Consultants.jpg"
-            alt="Completed Moore Consultants Adelaide development project"
+            alt="Completed Moore Developments Adelaide development project"
             fill
             className="object-cover"
           />
