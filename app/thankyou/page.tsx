@@ -4,15 +4,15 @@ import Image from "next/image"
 import { ArrowRight, CheckCircle2, Instagram, Linkedin, Mail, MapPin } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Thank You | Moore Consultants",
+  title: "Thank You | Moore Developments",
   description:
-    "Thank you for contacting Moore Consultants. Guy reviews every enquiry personally and aims to respond within one business day.",
+    "Thank you for contacting Moore Developments. Guy reviews every enquiry personally and aims to respond within one business day.",
 }
 
 const nextSteps = [
   {
     title: "Your enquiry has been received",
-    description: "Your details have landed with Moore Consultants and the team now has everything needed to review your enquiry properly.",
+    description: "Your details have landed with Moore Developments and the team now has everything needed to review your enquiry properly.",
   },
   {
     title: "Guy reviews your situation personally",
@@ -52,14 +52,7 @@ export default function ThankYouPage() {
       <div className="border-b border-moore-charcoal/10 bg-white">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-12">
           <Link href="/" className="flex items-center">
-            <Image
-              src="/moore-consultants-logo.png"
-              alt="Moore Consultants"
-              width={180}
-              height={40}
-              priority
-              className="h-10 w-auto lg:h-12"
-            />
+            <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
           </Link>
 
           <Link
@@ -86,7 +79,7 @@ export default function ThankYouPage() {
             Your enquiry is in and Guy will be in touch shortly.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-moore-offwhite/75 lg:text-lg">
-            Thanks for reaching out to Moore Consultants. Every enquiry is reviewed personally, and you can expect a
+            Thanks for reaching out to Moore Developments. Every enquiry is reviewed personally, and you can expect a
             response within one business day.
           </p>
         </section>
