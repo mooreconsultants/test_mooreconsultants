@@ -16,7 +16,7 @@ function checkRateLimit(ip: string): boolean {
   return true
 }
 
-const FROM_ADDRESS = "Moore Consultants <gmoore@updates.mooreconsultants.com.au>"
+const FROM_ADDRESS = "Moore Developments <gmoore@updates.mooreconsultants.com.au>"
 const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
 const ADMIN_RECIPIENTS = [GUY_EMAIL, "alex@3pdigital.com.au"]
 
@@ -57,7 +57,7 @@ function buildUserEmailHtml(payload: ContactSubmissionPayload): string {
           <table role="presentation" width="620" cellspacing="0" cellpadding="0" style="max-width:620px;background:#ffffff;border:1px solid #e2e8f0;">
             <tr>
               <td style="padding:28px 30px;background:#0f172a;">
-                <p style="margin:0;color:#cbd5e1;font-size:12px;letter-spacing:2px;text-transform:uppercase;">Moore Consultants</p>
+                <p style="margin:0;color:#cbd5e1;font-size:12px;letter-spacing:2px;text-transform:uppercase;">Moore Developments</p>
                 <h1 style="margin:10px 0 0;color:#ffffff;font-size:28px;line-height:1.2;font-weight:600;">Thanks for your enquiry, ${escapeHtml(payload.name)}.</h1>
               </td>
             </tr>
@@ -77,7 +77,7 @@ function buildUserEmailHtml(payload: ContactSubmissionPayload): string {
             </tr>
             <tr>
               <td style="padding:18px 30px;background:#f8fafc;border-top:1px solid #e2e8f0;color:#64748b;font-size:12px;">
-                Moore Consultants · Adelaide, South Australia
+                Moore Developments · Adelaide, South Australia
               </td>
             </tr>
           </table>
@@ -226,7 +226,7 @@ export async function POST(request: Request) {
       from: FROM_ADDRESS,
       to: payload.email,
       replyTo: GUY_EMAIL,
-      subject: "We received your Moore Consultants submission",
+      subject: "We received your Moore Developments submission",
       html: buildUserEmailHtml(payload),
     })
 
@@ -235,7 +235,7 @@ export async function POST(request: Request) {
       from: FROM_ADDRESS,
       to: ADMIN_RECIPIENTS,
       replyTo: payload.email,
-      subject: `[Moore Consultants] ${payload.triggerLabel} from ${payload.name}`,
+      subject: `[Moore Developments] ${payload.triggerLabel} from ${payload.name}`,
       html: buildAdminEmailHtml(payload, requestMeta),
     })
 
