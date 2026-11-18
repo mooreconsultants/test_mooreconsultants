@@ -3,10 +3,7 @@ import { StatementSection } from "@/components/statement-section"
 import { ProblemSection } from "@/components/problem-section"
 import { AboutSection } from "@/components/about-section"
 import { ServicesSection } from "@/components/services-section"
-import { CaseStudiesSection } from "@/components/case-studies-section"
-import { ProcessSection } from "@/components/process-section"
 import { SiteVisitSection } from "@/components/site-visit-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
 import { DifferentiationSection } from "@/components/differentiation-section"
 import { CTASection } from "@/components/cta-section"
 import { Footer } from "@/components/footer"
@@ -21,10 +18,7 @@ export default function Home() {
       <ProblemSection />
       <AboutSection />
       <ServicesSection />
-      <CaseStudiesSection />
-      <ProcessSection />
       <SiteVisitSection />
-      <TestimonialsSection />
       <DifferentiationSection />
       <CTASection />
       <Footer />
