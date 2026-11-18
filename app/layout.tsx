@@ -13,14 +13,14 @@ const _playfairDisplay = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Moore Consultants | Cybersecurity, AI & Technology Advisory",
-  description: "Independent cybersecurity, AI and technology consulting in Adelaide, Australia. Enterprise experience, government insight and practical business-focused advice.",
-  keywords: ["cybersecurity consulting", "AI strategy", "technology consulting", "IT advisory", "Adelaide", "government cybersecurity", "Australia"],
-  authors: [{ name: "Moore Consultants" }],
+  title: "Moore Developments | Adelaide Property Development & Project Advisory",
+  description: "Adelaide property development advisory, coaching and project management. Practical guidance from site selection through to project delivery.",
+  keywords: ["property development", "development advisory", "property development coaching", "project management", "Adelaide", "South Australia"],
+  authors: [{ name: "Moore Developments" }],
   alternates: { canonical: "https://mooreconsultants.com.au" },
   openGraph: {
-    title: "Moore Consultants | Cybersecurity, AI & Technology Advisory",
-    description: "Complex technology. Clearer decisions. Better outcomes.",
+    title: "Moore Developments | Adelaide Property Development & Project Advisory",
+    description: "Practical property development advice and project management in Adelaide.",
     type: "website",
     url: "https://mooreconsultants.com.au",
   },
