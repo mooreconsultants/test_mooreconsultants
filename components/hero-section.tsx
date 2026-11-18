@@ -94,12 +94,12 @@ export function HeroSection() {
         <div className="max-w-[1400px] mx-auto">
           <div className="inline-flex flex-col sm:flex-row gap-6 lg:gap-16 bg-moore-navy/95 backdrop-blur-sm text-moore-offwhite ml-6 lg:ml-20 px-8 lg:px-12 py-6 lg:py-8 rounded-tr-3xl">
             {[
-              { value: "20+", label: "Years in Technology" },
-              { value: "8", label: "Years at Palo Alto Networks" },
-              { value: "~40", label: "Canberra Operation Scale" },
+              { value: "Reduce Risk", label: "Cybersecurity & Resilience" },
+              { value: "Save Time", label: "AI, Automation & Efficiency" },
+              { value: "Work Smarter", label: "Technology & Business Improvement" },
             ].map((stat, index) => (
               <div key={index} className="text-center sm:text-left">
-                <div className="text-moore-gold text-3xl lg:text-4xl font-light mb-1">{stat.value}</div>
+                <div className="text-moore-gold text-2xl lg:text-3xl font-light mb-1">{stat.value}</div>
                 <div className="text-moore-offwhite/60 text-xs tracking-widest uppercase">{stat.label}</div>
               </div>
             ))}
