@@ -18,7 +18,7 @@ function checkRateLimit(ip: string): boolean {
 
 const FROM_ADDRESS = "Moore Developments <gmoore@updates.mooreconsultants.com.au>"
 const GUY_EMAIL = "gmoore@mooreconsultants.com.au"
-const ADMIN_RECIPIENTS = [GUY_EMAIL, "alex@3pdigital.com.au"]
+const ADMIN_RECIPIENTS = [GUY_EMAIL]
 
 function escapeHtml(value: string): string {
   return value
