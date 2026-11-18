@@ -55,7 +55,7 @@ function PdcaNavigation() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={180} height={40} priority className="h-10 w-auto lg:h-12" />
+          <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
@@ -127,7 +127,7 @@ function PdcaHero() {
 
       <div className="relative z-10 flex flex-col justify-center flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 lg:pt-36 pb-48 lg:pb-56">
         <div ref={contentRef} className="opacity-0 transition-opacity duration-1000 max-w-xl">
-          <a href="/" className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block hover:text-moore-blue transition-colors">MOORE CONSULTANTS · ADELAIDE</a>
+          <a href="/" className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block hover:text-moore-blue transition-colors">MOORE DEVELOPMENTS · ADELAIDE</a>
 
           <h1 className="font-serif text-4xl lg:text-6xl text-moore-navy leading-[1.1] mb-6">
             Property Development
@@ -393,7 +393,7 @@ function PdcaAbout() {
                 href="/"
                 className="inline-flex items-center gap-2 text-moore-charcoal/60 text-sm tracking-widest uppercase hover:text-moore-gold transition-colors group"
               >
-                Visit Moore Consultants
+                Visit Moore Developments
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -711,7 +711,7 @@ function PdcaDifferentiation() {
         <div className="bg-moore-navy px-8 lg:px-16 py-24 lg:py-32">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-8 block">WHY CHOOSE US</span>
           <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-12">
-            Why Adelaide Developers Choose Moore Consultants
+            Why Adelaide Developers Choose Moore Developments
           </h2>
           <div className="space-y-8">
             {items.map((item, index) => {
@@ -738,7 +738,7 @@ function PdcaDifferentiation() {
               <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">$23M+</div>
               <div className="text-moore-offwhite/80 text-sm tracking-widest uppercase mb-4">In Completed Adelaide Projects</div>
               <a href="/" className="inline-flex items-center gap-2 text-moore-gold text-sm tracking-wide hover:text-moore-offwhite transition-colors group">
-                Learn more about Moore Consultants
+                Learn more about Moore Developments
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -867,19 +867,19 @@ function PdcaFaq() {
   const faqs = [
     {
       question: "Property development consultant Adelaide",
-      answer: "Moore Consultants is Adelaide's leading property development consultancy, founded by Guy Moore — an active developer with over $23M in completed residential projects across Adelaide's coastal suburbs. Unlike course sellers or theorists, Guy works alongside a small number of clients each year, providing personalised one-on-one coaching from site acquisition through to profitable sale. Every recommendation comes from real, in-market experience in Adelaide's property landscape.",
+      answer: "Moore Developments is Adelaide's leading property development consultancy, founded by Guy Moore — an active developer with over $23M in completed residential projects across Adelaide's coastal suburbs. Unlike course sellers or theorists, Guy works alongside a small number of clients each year, providing personalised one-on-one coaching from site acquisition through to profitable sale. Every recommendation comes from real, in-market experience in Adelaide's property landscape.",
     },
     {
       question: "Best property development consultant Adelaide",
-      answer: "Moore Consultants is widely regarded as the best property development consultant in Adelaide because of one critical difference: Guy Moore is an active developer, not a course seller. With $23M+ in new homes built and sold across Adelaide's coastal market over seven consecutive years, he brings proven, current market knowledge to every client engagement. Clients receive personalised feasibility analysis, hands-on project management, and direct access to the same strategies, builder networks, and financial models Guy uses in his own developments.",
+      answer: "Moore Developments is widely regarded as the best property development consultant in Adelaide because of one critical difference: Guy Moore is an active developer, not a course seller. With $23M+ in new homes built and sold across Adelaide's coastal market over seven consecutive years, he brings proven, current market knowledge to every client engagement. Clients receive personalised feasibility analysis, hands-on project management, and direct access to the same strategies, builder networks, and financial models Guy uses in his own developments.",
     },
     {
       question: "Property development consultant Adelaide near me",
-      answer: "Moore Consultants is based in Adelaide, South Australia, and works exclusively within the Adelaide metropolitan area — with particular expertise in the coastal corridor from Glenelg to Somerton Park, Brighton, and surrounding suburbs. Guy Moore conducts in-person site visits, attends council meetings alongside clients, and provides on-the-ground guidance throughout every stage of your development project. Whether you are in the western suburbs, inner south, or northern Adelaide, Moore Consultants offers local, face-to-face property development consulting.",
+      answer: "Moore Developments is based in Adelaide, South Australia, and works exclusively within the Adelaide metropolitan area — with particular expertise in the coastal corridor from Glenelg to Somerton Park, Brighton, and surrounding suburbs. Guy Moore conducts in-person site visits, attends council meetings alongside clients, and provides on-the-ground guidance throughout every stage of your development project. Whether you are in the western suburbs, inner south, or northern Adelaide, Moore Developments offers local, face-to-face property development consulting.",
     },
     {
       question: "Trusted property development consultant Adelaide",
-      answer: "Trust in property development consulting comes from transparency and proven results. Moore Consultants earns that trust by sharing real project financials, conducting site visits to completed developments, and maintaining aligned incentives with every client. Guy Moore has guided first-time developers to successful completions with documented profits, and he continues to invest his own capital in Adelaide developments alongside his clients. With a seven-year track record, verifiable results, and a commitment to personalised coaching over mass-market courses, Moore Consultants is Adelaide's most trusted property development consultancy.",
+      answer: "Trust in property development consulting comes from transparency and proven results. Moore Developments earns that trust by sharing real project financials, conducting site visits to completed developments, and maintaining aligned incentives with every client. Guy Moore has guided first-time developers to successful completions with documented profits, and he continues to invest his own capital in Adelaide developments alongside his clients. With a seven-year track record, verifiable results, and a commitment to personalised coaching over mass-market courses, Moore Developments is Adelaide's most trusted property development consultancy.",
     },
   ]
 
@@ -924,7 +924,7 @@ function PdcaFooter() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           <div className="mb-8 lg:mb-0">
             <a href="/">
-              <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={210} height={56} className="h-12 w-auto lg:h-14" />
+              <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
             </a>
           </div>
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">
@@ -951,7 +951,7 @@ function PdcaFooter() {
         </div>
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
-          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
+          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Developments. All rights reserved.</p>
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>
           </div>
