@@ -6,32 +6,32 @@ import { Search, FileSearch, Calculator, HardHat, TrendingUp } from "lucide-reac
 const steps = [
   {
     number: "01",
-    title: "Discovery Call",
-    description: "Understand your goals, budget, timeline, and risk tolerance to create a tailored strategy.",
+    title: "Discovery Conversation",
+    description: "Understand the business context, technology goals, opportunities and constraints.",
     icon: Search,
   },
   {
     number: "02",
-    title: "Site Tour",
-    description: "Walk completed Adelaide projects with Guy — see real results and get behind-the-scenes insights before you commit.",
+    title: "Current State Review",
+    description: "Review current technology, security capabilities, business systems and operational workflows.",
     icon: FileSearch,
   },
   {
     number: "03",
-    title: "Foundations",
-    description: "One-on-one coaching to build your knowledge, validate your numbers, and prepare you to move with confidence.",
+    title: "Strategic Priorities",
+    description: "Identify the highest-value opportunities, risks, dependencies and practical pathways.",
     icon: Calculator,
   },
   {
     number: "04",
-    title: "Site Find",
-    description: "Identify and validate high-potential development sites — market analysis, feasibility modeling, and negotiation support.",
+    title: "Roadmap & Options",
+    description: "Evaluate choices and develop a prioritised roadmap for meaningful progress.",
     icon: HardHat,
   },
   {
     number: "05",
-    title: "Full Project Management",
-    description: "End-to-end support from DA through to settlement — builder selection, construction oversight, and sales execution.",
+    title: "Adoption & Improvement",
+    description: "Support leadership alignment, adoption planning and ongoing improvement.",
     icon: TrendingUp,
   },
 ]
@@ -63,7 +63,7 @@ export function ProcessSection() {
       <div ref={sectionRef} className="max-w-[1400px] mx-auto px-8 lg:px-12 opacity-0 transition-opacity duration-1000">
         <div className="text-center mb-20">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE PROCESS</span>
-          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Your Path to Profit</h2>
+          <h2 className="font-serif text-4xl lg:text-5xl text-moore-navy">Your Path to Clarity</h2>
         </div>
 
         <div className="relative">
