@@ -1,4 +1,4 @@
-# Moore Consultants homepage
+# Moore Developments homepage
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
