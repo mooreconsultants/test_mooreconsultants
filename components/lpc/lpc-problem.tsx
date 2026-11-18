@@ -80,7 +80,7 @@ export function LpcProblem() {
                   We build with you. Not just teach you.
                 </h3>
                 <p className="text-moore-offwhite/70 leading-relaxed text-sm">
-                  Most property courses leave you stranded with theory. Moore Consultants is different. Guy works with
+                  Most property courses leave you stranded with theory. Moore Developments is different. Guy works with
                   you one-on-one, sharing his own Adelaide project financials, his own process, and his own hard-won
                   lessons from 10+ years in this market. You do not get a course. You get a partner.
                 </p>
