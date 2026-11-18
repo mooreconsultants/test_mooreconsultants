@@ -55,7 +55,7 @@ function PmNavigation() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
         <a href="/" className="flex items-center">
-          <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+          <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={180} height={40} priority className="h-10 w-auto lg:h-12" />
         </a>
 
         <div className="hidden lg:flex items-center gap-12">
@@ -110,7 +110,7 @@ function PmHero() {
 
       <div className="relative z-10 flex flex-col justify-center flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-12 pt-28 lg:pt-36 pb-48 lg:pb-56">
         <div ref={contentRef} className="opacity-0 transition-opacity duration-1000 max-w-xl">
-          <a href="/" className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block hover:text-moore-blue transition-colors">MOORE DEVELOPMENTS</a>
+          <a href="/" className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block hover:text-moore-blue transition-colors">MOORE CONSULTANTS</a>
 
           <h1 className="font-serif text-4xl lg:text-6xl text-moore-navy leading-[1.1] mb-6">
             Project Management
@@ -356,7 +356,7 @@ function PmAbout() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a href="/" className="inline-flex items-center gap-2 text-moore-charcoal/60 text-sm tracking-widest uppercase hover:text-moore-gold transition-colors group">
-                Visit Moore Developments
+                Visit Moore Consultants
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -673,7 +673,7 @@ function PmDifferentiation() {
         <div className="bg-moore-navy px-8 lg:px-16 py-24 lg:py-32">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-8 block">WHY CHOOSE US</span>
           <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-12">
-            Why Developers Choose Moore Developments for Project Management
+            Why Developers Choose Moore Consultants for Project Management
           </h2>
           <div className="space-y-8">
             {items.map((item, index) => {
@@ -700,7 +700,7 @@ function PmDifferentiation() {
               <div className="text-moore-offwhite text-5xl lg:text-7xl font-light mb-2">$23M+</div>
               <div className="text-moore-offwhite/80 text-sm tracking-widest uppercase mb-4">In Managed Developments</div>
               <a href="/" className="inline-flex items-center gap-2 text-moore-gold text-sm tracking-wide hover:text-moore-offwhite transition-colors group">
-                Learn more about Moore Developments
+                Learn more about Moore Consultants
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
@@ -829,19 +829,19 @@ function PmFaq() {
   const faqs = [
     {
       question: "Project management for property development",
-      answer: "Moore Developments provides comprehensive project management for property development — covering every stage from site acquisition and feasibility analysis through to council approvals, builder selection, construction oversight, and profitable sale. Founded by Guy Moore, an active developer with over $23M in completed residential projects, our project management approach is grounded in real-world experience rather than textbook theory. Every client receives personalised, one-on-one guidance tailored to their specific development project, budget, and risk profile.",
+      answer: "Moore Consultants provides comprehensive project management for property development — covering every stage from site acquisition and feasibility analysis through to council approvals, builder selection, construction oversight, and profitable sale. Founded by Guy Moore, an active developer with over $23M in completed residential projects, our project management approach is grounded in real-world experience rather than textbook theory. Every client receives personalised, one-on-one guidance tailored to their specific development project, budget, and risk profile.",
     },
     {
       question: "Best project management for property development",
-      answer: "The best project management for property development comes from someone who actively develops — not someone who only teaches. Moore Developments stands apart because Guy Moore manages his own development projects using the same processes, builder networks, and financial models he shares with clients. With $23M+ in new homes built and sold over seven consecutive years, clients benefit from proven project management systems that have been refined across dozens of real developments. From DA coordination and builder contracts to construction scheduling and sales strategy, every element of our project management has been tested with real capital at stake.",
+      answer: "The best project management for property development comes from someone who actively develops — not someone who only teaches. Moore Consultants stands apart because Guy Moore manages his own development projects using the same processes, builder networks, and financial models he shares with clients. With $23M+ in new homes built and sold over seven consecutive years, clients benefit from proven project management systems that have been refined across dozens of real developments. From DA coordination and builder contracts to construction scheduling and sales strategy, every element of our project management has been tested with real capital at stake.",
     },
     {
       question: "Project management for property development near me",
-      answer: "Moore Developments is based in Adelaide, South Australia, and provides hands-on project management for property development across the Adelaide metropolitan area. Guy Moore conducts in-person site visits, attends council meetings alongside clients, coordinates directly with builders on-site, and provides face-to-face oversight throughout every stage of the development process. Whether your project is in Adelaide's coastal suburbs, inner-city, or surrounding regions, Moore Developments delivers local, on-the-ground project management with a proven track record of successful completions.",
+      answer: "Moore Consultants is based in Adelaide, South Australia, and provides hands-on project management for property development across the Adelaide metropolitan area. Guy Moore conducts in-person site visits, attends council meetings alongside clients, coordinates directly with builders on-site, and provides face-to-face oversight throughout every stage of the development process. Whether your project is in Adelaide's coastal suburbs, inner-city, or surrounding regions, Moore Consultants delivers local, on-the-ground project management with a proven track record of successful completions.",
     },
     {
       question: "Trusted project management for property development",
-      answer: "Trust in property development project management is earned through transparency, accountability, and results. Moore Developments earns that trust by sharing real project financials from completed developments, maintaining aligned incentives with every client, and providing hands-on oversight rather than delegating to junior staff. Guy Moore has guided first-time developers to successful project completions with documented profits, and he continues to invest his own capital in developments alongside his clients. With a seven-year track record, a $23M+ portfolio of completed projects, and a commitment to personalised project management over generic consulting, Moore Developments is the trusted choice for property development project management.",
+      answer: "Trust in property development project management is earned through transparency, accountability, and results. Moore Consultants earns that trust by sharing real project financials from completed developments, maintaining aligned incentives with every client, and providing hands-on oversight rather than delegating to junior staff. Guy Moore has guided first-time developers to successful project completions with documented profits, and he continues to invest his own capital in developments alongside his clients. With a seven-year track record, a $23M+ portfolio of completed projects, and a commitment to personalised project management over generic consulting, Moore Consultants is the trusted choice for property development project management.",
     },
   ]
 
@@ -883,7 +883,7 @@ function PmFooter() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           <div className="mb-8 lg:mb-0">
             <a href="/">
-              <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+              <Image src="/moore-consultants-logo.png" alt="Moore Consultants" width={210} height={56} className="h-12 w-auto lg:h-14" />
             </a>
           </div>
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">
@@ -910,7 +910,7 @@ function PmFooter() {
         </div>
 
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
-          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Developments. All rights reserved.</p>
+          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">&copy; {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>
           </div>

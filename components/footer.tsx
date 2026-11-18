@@ -14,7 +14,13 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-12 border-b border-moore-offwhite/10">
           {/* Logo */}
           <div className="mb-8 lg:mb-0">
-            <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+            <Image
+              src="/moore-consultants-logo.png"
+              alt="Moore Consultants"
+              className="h-12 w-auto lg:h-14 brightness-0 invert opacity-50"
+              width={210}
+              height={56}
+            />
           </div>
 
           {/* Navigation */}
@@ -48,7 +54,7 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
-          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">© {new Date().getFullYear()} Moore Developments. All rights reserved.</p>
+          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">© {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
 
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>

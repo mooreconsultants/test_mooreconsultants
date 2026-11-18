@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: "Subscribe to The Moore Brief | Moore Developments",
+  title: "Subscribe to The Moore Brief | Moore Consultants",
   description:
     "A short weekly note on Adelaide property development from Guy Moore — $23M+ in completed coastal projects. No courses. No hype. Just what's actually happening.",
 }
@@ -15,7 +15,13 @@ export default function SubscribePage() {
       <div className="border-b border-moore-charcoal/10 bg-white">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 lg:px-12">
           <Link href="/" className="flex items-center">
-            <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+            <Image
+              src="/moore-consultants-logo.png"
+              alt="Moore Consultants"
+              width={180}
+              height={48}
+              className="h-10 w-auto"
+            />
           </Link>
           <Link
             href="/"
@@ -81,7 +87,7 @@ export default function SubscribePage() {
       {/* Footer */}
       <footer className="border-t border-moore-charcoal/10 py-8 text-center">
         <p className="text-sm text-moore-charcoal">
-          Moore Developments · Adelaide, SA ·{" "}
+          Moore Consultants · Adelaide, SA ·{" "}
           <a
             href="mailto:gmoore@mooreconsultants.com.au"
             className="text-moore-blue hover:underline"

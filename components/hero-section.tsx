@@ -59,7 +59,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-20 pt-12 sm:pt-20 lg:pt-36 pb-12 lg:pb-40">
         <div ref={contentRef} className="opacity-0 transition-opacity duration-1000 max-w-xl">
-          <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block">MOORE DEVELOPMENTS</span>
+          <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block">MOORE CONSULTANTS</span>
 
           <h1 className="font-serif text-[clamp(2.65rem,10vw,3.7rem)] lg:text-7xl text-moore-offwhite leading-[1.1] mb-6">
             From Complexity

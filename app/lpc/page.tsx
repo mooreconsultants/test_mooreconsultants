@@ -13,7 +13,7 @@ import { LpcContact } from "@/components/lpc/lpc-contact"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Early Bird Pricing | Moore Developments | Adelaide Property Development Coaching",
+  title: "Early Bird Pricing | Moore Consultants | Adelaide Property Development Coaching",
   description:
     "Limited time early bird pricing on all Adelaide property development coaching services. Tour de Coastal from $400, Foundations from $1,750. Offer ends end of month.",
 }

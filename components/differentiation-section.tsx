@@ -56,7 +56,7 @@ export function DifferentiationSection() {
         <div className="bg-moore-navy px-8 lg:px-16 py-24 lg:py-32">
           <span className="text-moore-gold text-xs tracking-[0.4em] mb-8 block">WHY CHOOSE US</span>
 
-          <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-12">Why Moore Developments?</h2>
+          <h2 className="font-serif text-3xl lg:text-4xl text-moore-offwhite mb-12">Why Moore Consultants?</h2>
 
           <div className="space-y-8">
             {differentiators.map((item, index) => {

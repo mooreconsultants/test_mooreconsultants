@@ -68,7 +68,7 @@ export function ProblemSection() {
                 <span className="text-moore-gold text-xs tracking-[0.4em] mb-4 block">THE SOLUTION</span>
 
                 <h3 className="font-serif text-2xl lg:text-3xl text-moore-offwhite mb-6">
-                  The Moore Developments Difference
+                  The Moore Consultants Difference
                 </h3>
 
                 <ul className="space-y-4">

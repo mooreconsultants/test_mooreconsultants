@@ -72,7 +72,7 @@ export function LpaHero() {
           />
 
           <div ref={contentRef} className="relative opacity-0 transition-opacity duration-1000 lg:pt-20">
-            <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE DEVELOPMENTS · ADELAIDE</span>
+            <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-8 block">MOORE CONSULTANTS · ADELAIDE</span>
 
             <h1 className="font-serif text-5xl lg:text-7xl text-moore-navy leading-[1.1] mb-6">
               From Theory

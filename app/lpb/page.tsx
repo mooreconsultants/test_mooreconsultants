@@ -14,11 +14,11 @@ import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Bundle Packages | Moore Developments",
+  title: "Bundle Packages | Moore Consultants",
   description:
     "Bundle packages for Adelaide professionals ready to commit to their first property development. More of Guy Moore's time and expertise, for less.",
   openGraph: {
-    title: "Bundle Packages | Moore Developments",
+    title: "Bundle Packages | Moore Consultants",
     description: "Bundle packages for Adelaide professionals ready to commit to their first property development.",
     url: "https://mooreconsultants.com.au/lpb",
     images: [{ url: "https://mooreconsultants.com.au/Hero.jpg", width: 1920, height: 1080 }],

@@ -36,7 +36,14 @@ export function LpcNavigation() {
       >
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex items-center justify-between">
           <a href="/" className="flex items-center">
-            <span className="inline-flex flex-col font-semibold tracking-[0.12em] uppercase leading-tight text-moore-gold"><span className="text-xl">MOORE</span><span className="text-xs tracking-[0.2em]">DEVELOPMENTS</span></span>
+            <Image
+              src="/moore-consultants-logo.png"
+              alt="Moore Consultants"
+              width={180}
+              height={40}
+              priority
+              className="h-10 w-auto lg:h-12"
+            />
           </a>
 
           <div className="hidden lg:flex items-center gap-12">
