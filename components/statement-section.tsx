@@ -33,14 +33,14 @@ export function StatementSection() {
         <div className="w-px h-16 bg-moore-gold mx-auto mb-12" />
 
         <blockquote className="font-serif text-3xl lg:text-5xl text-moore-navy leading-tight mb-8">
-          "Most property courses leave you stranded with theory.
+          "Technology should serve the business,
           <br />
-          <span className="text-moore-charcoal">We build with you."</span>
+          <span className="text-moore-charcoal">not the other way around."</span>
         </blockquote>
 
         <div className="flex items-center justify-center gap-4">
           <div className="w-12 h-px bg-moore-gold" />
-          <cite className="text-moore-charcoal text-sm tracking-widest uppercase not-italic">Guy Moore, Founder</cite>
+          <cite className="text-moore-charcoal text-sm tracking-widest uppercase not-italic">Guy Moore, Director</cite>
           <div className="w-12 h-px bg-moore-gold" />
         </div>
       </div>
