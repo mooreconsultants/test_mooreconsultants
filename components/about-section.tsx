@@ -54,18 +54,18 @@ export function AboutSection() {
             <div className="w-16 h-px bg-moore-gold mb-8" />
 
             <p className="text-moore-charcoal/70 leading-relaxed mb-10 max-w-lg relative z-10">
-              Guy has more than two decades of experience across cybersecurity, enterprise IT, Australian Government and Defence. At Palo Alto Networks, he helped rebuild and lead the Federal Government and Defence business, growing the Canberra operation to approximately 40 people. Today, he advises on cybersecurity strategy, AI adoption and technology-led business improvement. Outside work, Guy is passionate about HYROX, triathlon, strength and conditioning, yoga and exercise science.
+              Guy brings more than 20 years of experience across cybersecurity, enterprise technology, government and business leadership. He works with organisations to understand their challenges, reduce cybersecurity risk, identify practical applications for AI and improve the way their systems and teams work together. Whether the priority is solving an operational problem, making a difficult technology decision or moving a project forward, his approach is straightforward: understand the business need, develop a practical plan and help turn it into action.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 mb-10 relative z-10">
               {[
-                { value: "20+", label: "Years in Technology" },
-                { value: "8 Years", label: "At Palo Alto Networks" },
-                { value: "~40", label: "Canberra Operation" },
+                { value: "Reduce Risk", label: "Cybersecurity & Resilience" },
+                { value: "Improve", label: "Processes & Productivity" },
+                { value: "Deliver", label: "Practical Technology Outcomes" },
               ].map((stat, index) => (
                 <div key={index}>
-                  <div className="text-moore-navy text-3xl lg:text-4xl font-light mb-2">{stat.value}</div>
+                  <div className="text-moore-navy text-xl lg:text-2xl font-light mb-2">{stat.value}</div>
                   <div className="text-moore-charcoal/60 text-xs tracking-wide uppercase">{stat.label}</div>
                 </div>
               ))}
