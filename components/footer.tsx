@@ -1,10 +1,9 @@
-import { Linkedin, Instagram, Facebook } from "lucide-react"
+import { Linkedin } from "lucide-react"
 import Image from "next/image"
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://www.linkedin.com/company/mooreconsultants" },
-  { icon: Instagram, href: "https://www.instagram.com/moore_consultants_sa/" },
-  { icon: Facebook, href: "https://www.facebook.com/mooredevelopments/" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/gmoore/" },
+
 ]
 
 export function Footer() {
@@ -26,10 +25,10 @@ export function Footer() {
 
           {/* Navigation */}
           <nav className="flex flex-wrap gap-8 lg:gap-12 mb-8 lg:mb-0">
-            {["Services", "Portfolio", "About", "Process", "Contact"].map((item) => (
+            {["Services", "Experience", "About", "Process", "Contact"].map((item) => (
               <a
                 key={item}
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                href={item === "Experience" ? "#portfolio" : `#${item.toLowerCase().replace(" ", "-")}`}
                 className="text-moore-offwhite/70 text-sm tracking-wide hover:text-moore-gold transition-colors"
               >
                 {item}
@@ -44,7 +43,7 @@ export function Footer() {
                 key={index}
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}
-                rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={href.startsWith("http") ? "noreferrer" : undefined}
                 className="w-10 h-10 border border-moore-offwhite/20 flex items-center justify-center text-moore-offwhite/70 hover:border-moore-gold hover:text-moore-gold transition-colors"
               >
                 <Icon className="w-4 h-4" />
@@ -55,7 +54,7 @@ export function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-8">
-          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">© 2025 Moore Consultants. All rights reserved.</p>
+          <p className="text-moore-offwhite/50 text-sm mb-4 lg:mb-0">© {new Date().getFullYear()} Moore Consultants. All rights reserved.</p>
 
           <div className="mt-4 lg:mt-0">
             <p className="text-moore-offwhite/50 text-sm">Adelaide, South Australia</p>
