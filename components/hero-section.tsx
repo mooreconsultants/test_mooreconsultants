@@ -27,7 +27,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative h-screen w-full flex flex-col overflow-hidden">
+    <section className="relative min-h-screen lg:h-screen w-full flex flex-col overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <div className="lg:hidden absolute inset-0">
@@ -57,11 +57,11 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-20 pt-28 lg:pt-36 pb-36 lg:pb-40">
+      <div className="relative z-10 flex flex-col justify-center flex-1 w-full max-w-[1400px] mx-auto px-6 lg:px-20 pt-12 sm:pt-20 lg:pt-36 pb-12 lg:pb-40">
         <div ref={contentRef} className="opacity-0 transition-opacity duration-1000 max-w-xl">
           <span className="text-moore-gold text-xs tracking-[0.4em] font-light mb-6 block">MOORE CONSULTANTS</span>
 
-          <h1 className="font-serif text-5xl lg:text-7xl text-moore-offwhite leading-[1.1] mb-6">
+          <h1 className="font-serif text-[clamp(2.65rem,10vw,3.7rem)] lg:text-7xl text-moore-offwhite leading-[1.1] mb-6">
             From Complexity
             <br />
             <span className="text-moore-gold">to Clarity</span>
@@ -90,16 +90,16 @@ export function HeroSection() {
       </div>
 
       {/* Trust bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
+      <div className="relative lg:absolute lg:bottom-0 left-0 right-0 z-10 shrink-0">
         <div className="max-w-[1400px] mx-auto">
-          <div className="inline-flex flex-col sm:flex-row gap-6 lg:gap-16 bg-moore-navy/95 backdrop-blur-sm text-moore-offwhite ml-6 lg:ml-20 px-8 lg:px-12 py-6 lg:py-8 rounded-tr-3xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:inline-flex lg:flex-row gap-5 sm:gap-8 lg:gap-16 bg-moore-navy/95 backdrop-blur-sm text-moore-offwhite mx-6 lg:ml-20 lg:mr-0 px-6 lg:px-12 py-6 lg:py-8 rounded-t-2xl lg:rounded-t-none lg:rounded-tr-3xl">
             {[
               { value: "Reduce Risk", label: "Cybersecurity & Resilience" },
               { value: "Save Time", label: "AI, Automation & Efficiency" },
               { value: "Work Smarter", label: "Technology & Business Improvement" },
             ].map((stat, index) => (
-              <div key={index} className="text-center sm:text-left">
-                <div className="text-moore-gold text-2xl lg:text-3xl font-light mb-1">{stat.value}</div>
+              <div key={index} className="text-left">
+                <div className="text-moore-gold text-xl sm:text-2xl lg:text-3xl font-light mb-1">{stat.value}</div>
                 <div className="text-moore-offwhite/60 text-xs tracking-widest uppercase">{stat.label}</div>
               </div>
             ))}
